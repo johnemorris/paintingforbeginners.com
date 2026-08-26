@@ -1,0 +1,43 @@
+---
+import { navigation } from "../data/site";
+---
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="Painting for Beginners, home">
+      <span class="roller" aria-hidden="true"></span>
+      <span><strong>Painting</strong><small>for Beginners</small></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      {navigation.map((item) => <a href={item.href}>{item.label}</a>)}
+    </nav>
+    <details class="nav-shell">
+      <summary>Menu</summary>
+      <nav aria-label="Mobile navigation">
+        {navigation.map((item) => <a href={item.href}>{item.label}</a>)}
+      </nav>
+    </details>
+  </div>
+</header>
+<style>
+  .site-header { position: relative; z-index: 20; border-bottom: 1px solid var(--line); background: rgb(255 253 248 / .96); }
+  .header-inner { display: flex; min-height: 5rem; align-items: center; justify-content: space-between; gap: 2rem; }
+  .brand { display: inline-flex; align-items: center; gap: .7rem; color: var(--ink); line-height: .9; text-decoration: none; }
+  .brand strong { display: block; font-size: 1.35rem; letter-spacing: -.035em; text-transform: uppercase; }
+  .brand small { color: var(--teal-dark); font-family: var(--font-display); font-size: .95rem; font-style: italic; }
+  .roller { position: relative; width: 2rem; height: 2.6rem; transform: rotate(7deg); }
+  .roller::before { position: absolute; top: 0; left: .2rem; width: 1.55rem; height: 1.15rem; border: 3px solid var(--ink); border-radius: .2rem; background: var(--teal); content: ""; }
+  .roller::after { position: absolute; top: 1.25rem; left: .92rem; width: .38rem; height: 1.35rem; border-radius: 0 0 .2rem .2rem; background: var(--ink); content: ""; }
+  .nav-shell { display: none; }
+  nav { display: flex; align-items: center; gap: clamp(.8rem, 2vw, 1.7rem); }
+  nav a { color: var(--ink); font-size: .86rem; font-weight: 750; text-decoration: none; }
+  nav a:hover { color: var(--teal-dark); }
+  @media (max-width: 880px) {
+    .header-inner { min-height: 4.5rem; }
+    .desktop-nav { display: none; }
+    .nav-shell { display: block; }
+    .nav-shell summary { display: block; min-width: 3.25rem; padding: .55rem .7rem; border: 2px solid var(--ink); border-radius: var(--radius-sm); cursor: pointer; font-weight: 800; list-style: none; text-align: center; }
+    .nav-shell[open] nav { display: flex; }
+    nav { position: absolute; top: 100%; right: 0; left: 0; display: none; align-items: stretch; flex-direction: column; gap: 0; padding: .5rem 1rem 1rem; border-bottom: 1px solid var(--line); background: var(--paper); box-shadow: var(--shadow); }
+    nav a { min-height: 2.8rem; padding: .8rem; border-bottom: 1px solid var(--line); }
+  }
+</style>

@@ -7,11 +7,17 @@
   },
   "scripts": {
     "dev": "astro dev",
+    "prebuild": "node scripts/generate-redirects.mjs",
     "build": "astro build",
+    "postbuild": "node scripts/check-built-site.mjs",
+    "check:redirects": "node scripts/generate-redirects.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
     "astro": "^7.2.4"
+  },
+  "devDependencies": {
+    "wrangler": "^4.126.0"
   }
 }

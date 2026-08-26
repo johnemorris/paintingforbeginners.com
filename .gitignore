@@ -23,4 +23,8 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
+# generated from src/data/redirects.json during prebuild
+public/_redirects
+
+# local Cloudflare development state
 .wrangler/
