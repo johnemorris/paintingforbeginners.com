@@ -8,7 +8,7 @@ export async function getStaticPaths() {
 }
 
 const { entry, guides } = Astro.props;
-const { Content } = await render(entry);
-const relatedGuides = entry.data.related.map((id) => guides.find((guide) => guide.id === id)).filter(Boolean).slice(0, 3);
+const { Content, headings } = await render(entry);
+const relatedGuides = entry.data.related.map((id) => guides.find((guide) => guide.id === id)).filter(Boolean);
 ---
-<GuideLayout {entry} {relatedGuides}><Content /></GuideLayout>
+<GuideLayout {entry} {relatedGuides} {headings}><Content /></GuideLayout>

@@ -1,0 +1,54 @@
+---
+import type { CollectionEntry } from "astro:content";
+import BaseLayout from "./BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import EditorialGuideCard from "../components/EditorialGuideCard.astro";
+import { categories } from "../data/site";
+import { paintingBasicsImages, planPrepareStages } from "../data/painting-basics";
+
+interface Props { guides: CollectionEntry<"guides">[] }
+const { guides } = Astro.props;
+const category = categories.basics;
+const byId = new Map(guides.map((guide) => [guide.id, guide]));
+const stages = planPrepareStages.map((stage) => ({ ...stage, guides: stage.guideIds.map((id) => byId.get(id)).filter(Boolean) }));
+const representedIds = new Set(stages.flatMap((stage) => stage.guideIds));
+const remaining = guides.filter((guide) => !representedIds.has(guide.id));
+const description = "Beginner-friendly guides to inspecting, cleaning, repairing, sanding, and priming a surface before paint goes on.";
+---
+<BaseLayout title="Plan & Prepare" {description} image={paintingBasicsImages.preparation.src}>
+  <header class="topic-hero"><div class="wrap"><Breadcrumbs items={[{ label: category.title, href: category.href }, { label: "Plan & Prepare" }]} /><div class="hero-grid"><div><p class="eyebrow">Painting Basics · Plan & Prepare</p><h1>Prepare the surface, not just the room</h1><p class="lead">Paint follows the shape and condition underneath it. Learn how to inspect the old finish, fix what is loose or uneven, and choose only the preparation steps your surface actually needs.</p><a class="button" href="#guides">Find your preparation guide <span aria-hidden="true">↓</span></a></div><img src={paintingBasicsImages.preparation.src} alt={paintingBasicsImages.preparation.alt} width="1200" height="800" /></div></div></header>
+  <section class="section why"><div class="narrow"><p class="eyebrow">Why it matters</p><h2>Preparation gives new paint something trustworthy to hold onto</h2><p class="lead">Cleaning removes invisible films. Repairs create an even plane. Sanding solves specific texture or adhesion problems. Primer handles surfaces and transitions that finish paint should not handle alone.</p><div class="checks"><span>Clean</span><span>Dry</span><span>Sound</span><span>Smooth</span><span>Compatible</span></div></div></section>
+  <section class="section guide-section" id="guides"><div class="wrap"><div class="section-heading"><p class="eyebrow">Choose by the job in front of you</p><h2>Plan & Prepare guides</h2><p class="lead">Start with the condition you can see. Each guide explains why a step matters, when it can be skipped, and what to do next.</p></div>
+    <div class="stages">{stages.map((stage, index) => <section class="stage"><header><span>{String(index + 1).padStart(2, "0")}</span><div><p class="eyebrow">{stage.eyebrow}</p><h3>{stage.title}</h3><p>{stage.description}</p></div></header><div class="stage-guides">{stage.guides.map((guide) => <EditorialGuideCard {guide} />)}</div></section>)}</div>
+    {remaining.length > 0 && <section class="more-guides"><h2>More ways to prepare</h2><div class="stage-guides">{remaining.map((guide) => <EditorialGuideCard {guide} />)}</div></section>}
+  </div></section>
+  <section class="section next-step"><div class="narrow"><p class="eyebrow">Once the surface is ready</p><h2>Choose a coating that fits the room and the finish underneath</h2><p class="lead">Move on to paint type, sheen, quantity, and coverage when the surface is clean, stable, and ready to bond.</p><a class="button secondary" href="/paint-finish-guide/">Start choosing paint <span aria-hidden="true">→</span></a></div></section>
+</BaseLayout>
+<style>
+  .topic-hero { padding: var(--space-4) 0 var(--space-6); background: linear-gradient(120deg, var(--blue-wash), var(--canvas)); }
+  .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(24rem, .9fr); align-items: center; gap: clamp(var(--space-4), 6vw, var(--space-6)); margin-top: var(--space-4); }
+  .hero-grid h1 { max-width: 12ch; }
+  .hero-grid .button { margin-top: var(--space-3); }
+  .hero-grid img { width: 100%; aspect-ratio: 4 / 3; border: .55rem solid white; border-radius: var(--radius); object-fit: cover; box-shadow: var(--shadow); transform: rotate(1deg); }
+  .why { text-align: center; }
+  .why h2 { margin-top: 0; }
+  .why .lead { margin-inline: auto; }
+  .checks { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-2); margin-top: var(--space-4); }
+  .checks span { padding: .55rem .9rem; border: 1px solid var(--line); border-radius: 999px; background: white; color: var(--ink-strong); font-weight: 850; }
+  .guide-section { background: var(--canvas); }
+  .section-heading { max-width: 48rem; margin-bottom: var(--space-5); }
+  .section-heading h2 { margin-top: 0; }
+  .stages { display: grid; gap: var(--space-6); }
+  .stage > header { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); max-width: 50rem; margin-bottom: var(--space-4); }
+  .stage > header > span { color: var(--coral-dark); font-family: var(--font-display); font-size: 2.4rem; line-height: 1; }
+  .stage h3 { margin: 0 0 var(--space-2); font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.25rem); }
+  .stage header p:last-child { color: var(--muted); }
+  .stage-guides { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); }
+  .more-guides { margin-top: var(--space-6); padding-top: var(--space-5); border-top: 1px solid var(--line); }
+  .more-guides h2 { margin-top: 0; }
+  .next-step { background: var(--blue-wash); text-align: center; }
+  .next-step h2 { margin-top: 0; }
+  .next-step .lead { margin-inline: auto; }
+  @media (max-width: 840px) { .hero-grid { grid-template-columns: 1fr; } .hero-grid img { max-width: 42rem; } .stage-guides { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 580px) { .stage-guides { grid-template-columns: 1fr; } .stage > header { grid-template-columns: 3.3rem minmax(0, 1fr); } }
+</style>

@@ -17,6 +17,8 @@ const guides = defineCollection({
     supplies: z.array(z.string()).min(2),
     related: z.array(z.string()).default([]),
     featured: z.boolean().default(false),
+    articleStyle: z.enum(["standard", "editorial"]).default("standard"),
+    takeaways: z.array(z.string()).min(3).max(7).optional(),
     hero: z.object({
       src: z.string(),
       alt: z.string(),

@@ -7,7 +7,7 @@ difficulty: Easy
 activeTime: "1–3 hours of preparation"
 totalTime: "Usually 1–2 days with drying"
 updated: 2026-08-26
-summary: "You can usually repaint a clean, dry, firmly bonded existing finish after the preparation required by the new coating. Do not paint directly over peeling paint, grease, active moisture, chalky residue, or an incompatible glossy finish and expect the new coat to fix it."
+summary: "You can usually repaint a clean, dry, firmly bonded existing finish after doing the preparation required by the new coating. Do not paint directly over peeling paint, grease, active moisture, chalky residue, or an incompatible glossy finish and expect the new coat to fix it."
 supplies:
   - Mild cleaner appropriate to the surface
   - Clean cloths or sponge
@@ -15,125 +15,124 @@ supplies:
   - Filler or patching compound as needed
   - Fine sanding sponge
   - Primer when the surface or coating system requires it
-related: [surface-preparation-before-painting, do-you-need-primer, how-many-coats-of-paint, how-to-paint-a-room]
+related: [do-you-need-primer, do-you-need-to-sand-before-painting, how-many-coats-of-paint, surface-preparation-before-painting, how-to-use-a-paint-roller]
 recommendationSlots: [sanding-sponge]
+articleStyle: editorial
+takeaways:
+  - "Old paint can stay when it is clean, dry, smooth enough, and firmly attached."
+  - "Remove loose paint and solve moisture, grease, mildew, or adhesion problems before recoating."
+  - "Sand for a reason: to dull gloss, smooth repairs, feather edges, or meet the coating manufacturer's instructions."
+  - "Prime bare, repaired, stained, glossy, or difficult surfaces when the paint system calls for it."
+  - "Plan on two finish coats when coverage, color change, or the product instructions require them."
+hero:
+  src: "/images/painting-basics/repainting-wall-hero.jpg"
+  alt: "A beginner repainting an existing interior wall with pale teal paint and a roller."
 ---
 
-In many rooms, the easiest surface to paint is a wall that has already been painted.
+In many rooms, the easiest surface to paint is a wall that has already been painted. You do **not** have to strip every old coat back to bare drywall. The real question is whether the finish you have is a trustworthy foundation for the finish you want.
 
-You do **not** have to strip every old coat back to bare drywall. What matters is whether the existing coating is a stable foundation for the new one.
+## When can you paint directly over old paint?
 
-## You can often paint directly over old paint when…
+You can usually repaint when the old coating is:
 
-The old finish is:
+- firmly attached, with no peeling or bubbles;
+- clean and free of grease, wax, smoke film, and heavy dust;
+- completely dry, with no active leak or damp area;
+- smooth enough for the finish you expect;
+- dull enough—or prepared well enough—for the new coating to grip; and
+- compatible with the primer and paint you plan to use.
 
-- firmly attached;
-- clean;
-- dry;
-- free of grease and heavy residue;
-- not excessively glossy, or has been prepared as required;
-- compatible with the new coating system; and
-- reasonably smooth.
+On a sound interior wall, the job may be as simple as washing touched or dirty areas, filling small holes, sanding those repairs smooth, spot-priming bare patches, and applying the finish coats.
 
-On a sound wall like that, preparation may be as simple as cleaning, repairing small defects, dulling problem areas if required, spot-priming repairs, and applying the new paint.
+<div class="decision-box">
+  <strong>A useful rule:</strong> new paint changes color and sheen. It does not repair a weak surface underneath.
+</div>
 
-## Don't paint over failure
+## When should you not paint over the old finish?
 
-New paint does not glue loose old paint permanently back to the wall.
+Stop and fix the cause when you see peeling, flaking, bubbling, active water damage, soft drywall, heavy chalky residue, grease, wax, mildew, rust, or loose wallpaper adhesive. A fresh coat may hide the problem briefly, but it cannot permanently glue loose material back to the wall.
 
-Stop and correct the surface if you see:
+<figure>
+  <img src="/images/painting-basics/paint-failure.jpg" alt="Peeling and bubbled white paint revealing an older pale teal coating and a damaged surface beneath." width="1200" height="800" loading="lazy">
+  <figcaption>Lifted edges and bubbles mean the coating system has lost adhesion. Remove what is loose and investigate moisture or contamination before repainting.</figcaption>
+</figure>
 
-- peeling or flaking;
-- bubbling;
-- active water damage;
-- soft or crumbling drywall;
-- heavy chalky residue;
-- grease or wax;
-- mildew or biological growth;
-- rust;
-- loose wallpaper or adhesive; or
-- cracks that are still moving.
+Remove loose material until the remaining edge is firm. Then correct the underlying issue and let the surface dry. If the failure is widespread, if drywall is soft, or if moisture keeps returning, the repair is bigger than a normal repaint.
 
-Remove loose material and solve the underlying cause before coating.
+If scraping or sanding could disturb paint in a home built before 1978 in the United States, pause before making dust and follow current lead-safe guidance. Do not dry-sand an unknown old coating as a casual test.
 
-## Clean even when the wall looks clean
+## How do you prepare a previously painted wall?
 
-Walls collect dust, hand oils, cooking residue, hairspray, smoke residue, and cleaning-product films.
+Preparation is not one mandatory ritual. It is a short inspection followed by the steps that solve the conditions you actually find.
 
-Pay special attention around:
+<figure>
+  <img src="/images/painting-basics/preparation-tools.jpg" alt="Sanding sponge, putty knives, patching compound, sponge, painter's tape, cloth, and safety glasses arranged on a drop cloth." width="1200" height="800" loading="lazy">
+  <figcaption>A basic preparation kit covers cleaning, minor repairs, edge-feathering, and dust control. Inspect first so you do not create work the wall does not need.</figcaption>
+</figure>
 
-- light switches;
-- doors;
-- kitchens;
-- bathrooms;
-- children's rooms; and
-- areas touched by furniture or hands.
+### 1. Clean the areas that collect residue
 
-Use a cleaner compatible with the surface and paint system. Rinse if the cleaner requires it, then let the wall dry.
+Walls can look clean while holding hand oils, cooking film, hairspray, smoke residue, or cleaner buildup. Pay special attention around switches and doors, above cooking areas, in bathrooms, and anywhere furniture or hands touch the wall.
 
-## Do you need to sand old paint?
+Use a mild cleaner that is appropriate for the existing surface and the coating you plan to apply. Follow its rinse instructions and allow the wall to dry completely. Painting over cleaner residue simply exchanges one adhesion problem for another.
 
-Not automatically.
+### 2. Scrape and repair only what is unsound
 
-Sanding is useful when you need to:
+Use a scraper to remove paint that is already loose. Do not pry firmly bonded layers off merely because several coats exist. Multiple sound coats are not automatically a reason to strip a wall.
 
-- dull a glossy finish;
-- feather the edge where loose paint was removed;
-- smooth filler or repairs;
-- knock down old drips or brush marks; or
-- create the surface profile required by a bonding system.
+Fill nail holes, dents, and shallow damage with a suitable patching material. Let the repair dry, then sand it flush. Deeper cracks, repeated cracks, and crumbling areas may need a more complete repair before paint.
 
-If the existing wall is already sound, clean, dull, and smooth, sanding every square inch may add dust without adding value.
+### 3. Sand for a specific reason
 
-Always remove sanding dust before painting.
+You do not automatically need to sand every square inch of old paint. Sanding is useful when you need to:
 
-## What if the old paint is glossy?
+- dull a slick, glossy finish;
+- feather the ridge where loose paint was removed;
+- smooth dried filler, old drips, or brush marks; or
+- create the surface profile specified by the new primer or paint.
 
-Glossy enamel can be harder for a new coating to grip.
+If the wall is already clean, sound, dull, and smooth, blanket sanding may add dust without improving the result. Always remove sanding dust before priming or painting.
 
-Clean it thoroughly, then follow the new paint or primer manufacturer's preparation instructions. That may involve scuff-sanding, a bonding primer, or both.
+## Do you need primer over old paint?
 
-A quick coat of ordinary wall paint over a slick unknown finish is not a good adhesion test.
+Sometimes—but a full coat of primer is not an automatic fee you pay for repainting.
 
-## What if you don't know whether the old paint is oil or water based?
+Primer becomes more useful when you expose bare drywall or wood, make porous repairs, need to block a stain, cover a very glossy or difficult surface, make a dramatic color change, or use a coating system that specifically requires it. A clean, sound, previously painted wall in a similar color may need only spot primer on repairs—or no separate primer at all.
 
-Older trim, doors, cabinets, and some walls may have alkyd/oil-based coatings.
+Paint-and-primer-in-one products do not make surface problems disappear. That phrase usually describes coverage performance, not a guarantee of bonding over grease, gloss, loose paint, or bare problem materials.
 
-Do not rely on color or sheen alone to identify them. If compatibility is uncertain, use the paint manufacturer's recommended identification/preparation method or test a small prepared area with the intended system before coating everything.
+## What if the old paint is glossy or an unknown type?
 
-A bonding primer may be appropriate for some transitions, but choose it based on the actual surface and product directions.
+Glossy enamel gives a new coat less texture to grip. Clean it thoroughly, then follow the new paint or bonding primer manufacturer's instructions. The correct system may call for scuff-sanding, a bonding primer, or both.
 
-## Do you need primer?
+Older trim, doors, cabinets, and some walls may have alkyd or oil-based coatings. You cannot reliably identify the binder from color or sheen alone. Use the coating manufacturer's recommended identification and preparation method, or prepare and test a small inconspicuous area with the complete system before coating everything.
 
-Maybe.
+<figure>
+  <img src="/images/painting-basics/choose-paint.jpg" alt="Unbranded open paint cans, color swatches, and sample boards showing matte and shinier paint finishes." width="1200" height="800" loading="lazy">
+  <figcaption>Color is only one choice. The old coating, new paint type, and sheen all affect preparation, adhesion, and how strongly surface flaws show.</figcaption>
+</figure>
 
-Primer becomes more likely when:
+## How many coats will cover the old color?
 
-- you expose bare drywall or wood;
-- you make repairs;
-- the old surface is stained;
-- the finish is glossy or difficult to bond to;
-- the color change is dramatic; or
-- the new paint system requires it.
+Preparation and coverage are related but different. A stable old color can still show through the first coat—especially when moving from dark to light, bright to muted, or between strongly contrasting colors.
 
-A clean, sound, previously painted wall in a similar color may not need a full primer coat.
+Use primer when it solves a surface, stain, bonding, or color-transition problem. Then apply the number of finish coats required by the product and the appearance on the wall. Two finish coats are common for even color and sheen, but extreme changes may need a tinted primer or an additional coat.
 
-## What about old paint with lots of layers?
-
-Multiple sound layers are not automatically a reason to strip a wall. Problems arise when the layers have poor adhesion, excessive texture, cracking, or incompatible coatings.
-
-If scraping or sanding may disturb paint in an older home, consider lead-paint safety before creating dust. In the United States, EPA guidance is especially important for homes built before 1978.
+Do not keep rolling the same area after paint begins to set in an attempt to force one-coat coverage. That can leave lap marks and texture. Let the coat dry for the stated recoat time, then judge coverage in consistent light.
 
 ## A five-minute decision check
 
-Before repainting, ask:
+Before opening the finish paint, ask:
 
-1. **Is it attached?** Nothing peeling, bubbling, or flaking?
-2. **Is it clean?** No grease, chalk, wax, or heavy residue?
-3. **Is it dry?** No leak or moisture problem?
-4. **Is it smooth enough?** Repairs and ridges won't show through?
-5. **Will the new coating bond?** The sheen and old coating have been prepared as required?
+1. **Is it attached?** Nothing is peeling, bubbling, or flaking.
+2. **Is it clean?** There is no grease, wax, chalk, mildew, or heavy residue.
+3. **Is it dry?** There is no leak, damp patch, or active condensation problem.
+4. **Is it smooth enough?** Repairs, edges, and old drips will not show through the new sheen.
+5. **Will the new coating bond?** Gloss and unknown coatings have been prepared according to the product system.
 
-If all five answers are yes, you usually have a paintable surface.
+If all five answers are yes, you usually have a paintable surface. If one answer is no, solve that problem first. Repainting once with a sound foundation is much easier than watching the new coat fail with the old one.
 
-If one answer is no, fix that problem first. Repainting is much easier than repainting twice because the first new coat was applied over a bad foundation.
+<figure>
+  <img src="/images/painting-basics/finished-room.jpg" alt="A freshly painted pale teal room with an even finish, open window, and painting tools set aside." width="1200" height="800" loading="lazy">
+  <figcaption>An even repaint starts beneath the color: a stable old finish, deliberate preparation, compatible products, and enough undisturbed drying time.</figcaption>
+</figure>

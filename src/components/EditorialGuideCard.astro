@@ -1,0 +1,35 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { imageForGuide } from "../data/painting-basics";
+
+interface Props { guide: CollectionEntry<"guides">; image?: { src: string; alt: string }; compact?: boolean; informativeImage?: boolean }
+const { guide, image = guide.data.hero ?? imageForGuide(guide.id, guide.data.topic), compact = false, informativeImage = false } = Astro.props;
+---
+<article class:list={["editorial-card", { compact }]}>
+  <a class="card-image" href={`/${guide.id}/`} tabindex={informativeImage ? undefined : "-1"} aria-hidden={informativeImage ? undefined : "true"}><img src={image.src} alt={informativeImage ? image.alt : ""} loading="lazy" width="1200" height="800" /></a>
+  <div class="card-copy">
+    <p class="card-meta">{guide.data.difficulty} · {guide.data.totalTime}</p>
+    <h3><a href={`/${guide.id}/`}>{guide.data.title}</a></h3>
+    {!compact && <p>{guide.data.description}</p>}
+    <a class="card-link" href={`/${guide.id}/`}>Read the guide <span aria-hidden="true">→</span></a>
+  </div>
+</article>
+<style>
+  .editorial-card { display: flex; min-height: 100%; flex-direction: column; overflow: hidden; border-radius: var(--radius); background: white; box-shadow: var(--shadow-soft); }
+  .card-image { display: block; overflow: hidden; background: var(--blue-wash); }
+  img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; transition: transform .25s ease; }
+  .card-image:hover img { transform: scale(1.025); }
+  .card-copy { display: flex; flex: 1; flex-direction: column; padding: var(--space-3); }
+  .card-meta { margin: 0 0 var(--space-1); color: var(--coral-dark); font-size: .72rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+  h3 { margin: 0 0 var(--space-2); font-family: var(--font-display); font-size: 1.28rem; }
+  h3 a { color: var(--ink-strong); text-decoration: none; }
+  h3 a:hover { color: var(--teal-dark); text-decoration: underline; }
+  .card-copy > p:not(.card-meta) { color: var(--muted); font-size: .9rem; line-height: 1.55; }
+  .card-link { margin-top: auto; font-size: .88rem; font-weight: 800; }
+  .compact { display: grid; grid-template-columns: 9rem minmax(0, 1fr); }
+  .compact .card-image, .compact img { height: 100%; }
+  .compact img { aspect-ratio: auto; }
+  .compact h3 { font-size: 1.08rem; }
+  @media (max-width: 540px) { .compact { grid-template-columns: 7rem minmax(0, 1fr); } }
+  @media (prefers-reduced-motion: reduce) { img { transition: none; } }
+</style>

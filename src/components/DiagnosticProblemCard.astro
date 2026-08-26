@@ -1,0 +1,19 @@
+---
+import type { CollectionEntry } from "astro:content";
+const { label, guide, image } = Astro.props as { label: string; guide: CollectionEntry<"guides">; image: { src: string; alt: string } };
+---
+<article class="problem-card">
+  <div class="problem-image"><img src={image.src} alt={image.alt} loading="lazy" width="960" height="640" /></div>
+  <div><h3><a href={`/${guide.id}/`}>{label}</a></h3><p>{guide.data.description}</p><a class="problem-link" href={`/${guide.id}/`}>Diagnose the problem <span aria-hidden="true">→</span></a></div>
+</article>
+<style>
+  .problem-card { overflow: hidden; border-radius: var(--radius); background: white; box-shadow: var(--shadow-soft); }
+  .problem-image { overflow: hidden; }
+  img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+  .problem-card > div { padding: var(--space-3); }
+  h3 { margin: 0 0 var(--space-2); font-family: var(--font-display); font-size: 1.25rem; }
+  h3 a { color: var(--ink-strong); text-decoration: none; }
+  h3 a:hover { color: var(--teal-dark); text-decoration: underline; }
+  p { color: var(--muted); font-size: .84rem; line-height: 1.5; }
+  .problem-link { font-size: .84rem; font-weight: 850; }
+</style>

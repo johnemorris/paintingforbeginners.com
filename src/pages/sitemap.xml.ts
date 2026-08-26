@@ -1,7 +1,7 @@
 import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
 import { site } from "../data/site";
-const staticRoutes = ["/", "/painting-basics/", "/home-painting/", "/furniture-projects/", "/canvas-painting/", "/supplies-tools/", "/about/", "/affiliate-disclosure/"];
+const staticRoutes = ["/", "/painting-basics/", "/painting-basics/plan-prepare/", "/home-painting/", "/furniture-projects/", "/canvas-painting/", "/supplies-tools/", "/about/", "/affiliate-disclosure/"];
 const escape = (value: string) => value.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
 export const GET: APIRoute = async () => {
   const guides = (await getCollection("guides")).filter((guide) => !guide.data.draft && !guide.data.noindex);
