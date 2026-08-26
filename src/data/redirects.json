@@ -1,0 +1,16 @@
+[
+  { "from": "/about-me/", "to": "/about/", "status": 301, "reason": "Consolidated site identity page" },
+  { "from": "/about-us/", "to": "/about/", "status": 301, "reason": "Consolidated site identity page" },
+  { "from": "/author/admin/", "to": "/about/", "status": 301, "reason": "Retired WordPress author archive" },
+  { "from": "/contact-us/", "to": "/contact/", "status": 301, "reason": "Canonical contact route" },
+  { "from": "/privacy-policy/", "to": "/privacy/", "status": 301, "reason": "Canonical privacy route" },
+  { "from": "/blog/", "to": "/canvas-painting/", "status": 301, "reason": "Former art index now represented by canvas hub" },
+  { "from": "/category/acrylic-painting/", "to": "/canvas-painting/", "status": 301, "reason": "No unnecessary acrylic taxonomy; canvas hub lists the relevant guides" },
+  { "from": "/category/art/", "to": "/canvas-painting/", "status": 301, "reason": "Former art archive replaced by useful hub" },
+  { "from": "/category/guides/", "to": "/canvas-painting/", "status": 301, "reason": "Former generic archive replaced by useful hub" },
+  { "from": "/category/knife-painting/", "to": "/canvas-painting/", "status": 301, "reason": "Technique archive retired; canvas hub is the closest useful current collection" },
+  { "from": "/category/oil-painting/", "to": "/canvas-painting/", "status": 301, "reason": "Oil taxonomy is outside the focused MVP" },
+  { "from": "/category/watercolor-painting/", "to": "/canvas-painting/", "status": 301, "reason": "Watercolor taxonomy is outside the focused MVP" },
+  { "from": "/checklist-for-painting/", "to": "/painting-supplies-for-beginners/", "status": 301, "reason": "Closest current beginner art supply checklist" },
+  { "from": "/acrylic-painting-techniques/", "to": "/acrylic-painting-for-beginners/", "status": 301, "reason": "Techniques are covered in the complete current acrylic guide" }
+]

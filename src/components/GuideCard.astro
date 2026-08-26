@@ -1,0 +1,5 @@
+---
+const { href, title, description, meta } = Astro.props;
+---
+<article class="card"><p class="meta">{meta}</p><h3>{title}</h3><p>{description}</p><a href={href}>Read the guide <span aria-hidden="true">→</span></a></article>
+<style>.meta { color: var(--coral) !important; font-size: .76rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }</style>
