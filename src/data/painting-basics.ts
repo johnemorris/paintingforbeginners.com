@@ -38,8 +38,8 @@ export const paintingBasicsTopics = {
   },
   "apply-paint": {
     image: paintingBasicsImages.application,
-    href: "/how-to-use-a-paint-roller/",
-    featured: ["how-to-use-a-paint-roller", "how-to-cut-in-paint", "how-to-keep-a-wet-edge"],
+    href: "/how-to-keep-a-wet-edge/",
+    featured: ["how-to-keep-a-wet-edge"],
   },
   "fix-problems": {
     image: paintingBasicsImages.problems,
@@ -49,7 +49,7 @@ export const paintingBasicsTopics = {
   "drying-durability": {
     image: paintingBasicsImages.drying,
     href: "/paint-dry-recoat-cure-time/",
-    featured: ["paint-dry-recoat-cure-time", "should-you-sand-between-coats-of-paint", "how-long-before-furniture-against-painted-wall"],
+    featured: ["paint-dry-recoat-cure-time", "should-you-sand-between-coats-of-paint"],
   },
 } as const;
 
@@ -80,7 +80,7 @@ export const planPrepareStages = [
     eyebrow: "Make it sound",
     title: "Clean, repair, and smooth",
     description: "Turn a dusty, dented, or newly installed surface into a stable base that will not advertise every defect through the finish.",
-    guideIds: ["surface-preparation-before-painting", "patch-nail-holes-and-small-drywall-damage", "how-to-paint-new-drywall"],
+    guideIds: ["surface-preparation-before-painting"],
   },
 ] as const;
 

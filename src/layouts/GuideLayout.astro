@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import ArticleHero from "../components/ArticleHero.astro";
 import Breadcrumbs from "../components/Breadcrumbs.astro";
 import GuideList from "../components/GuideList.astro";
 import EditorialGuideCard from "../components/EditorialGuideCard.astro";
@@ -11,6 +12,12 @@ import { getRecommendations } from "../data/recommendations";
 const { entry, relatedGuides = [], headings = [] } = Astro.props;
 const { title, description, category, difficulty, activeTime, totalTime, updated, summary, supplies, hero, noindex, recommendationSlots, articleStyle, takeaways } = entry.data;
 const categoryInfo = categories[category];
+const topicInfo = "topics" in categoryInfo && entry.data.topic ? categoryInfo.topics.find((topic) => topic.id === entry.data.topic) : undefined;
+const editorialBreadcrumbs = [
+  { label: categoryInfo.title, href: categoryInfo.href },
+  ...(topicInfo ? [{ label: topicInfo.title, href: `${categoryInfo.href}${topicInfo.id}/` }] : []),
+  { label: title },
+];
 const recommendationItems = getRecommendations(recommendationSlots);
 const isoDate = updated.toISOString();
 const editorial = articleStyle === "editorial";
@@ -27,25 +34,25 @@ const schema = [
 <BaseLayout {title} {description} image={hero?.src} type="article" {schema} {noindex}>
   {editorial ? (
     <>
-      <header class="editorial-head"><div class="wrap"><Breadcrumbs items={[{ label: categoryInfo.title, href: categoryInfo.href }, { label: "Plan & Prepare", href: "/painting-basics/plan-prepare/" }, { label: title }]} /><div class="editorial-hero-grid"><div class="editorial-title"><p class="eyebrow">A beginner's guide to repainting</p><h1>{title}</h1><p class="lead">{description}</p><dl class="guide-meta"><div><dt>Difficulty</dt><dd>{difficulty}</dd></div><div><dt>Hands-on time</dt><dd>{activeTime}</dd></div><div><dt>Total time</dt><dd>{totalTime}</dd></div></dl></div>{hero && <figure class="editorial-hero"><img src={hero.src} alt={hero.alt} width="1400" height="933" /><figcaption>Repainting works best when the old finish is clean, stable, and ready to bond.</figcaption></figure>}</div></div></header>
+      <header class="editorial-head"><div class="wrap"><Breadcrumbs items={editorialBreadcrumbs} /><div class="editorial-hero-grid"><div class="editorial-title"><p class="eyebrow">{categoryInfo.eyebrow}</p><h1>{title}</h1><p class="lead">{description}</p><dl class="guide-meta"><div><dt>Difficulty</dt><dd>{difficulty}</dd></div><div><dt>Hands-on time</dt><dd>{activeTime}</dd></div><div><dt>Total time</dt><dd>{totalTime}</dd></div></dl></div>{hero && <ArticleHero {hero} variant="editorial" />}</div></div></header>
       <div class="wrap editorial-shell">
         <aside class="toc-column"><InThisGuide {headings} /></aside>
         <div class="article-column">
-          <aside class="quick-answer" aria-labelledby="quick-answer"><p class="eyebrow">Quick answer</p><h2 id="quick-answer">Yes—if the old paint is still a sound surface.</h2><p>{summary}</p></aside>
-          <section class="supplies editorial-supplies" aria-labelledby="supplies-heading"><h2 id="supplies-heading">A small preparation kit</h2><ul>{supplies.map((item) => <li>{item}</li>)}</ul><p class="supply-note"><strong>Start with the surface:</strong> You may not need every item. Inspect first, then use only the cleaning, repair, sanding, or priming step the wall requires.</p></section>
+          <aside class="quick-answer" aria-labelledby="quick-answer"><p class="eyebrow">Quick answer</p><h2 id="quick-answer">The decision starts with the existing coating.</h2><p>{summary}</p></aside>
+          <section class="supplies editorial-supplies" aria-labelledby="supplies-heading"><h2 id="supplies-heading">For a simple condition check</h2><ul>{supplies.map((item) => <li>{item}</li>)}</ul><p class="supply-note"><strong>Inspect first:</strong> Use only the cleaning, repair, sanding, or priming step the surface and new coating actually require.</p></section>
           <article class="prose editorial-prose"><slot /></article>
           {takeaways && <aside class="takeaways" aria-labelledby="takeaways-heading"><p class="eyebrow">The bottom line</p><h2 id="takeaways-heading">Key takeaways</h2><ul>{takeaways.map((item) => <li>{item}</li>)}</ul></aside>}
           {recommendationItems.length > 0 && <Recommendations items={recommendationItems} />}
           <p class="updated">Last reviewed and updated <time datetime={isoDate}>{updated.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</time>.</p>
         </div>
       </div>
-      {visibleRelated.length > 0 && <section class="section related-editorial"><div class="wrap"><p class="eyebrow">Keep building the skill</p><h2>Related visual guides</h2><p class="lead">Go deeper on the preparation or application step your wall needs.</p><div class="related-grid">{visibleRelated.map((guide) => <EditorialGuideCard {guide} />)}</div></div></section>}
+      {visibleRelated.length > 0 && <section class="section related-editorial"><div class="wrap"><p class="eyebrow">Keep building the skill</p><h2>Related visual guides</h2><p class="lead">Go deeper on the preparation or coating decision your surface needs.</p><div class="related-grid">{visibleRelated.map((guide) => <EditorialGuideCard {guide} />)}</div></div></section>}
     </>
   ) : (
     <>
       <header class="guide-head"><div class="narrow"><Breadcrumbs items={[{ label: categoryInfo.title, href: categoryInfo.href }, { label: title }]} /><p class="eyebrow">{categoryInfo.eyebrow}</p><h1>{title}</h1><p class="lead">{description}</p><dl class="guide-meta"><div><dt>Difficulty</dt><dd>{difficulty}</dd></div><div><dt>Hands-on time</dt><dd>{activeTime}</dd></div><div><dt>Total time</dt><dd>{totalTime}</dd></div></dl></div></header>
       <div class="narrow guide-body">
-        {hero && <figure class="guide-hero"><img src={hero.src} alt={hero.alt} />{hero.attribution && <figcaption>{hero.attributionUrl ? <a href={hero.attributionUrl} rel="license">{hero.attribution}</a> : hero.attribution}</figcaption>}</figure>}
+        {hero && <ArticleHero {hero} />}
         <aside class="quick-answer" aria-labelledby="quick-answer"><h2 id="quick-answer">The short answer</h2><p>{summary}</p></aside>
         <section class="supplies" aria-labelledby="supplies-heading"><h2 id="supplies-heading">What you'll need</h2><ul>{supplies.map((item) => <li>{item}</li>)}</ul><p class="supply-note"><strong>About product links:</strong> We currently recommend types of tools, not specific retailers. If affiliate links are added later, they will be clearly disclosed near the recommendation.</p></section>
         <article class="prose"><slot /></article>
@@ -65,9 +72,6 @@ const schema = [
   dt { color: var(--muted); font-size: .72rem; font-weight: 850; letter-spacing: .06em; text-transform: uppercase; }
   dd { margin: .1rem 0 0; color: var(--ink-strong); font-weight: 800; }
   .guide-body { padding-block: var(--space-4) var(--space-6); }
-  .guide-hero { margin: 0 0 var(--space-4); }
-  .guide-hero img { width: 100%; border-radius: var(--radius-sm); }
-  .guide-hero figcaption, .editorial-hero figcaption { margin-top: .4rem; color: var(--muted); font-size: .78rem; }
   .quick-answer { margin-bottom: var(--space-4); padding: var(--space-3) var(--space-4); border-left: 6px solid var(--teal); background: var(--blue-wash); }
   .quick-answer h2 { margin: 0 0 var(--space-2); font-family: var(--font-body); font-size: 1.15rem; }
   .quick-answer p { margin-bottom: 0; }
@@ -81,13 +85,15 @@ const schema = [
   .prose :global(li) { margin-bottom: .55rem; }
   .prose :global(blockquote) { margin: var(--space-4) 0; padding: var(--space-3); border-left: 5px solid var(--ochre); background: #fff6d9; color: var(--ink-strong); }
   .prose :global(blockquote p:last-child) { margin-bottom: 0; }
+  .prose :global(figure) { margin: var(--space-5) 0; }
+  .prose :global(figure img) { width: 100%; height: min(28rem, 60vw); border-radius: var(--radius); object-fit: cover; object-position: var(--article-image-position, center); box-shadow: var(--shadow-soft); }
+  .prose :global(figure.article-image--detail img) { height: min(34rem, 70vw); aspect-ratio: 4 / 3; }
+  .prose :global(figcaption) { max-width: 42rem; margin: .65rem auto 0; color: var(--muted); font-size: .82rem; line-height: 1.45; text-align: center; }
   .updated { margin-top: var(--space-5); color: var(--muted); font-size: .85rem; }
   .editorial-head { padding: var(--space-3) 0 var(--space-6); background: linear-gradient(120deg, var(--blue-wash), var(--canvas)); }
   .editorial-hero-grid { display: grid; grid-template-columns: minmax(0, .95fr) minmax(28rem, 1.05fr); align-items: center; gap: clamp(var(--space-4), 6vw, var(--space-6)); margin-top: var(--space-4); }
   .editorial-title .eyebrow { margin-top: var(--space-3); }
   .editorial-title h1 { font-size: clamp(2.7rem, 6vw, 4.9rem); }
-  .editorial-hero { margin: 0; }
-  .editorial-hero img { width: 100%; aspect-ratio: 4 / 3; border: .6rem solid white; border-radius: var(--radius); object-fit: cover; box-shadow: var(--shadow); transform: rotate(1deg); }
   .editorial-shell { display: grid; grid-template-columns: 13.5rem minmax(0, var(--content)); justify-content: center; gap: clamp(var(--space-4), 5vw, var(--space-6)); padding-block: var(--space-5) var(--space-6); }
   .toc-column { min-width: 0; }
   .article-column { min-width: 0; }
@@ -98,8 +104,6 @@ const schema = [
   .editorial-prose :global(h2) { margin-top: var(--space-6); padding-top: 0; }
   .editorial-prose :global(h3) { margin-top: var(--space-5); }
   .editorial-prose :global(figure) { margin: var(--space-5) calc(var(--space-4) * -1); }
-  .editorial-prose :global(figure img) { width: 100%; aspect-ratio: 3 / 2; border-radius: var(--radius); object-fit: cover; box-shadow: var(--shadow-soft); }
-  .editorial-prose :global(figcaption) { max-width: 42rem; margin: .65rem auto 0; color: var(--muted); font-size: .82rem; line-height: 1.45; text-align: center; }
   .editorial-prose :global(.decision-box) { margin: var(--space-4) 0; padding: var(--space-3) var(--space-4); border: 1px solid var(--line); border-left: .35rem solid var(--coral); background: white; box-shadow: var(--shadow-soft); }
   .takeaways { margin-top: var(--space-6); padding: var(--space-4); border-radius: var(--radius); background: var(--ink-strong); color: white; }
   .takeaways .eyebrow { color: #8bd8d4; }
@@ -110,6 +114,6 @@ const schema = [
   .related-editorial h2 { margin-top: 0; }
   .related-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); margin-top: var(--space-4); }
   .related-grid :global(.editorial-card:nth-child(4)), .related-grid :global(.editorial-card:nth-child(5)) { grid-column: span 1; }
-  @media (max-width: 980px) { .editorial-hero-grid { grid-template-columns: 1fr; } .editorial-hero { max-width: 46rem; } .editorial-shell { grid-template-columns: minmax(0, var(--content)); } .related-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 980px) { .editorial-hero-grid { grid-template-columns: 1fr; } .editorial-hero-grid > :global(.article-hero) { max-width: 46rem; } .editorial-shell { grid-template-columns: minmax(0, var(--content)); } .related-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   @media (max-width: 620px) { .guide-meta { grid-template-columns: 1fr; } .guide-meta div { border-right: 0; border-bottom: 1px solid rgb(13 40 61 / .18); } .supplies ul { columns: 1; } .editorial-prose :global(figure) { margin-inline: 0; } .related-grid { grid-template-columns: 1fr; } }
 </style>

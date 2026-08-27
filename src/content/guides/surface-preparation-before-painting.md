@@ -1,59 +1,65 @@
 ---
-title: "How to Prepare a Surface Before Painting"
-description: "A practical beginner checklist for cleaning, repairing, sanding, and testing walls or furniture so new paint bonds and looks smooth."
+title: "What Does a Surface Need Before Painting?"
+description: "Use five condition checks—sound, clean, dry, smooth enough, and compatible—to decide what preparation a painted or bare surface actually needs."
 category: basics
 topic: plan-prepare
 difficulty: Easy
-activeTime: "1–4 hours"
-totalTime: "Several hours to 2 days"
-updated: 2026-08-25
-summary: "Remove anything loose, clean off grease and dust, repair damage, dull glossy finishes, remove sanding residue, and let the surface dry. Preparation is complete when the surface is sound, clean, dry, and appropriately dull—not when it merely looks better from across the room."
-supplies: [Mild cleaner suitable for the surface, Clean cloths and water, Putty knife and compatible filler, Sanding sponge or sandpaper, Vacuum with brush attachment, Gloves and eye protection, Primer when required]
-related: [do-you-need-primer, can-you-paint-over-old-paint, how-to-paint-a-room, how-to-paint-wood-furniture]
+activeTime: "10–20 minutes to assess"
+totalTime: "Preparation time depends on condition"
+updated: 2026-08-26
+summary: "A paint-ready surface is sound, clean, dry, smooth enough for the intended finish, and compatible with the coating system. Preparation should correct the conditions you find rather than apply the same cleaning, sanding, repair, and priming routine to every project."
+supplies:
+  - Bright light
+  - Clean white cloth
+  - New coating label or technical data
+  - Cleaning, repair, sanding, or priming materials only as needed
+related: [do-you-need-primer, can-you-paint-over-old-paint, do-you-need-to-sand-before-painting]
 featured: true
 recommendationSlots: [sanding-sponge]
 ---
 
-Preparation is the part of painting that determines whether the finish stays attached. The exact work varies, but the goal does not: paint needs a stable, clean, dry surface it can grip.
+Preparation is not a fixed list of chores. It is an assessment: identify what the surface is, find the conditions that could interfere with adhesion or appearance, and correct only those conditions.
 
-## Start by identifying the surface
+The same five checks apply broadly, although the products and methods differ by material.
 
-Drywall, plaster, bare wood, previously painted wood, laminate, and metal do not accept paint in the same way. Before sanding an unfamiliar finish, consider the age of the item or home. Older coatings may contain lead, and some building materials can contain other hazardous dusts. If that is possible, stop and use appropriate testing or qualified help rather than dry-sanding blindly.
+## 1. Is the surface sound?
 
-Read the new paint and primer labels. Their surface-preparation directions take priority over general advice.
+Paint needs a stable foundation. Peeling coating, loose fibers, crumbling filler, rot, active corrosion, and weak material underneath must be addressed before another layer is added.
 
-## 1. Make the surface sound
+Do not remove firmly attached coating merely because it is old. Do not preserve loose material merely because covering it is faster.
 
-Scrape away loose or flaking material with controlled pressure. Do not simply paint the loose edge down; the new coating will be attached to a failing layer.
+## 2. Is it clean?
 
-For walls, fill holes and dents with a compound intended for that repair. Deep damage may need more than one application. On wood, use a compatible wood filler where appropriate. Let repairs dry fully.
+Dust, grease, wax, soap film, chalk, mildew, and cleaner residue can sit between the surface and new paint. Contamination is not always visible, especially where hands, cooking, polishing products, or weather affect the finish.
 
-## 2. Clean before final sanding
+Use a cleaning method compatible with both the material and coating system. Sanding contamination into the surface is not a substitute for cleaning.
 
-Grease can be nearly invisible. Clean kitchen surfaces, doors around handles, furniture tops, and other touched areas especially well. Use the least aggressive cleaner that removes the contamination and is compatible with the surface. Rinse if the product requires it.
+## 3. Is it dry?
 
-Cleaning first prevents sanding from grinding grease into the surface or loading the abrasive immediately.
+Active leaks, damp material, condensation, and trapped cleaning moisture can cause failure. Find and correct the source rather than sealing it beneath paint.
 
-## 3. Sand for smoothness and grip
+Dry-to-the-touch is not enough when a porous material may still hold moisture internally.
 
-Sand repairs flush and soften hard paint edges. On a glossy, sound coating, light scuff-sanding creates a uniformly dull surface. You are usually trying to remove shine, not remove every layer of old finish.
+## 4. Is it smooth enough?
 
-Sand with the wood grain on visible wood surfaces. Use a sanding block or sponge on flat areas so finger pressure does not create grooves.
+Paint follows the shape beneath it. Ridges, loose edges, rough repairs, dents, and old drips may remain visible—especially under a higher sheen.
 
-> **Stop if you are unsure what the old coating contains.** Lead-safe work practices are different from ordinary sanding. Consult current EPA guidance and local requirements for pre-1978 housing.
+“Smooth enough” depends on the intended appearance. A broad utility surface and a glossy furniture top do not require the same refinement.
 
-## 4. Remove all dust
+## 5. Is the coating system compatible?
 
-Vacuum first, including corners and profiles. Then wipe using the method recommended for your coating. A surface that feels gritty will produce a gritty paint finish.
+Bare wood, drywall, laminate, masonry, metal, and existing paint can require different primers or preparation. Glossy finishes may need dulling; stains or corrosion may need specialized products.
 
-Avoid leaving cleaner residue or soaking porous material. Give the surface enough time to dry throughout, not only on top.
+Read the new coating's approved surfaces and preparation directions. When the old finish is unknown, test the complete system in a small inconspicuous area.
 
-## 5. Decide whether to prime
+## Sand and prime for a reason
 
-Prime bare or patched porous material, stain-prone areas, difficult glossy surfaces, major color changes, and substrates for which the finish paint requires a primer. Spot-priming repairs may be enough for a sound wall; a whole piece may need primer when adhesion or stain blocking is the concern.
+Sand when you need to smooth a defect, feather an edge, dull gloss, or meet product instructions. Prime when you need adhesion, porosity control, stain blocking, corrosion protection, or another specified function.
 
-## The fingertip test
+Neither step should be automatic, and neither can correct active moisture, dirt, or a failing substrate.
 
-Run a clean hand across the dry surface. It should feel even, not dusty, greasy, chalky, or slick. Shine should be consistently dulled where scuff-sanding was required. Inspect from a low angle with a work light; shadows reveal ridges that front lighting hides.
+## A final condition check
 
-Preparation is not glamorous, but it is far easier to correct a ridge, loose edge, or greasy patch now than after two finish coats.
+In good light, the surface should feel stable and sufficiently even—not dusty, greasy, chalky, damp, or unexpectedly slick. Any repair should be dry, and any required test area should have bonded as expected.
+
+If disturbing an older coating could create hazardous dust, pause and follow current safety guidance before scraping or sanding. Preparation is successful when it produces the right foundation for the selected coating—not when every possible prep step has been performed.

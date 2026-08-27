@@ -1,8 +1,7 @@
 ---
 title: "Should You Cut In Before or After Rolling?"
 description: "Use a simple wall-by-wall workflow that keeps brushed edges and rolled paint working together instead of letting the cut-in dry around the room."
-category: basics
-topic: apply-paint
+category: home
 difficulty: Easy
 activeTime: "5 minutes to plan"
 totalTime: "Part of each wall coat"

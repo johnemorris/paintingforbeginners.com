@@ -64,7 +64,7 @@ A dramatic color change, porous surface, uneven application, or a color with dif
 
 ## The beginner-friendly rule
 
-Do not buy primer because you think **every** wall requires it.
+Do not buy primer because you think **every** surface requires it.
 
 Do not skip primer because your finish paint says **paint + primer**.
 

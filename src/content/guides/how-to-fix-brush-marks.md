@@ -60,11 +60,9 @@ Use a brush type recommended for the coating and task.
 
 A thick ridge has more material to level and can sag or hold brush texture.
 
-## For wall cut-ins, roll close to the brush work
+## Separate normal tool texture from a defect
 
-A brushed border can look different from the rolled center of a wall.
-
-Keep the cut-in narrow and bring the roller close enough to blend the texture while the edge is still workable.
+Brush, roller, and spray application do not produce identical textures. Judge the result expected for the chosen coating and tool before trying to make one method imitate another.
 
 ## Do not add thinner automatically
 

@@ -1,8 +1,7 @@
 ---
 title: "How to Patch Nail Holes, Dents, and Small Drywall Damage Before Painting"
 description: "Fix nail holes, dents, anchor holes, and other small drywall damage so repairs do not flash through a fresh coat of paint."
-category: basics
-topic: plan-prepare
+category: home
 difficulty: Easy
 activeTime: "20–45 minutes"
 totalTime: "Several hours to 1 day with drying"

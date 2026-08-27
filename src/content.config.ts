@@ -22,6 +22,7 @@ const guides = defineCollection({
     hero: z.object({
       src: z.string(),
       alt: z.string(),
+      caption: z.string().optional(),
       attribution: z.string().optional(),
       attributionUrl: z.string().url().optional(),
     }).optional(),

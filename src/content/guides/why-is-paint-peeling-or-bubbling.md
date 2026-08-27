@@ -29,7 +29,7 @@ Before cosmetic repair, investigate possible water or moisture sources such as:
 
 Do not seal an active moisture problem behind fresh paint.
 
-If the wall is soft, wet, moldy, or the source is unclear, the project may need repair beyond painting.
+If the material is soft, wet, moldy, heavily corroded, or the source is unclear, the project may need repair beyond painting.
 
 ## Other common causes
 
@@ -44,7 +44,7 @@ Peeling can also result from:
 
 Bubbles or crater-like defects during application can also have causes different from classic moisture blisters, including surface contamination. Diagnose what you are actually seeing.
 
-## Do not test adhesion by ripping off half the wall
+## Use failure as evidence, not an invitation to strip blindly
 
 A small failed area can sometimes reveal whether the weakness is:
 
@@ -52,26 +52,19 @@ A small failed area can sometimes reveal whether the weakness is:
 - between an older coating and the substrate
 - within damaged drywall paper or another weak material
 
-But aggressive scraping of unknown old paint can create additional hazards and damage.
+But aggressive scraping of an unknown coating can create additional hazards and damage.
 
 > **Lead warning:** Paint in pre-1978 homes may contain lead. Scraping and sanding can create hazardous dust. Follow current EPA lead-safe guidance before disturbing suspect coatings.
 
-## The basic repair sequence
+## The cause determines the correction
 
-Once the underlying cause is corrected:
+Loose material cannot remain as a dependable base, but removal is only one part of the decision. Moisture must be stopped, contamination removed, damaged substrate repaired, and incompatible layers addressed before a suitable primer or finish is selected.
 
-1. remove only loose/failing material using a safe method appropriate to the coating
-2. feather and repair damaged edges
-3. clean the surface
-4. allow it to dry
-5. prime exposed or problem areas with the appropriate primer
-6. repaint according to the coating system
-
-The exact repair depends on why the paint failed.
+The exact repair depends on where the bond failed and why. A small application defect, widespread substrate failure, and recurring moisture problem should not receive the same response.
 
 ## Why "just prime it" is not enough
 
-Primer cannot repair an active leak, greasy surface, loose drywall paper, or a previous paint layer that is detaching from the wall.
+Primer cannot repair an active leak, greasy surface, weak substrate, untreated corrosion, or a previous paint layer that is detaching.
 
 Primer is part of a coating system—not glue for every failing surface.
 

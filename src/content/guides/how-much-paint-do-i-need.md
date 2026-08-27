@@ -1,64 +1,61 @@
 ---
 title: "How Much Paint Do I Need?"
-description: "Measure walls or furniture, account for coats and coverage, and buy a practical amount of paint without relying on a misleading one-size-fits-all estimate."
+description: "Estimate paint from actual surface area, planned coats, and the product's stated coverage, then adjust for texture, porosity, detail, and normal waste."
 category: basics
 topic: paint-coverage
 difficulty: Easy
 activeTime: "15–30 minutes"
 totalTime: "About 30 minutes"
-updated: 2026-08-25
-summary: "Calculate the square footage you will actually coat, multiply by the number of coats, then divide by the coverage printed on your paint. Round up enough to cover normal waste and touch-ups; texture, porosity, technique, and strong color changes can all reduce real-world coverage."
-supplies: [Tape measure, Calculator or phone, Project sketch, Coverage information from the paint label]
-related: [how-to-paint-a-room, do-you-need-primer, surface-preparation-before-painting]
+updated: 2026-08-26
+summary: "Measure the area you will coat, multiply by the planned finish coats, and divide by the coverage stated for the exact product. Treat the result as an estimate because texture, porosity, shape, application method, and waste change real consumption."
+supplies: [Tape measure, Calculator, Project sketch, Coverage information for the selected coating]
+related: [how-many-coats-of-paint, do-you-need-primer, surface-preparation-before-painting]
 ---
 
-Paint calculators are estimates, not promises. The most reliable starting point is the coverage range printed by the manufacturer of the exact paint you plan to use.
+Paint calculators are estimates, not promises. The most reliable starting point is the coverage stated by the manufacturer of the exact product you plan to use.
 
-## Measure wall area
+## Use the basic calculation
 
-For each wall, multiply width by height. Add the wall totals together.
+1. Measure the paintable surface area.
+2. Multiply it by the number of planned finish coats.
+3. Divide by the product's coverage per container.
+4. Round up to a quantity you can actually buy, with a modest allowance for waste and touch-up.
 
-For a simple rectangular room, you can first calculate the perimeter:
+`surface area × finish coats ÷ coverage per container = estimated containers`
 
-`(length + width) × 2 × wall height = gross wall area`
+Calculate primer separately because it can have different coverage and may be used only on selected areas.
 
-Subtract large openings if you want a tighter estimate. For a typical first project, leaving small windows and doors in the number creates a sensible allowance for waste and touch-up. Measure unusually large openings separately.
+## Measure the actual shape
 
-## Account for coats
+For a rectangle, multiply width by height. Break a complex object or area into simple rectangles, circles, or panels, calculate each, and add them together. Include edges, returns, profiles, and additional faces when they will be coated.
 
-Multiply the paintable area by the number of planned coats. Two finish coats are a practical assumption for many color changes and help produce consistent color and sheen. Do not count primer as a finish coat; calculate primer separately using its own coverage.
+For a rectangular room, wall area can be estimated as:
 
-Then divide by the manufacturer's stated coverage per container:
+`(length + width) × 2 × wall height`
 
-`total coating area ÷ coverage per container = containers needed`
+That is one example of the general area method, not a separate paint rule. Subtract very large openings when a tighter estimate matters; leaving small openings in the total can provide a useful allowance.
 
-Round up to a quantity you can actually buy. Keeping some matching paint is useful for later touch-ups.
+## Why real coverage can be lower
 
-## When coverage is lower than the label estimate
+More coating may be needed for:
 
-Expect to use more paint on:
+- rough or deeply textured surfaces;
+- porous or improperly sealed material;
+- shapes with many edges, joints, or profiles;
+- strong color changes or lower-hiding colors;
+- spraying or another method with transfer loss; and
+- repeated transfers, cleanup, and material left in tools or containers.
 
-- Rough or heavily textured walls.
-- Porous unprimed material.
-- Deep texture and masonry.
-- Very strong color changes.
-- Surfaces with many edges and details.
-- Projects where the roller or brush is repeatedly cleaned or paint is transferred between containers.
+Do not stretch paint beyond its stated coverage to make the estimate work. A film applied too thinly can leave poor hide, uneven sheen, or inadequate performance.
 
-Application thickness matters too. Spreading paint beyond its recommended coverage can leave weak hide and uneven sheen.
+## Keep products and batches straight
 
-## Ceilings, trim, and doors are separate
+Separate calculations are useful when surfaces receive different primers, colors, sheens, or specialty coatings. Record the brand, product line, color code, sheen, and batch information.
 
-Calculate ceiling area as room length × width. Trim is usually easiest to estimate by measuring its linear length and using the coating's guidance. Doors have two faces plus edges, but panel designs create more surface and brush work than a flat rectangle suggests.
+When several cans of the same finish will meet across one large uninterrupted surface, combining them in a suitable larger container can reduce visible batch variation when the manufacturer permits it.
 
-Use separate calculations when colors, products, or sheens differ.
+## Buy for uncertainty, not fear
 
-## Keep the batch consistent
+Round up enough to complete the planned coats and retain a practical touch-up amount, but do not multiply the estimate without a reason. Small objects, detailed pieces, and specialty coatings may be available in smaller containers.
 
-If several cans will be used on the same large surface, mix them together in a clean larger container when practical—a process painters call boxing. This reduces the chance that tiny batch variations become visible from one section to the next.
-
-Record the brand, product line, color name and code, sheen, and purchase date. A photo of the label is useful, but keep the information with the leftover paint too.
-
-## Do not overbuy specialty paint
-
-For a small furniture project, the full room formula is not very helpful. Check whether the manufacturer provides project guidance or smaller container sizes. Detailed furniture, absorbent raw wood, and spraying all change consumption. Measure broad panels, use the label as a starting point, and include a modest allowance rather than buying several times the likely amount.
+Measure first, use the label coverage second, and adjust only for conditions that actually apply to the project.

@@ -1,13 +1,13 @@
 ---
 title: "Do You Need to Sand Before Painting?"
-description: "Learn when sanding is important before painting, when a light scuff is enough, and when a sound painted wall may not need sanding at all."
+description: "Learn when sanding solves a real smoothness or adhesion problem, when a light scuff is enough, and when a sound painted surface needs none."
 category: basics
 topic: plan-prepare
 difficulty: Easy
 activeTime: "15–60 minutes depending on the surface"
 totalTime: "About 30 minutes to several hours"
 updated: 2026-08-26
-summary: "You do not automatically need to sand every wall before repainting. Sand when you need to smooth defects, dull a slick finish, feather repairs, or create a better surface for the next coating system."
+summary: "You do not automatically need to sand every surface before painting. Sand when you need to smooth defects, dull a slick finish, feather repairs, or meet the next coating system's preparation requirements."
 supplies: [Fine or medium sanding sponge appropriate to the surface, Vacuum or clean cloth, Eye protection, Dust protection appropriate to the job]
 related: [surface-preparation-before-painting, can-you-paint-over-old-paint, do-you-need-primer]
 featured: false
@@ -35,9 +35,9 @@ A glossy or hard, slick coating may need cleaning and scuff-sanding as part of t
 
 The exact preparation depends on the existing finish and the new product. Follow the new coating manufacturer's adhesion and preparation directions.
 
-## You may not need to sand an ordinary sound wall
+## A sound painted surface may not need sanding
 
-If an interior wall is:
+If the existing finish is:
 
 - clean
 - firmly bonded
@@ -45,7 +45,7 @@ If an interior wall is:
 - not unusually glossy
 - compatible with the new coating
 
-then a full-wall sanding may add work and dust without adding much value.
+then blanket sanding may add work and dust without adding much value.
 
 You may still need to sand individual repairs or defects.
 
@@ -59,13 +59,13 @@ Grinding contamination into the surface with sandpaper is not a substitute for c
 
 There is no single grit for every material and coating.
 
-For typical wall smoothing and between-coat work, fine abrasives are easier to control than aggressive coarse paper. Use the grit recommended for the surface and product, and test a small area first.
+For light smoothing and between-coat work, fine abrasives are easier to control than aggressive coarse paper. Use the grit recommended for the material and product, and test a small area first.
 
 The goal is usually to **smooth or dull**, not remove the entire coating.
 
 ## Remove sanding dust before painting
 
-Dust left on the wall can interfere with the finish.
+Dust left on the surface can interfere with the finish.
 
 Vacuum or clean the surface using a method appropriate for the material and coating, then allow any wet cleaning to dry before painting.
 
@@ -81,6 +81,6 @@ Ask these questions:
 
 1. Is the surface rough or damaged? **Sand the problem areas.**
 2. Is the existing finish slick enough to create an adhesion concern? **Follow the coating system's prep directions; scuff-sanding may be part of them.**
-3. Is it a clean, sound, ordinary painted wall with no defects? **You may not need to sand the whole thing.**
+3. Is it a clean, sound painted surface with no defects? **You may not need to sand it.**
 
-Preparation should solve an actual surface problem—not become a ritual you perform on every room.
+Preparation should solve an actual surface problem—not become a ritual.

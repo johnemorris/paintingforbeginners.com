@@ -1,8 +1,7 @@
 ---
 title: "How to Load a Paint Brush Without Drips or Dry Brush Marks"
 description: "Learn how much paint to put on a brush, where to dip the bristles, and how to keep the brush working smoothly instead of dripping or dragging."
-category: basics
-topic: apply-paint
+category: supplies
 difficulty: Easy
 activeTime: "5 minutes to learn"
 totalTime: "Ongoing during painting"

@@ -1,8 +1,7 @@
 ---
 title: "How Long Before You Can Put Furniture Against a Painted Wall?"
 description: "Avoid sticking, scuffing, or imprinting fresh paint by understanding why recoat time is not the same as the time needed before furniture presses against a wall."
-category: basics
-topic: drying-durability
+category: home
 difficulty: Easy
 activeTime: "5 minutes to plan"
 totalTime: "Often several days or longer depending on the coating and conditions"

@@ -1,8 +1,7 @@
 ---
 title: "Why Does My Paint Look Different Where I Cut In?"
 description: "Fix darker or shinier borders around a painted wall by understanding wet edges, film thickness, brush texture, mixing, and roller overlap."
-category: basics
-topic: fix-problems
+category: home
 difficulty: Easy
 activeTime: "15–30 minutes to diagnose"
 totalTime: "Usually another coat plus drying time"

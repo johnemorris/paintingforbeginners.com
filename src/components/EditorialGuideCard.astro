@@ -17,7 +17,7 @@ const { guide, image = guide.data.hero ?? imageForGuide(guide.id, guide.data.top
 <style>
   .editorial-card { display: flex; min-height: 100%; flex-direction: column; overflow: hidden; border-radius: var(--radius); background: white; box-shadow: var(--shadow-soft); }
   .card-image { display: block; overflow: hidden; background: var(--blue-wash); }
-  img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; transition: transform .25s ease; }
+  img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; transition: transform .25s ease; }
   .card-image:hover img { transform: scale(1.025); }
   .card-copy { display: flex; flex: 1; flex-direction: column; padding: var(--space-3); }
   .card-meta { margin: 0 0 var(--space-1); color: var(--coral-dark); font-size: .72rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }

@@ -7,7 +7,7 @@ difficulty: Easy
 activeTime: "15–30 minutes when needed"
 totalTime: "Adds drying and cleanup time between coats"
 updated: 2026-08-26
-summary: "Sanding between coats can remove dust nibs, small ridges, and brush texture and can help produce a smoother finish, especially on trim and furniture. It is not automatically required for every ordinary wall coat."
+summary: "Sanding between coats can remove dust nibs, small ridges, and brush texture when a smoother finish matters. It is not automatically required when the previous coat is sound, clean, smooth, and ready to recoat."
 supplies: [Fine sanding sponge or abrasive recommended for the coating, Vacuum or clean cloth, Protective equipment appropriate to the job]
 related: [do-you-need-to-sand-before-painting, paint-dry-recoat-cure-time, how-many-coats-of-paint]
 featured: false
@@ -15,7 +15,7 @@ featured: false
 
 You **can** sand between coats of paint, and sometimes it noticeably improves the finish.
 
-That does not mean every bedroom wall needs to be sanded from corner to corner between every coat.
+That does not mean every acceptable coat needs to be sanded before the next one.
 
 ## Sand between coats when you need to remove defects
 
@@ -30,11 +30,11 @@ Light between-coat sanding is useful for:
 
 The goal is usually a light leveling pass, not stripping off the coat you just applied.
 
-## Ordinary walls may not need it
+## A smooth previous coat may not need it
 
-If the first wall coat dried smooth, clean, and free of defects—and the product does not require sanding for recoating—you can often proceed with the next coat after the required recoat interval.
+If the previous coat dried smooth, clean, and free of defects—and the product does not require sanding for recoating—you can often proceed after the required interval.
 
-Sanding an already acceptable wall can create unnecessary dust.
+Sanding an already acceptable coating can create unnecessary dust and risk breaking through edges.
 
 ## Wait until the coating is ready
 

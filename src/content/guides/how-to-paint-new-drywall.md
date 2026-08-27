@@ -1,8 +1,7 @@
 ---
 title: "How to Paint New Drywall for the First Time"
 description: "Prepare, prime, and paint new drywall without letting porous joint compound, dust, or unfinished repairs ruin the final wall."
-category: basics
-topic: plan-prepare
+category: home
 difficulty: Moderate
 activeTime: "Several hours for a typical room"
 totalTime: "1–3 days with drying and recoating"

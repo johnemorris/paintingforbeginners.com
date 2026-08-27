@@ -1,6 +1,6 @@
 ---
 title: "How to Fix Paint Drips and Runs"
-description: "Fix wet or dried paint drips without smearing the wall, then prevent new runs by loading tools correctly and avoiding heavy buildup."
+description: "Decide whether a paint drip is still workable or must dry before repair, then prevent new runs by correcting loading and film thickness."
 category: basics
 topic: fix-problems
 difficulty: Easy
@@ -45,7 +45,7 @@ Once the coating is hard enough to work without tearing:
 2. feather the edges rather than digging a crater around the defect
 3. remove the dust
 4. spot-prime if your repair exposes a substrate that requires it
-5. recoat the area—or the wall section—uniformly
+5. recoat the area or natural break uniformly
 
 A severe run may require more than a quick sanding pass.
 
@@ -60,7 +60,7 @@ Common causes include:
 - failing to check lower edges after brushing
 - trying to make one coat do the work of several
 
-## Watch the wall after you pass it
+## Check the surface before moving on
 
 Before moving too far away, glance back at freshly painted edges, corners, and areas below heavy brush work.
 

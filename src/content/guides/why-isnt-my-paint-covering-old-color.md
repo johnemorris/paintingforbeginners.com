@@ -13,19 +13,19 @@ related: [how-many-coats-of-paint, do-you-need-primer, how-to-use-a-paint-roller
 featured: false
 ---
 
-You finish a wall, step back, and can still see the old color underneath.
+The new coat has dried, but the old color still shows through.
 
-Before buying a completely different paint, figure out **why** the wall is not hiding evenly.
+Before changing products, determine **why** the coating is not hiding evenly.
 
 ## First: let the coat dry
 
 Wet paint can look uneven, translucent, darker, or lighter in places.
 
-Do not judge final hiding while portions of the wall are still drying. Wait at least the required recoat time and evaluate the wall under normal lighting.
+Do not judge final hiding while portions are still drying. Wait for the required interval and evaluate under normal lighting.
 
 ## Common reason #1: the film is too thin
 
-If the roller is running nearly dry, you may be spreading too little paint over too much wall.
+If the brush or roller is running nearly dry, you may be spreading too little paint over too much area.
 
 Signs include:
 
@@ -34,7 +34,7 @@ Signs include:
 - old color showing more strongly in some sections
 - repeated temptation to press harder on the roller
 
-Reload the roller before it becomes starved and apply the paint at the manufacturer's recommended coverage rate.
+Reload the applicator before it becomes starved and apply the paint at the manufacturer's recommended coverage rate.
 
 ## Common reason #2: the color change is demanding
 
@@ -46,9 +46,9 @@ Do not improvise the primer color; follow the paint manufacturer's recommendatio
 
 ## Common reason #3: patches are absorbing differently
 
-Bare joint compound, repairs, and porous areas can make a wall look uneven.
+Bare material, repairs, and porous areas can make a finish look uneven.
 
-If the problem follows repaired spots rather than the whole wall, the issue may be preparation or spot-priming rather than the finish color itself.
+If the problem follows repaired spots rather than the whole surface, the issue may be preparation or spot-priming rather than the finish color itself.
 
 ## Common reason #4: the paint was not mixed thoroughly
 
@@ -60,13 +60,13 @@ Stir the paint thoroughly according to the label, especially after it has been s
 
 Going back over an area after it has started to set can leave texture, lap marks, or different film thickness.
 
-Work in manageable sections and maintain a wet edge instead of chasing every spot as the wall dries.
+Work in manageable sections and maintain a wet edge instead of chasing every spot as the coating dries.
 
 ## Should you just add another coat?
 
 If the surface is properly prepared and the previous coat is sound, a uniform additional finish coat may be exactly what is needed.
 
-But if the wall is peeling, contaminated, unprimed where primer is required, or covered with obvious ridges and defects, another coat will not fix the underlying problem.
+But if the surface is peeling, contaminated, unprimed where primer is required, or covered with obvious ridges, another coat will not fix the underlying problem.
 
 ## A better question than "Is this paint bad?"
 

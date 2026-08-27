@@ -1,8 +1,7 @@
 ---
 title: "How to Use a Paint Roller Without Leaving Marks"
 description: "Learn how to load a roller, use the right pressure, keep a wet edge, overlap sections, and stop reworking paint before it starts leaving lines."
-category: basics
-topic: apply-paint
+category: home
 difficulty: Easy
 activeTime: "15 minutes to practice"
 totalTime: "About 30 minutes with setup"
