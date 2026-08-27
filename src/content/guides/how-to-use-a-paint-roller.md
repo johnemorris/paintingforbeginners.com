@@ -1,7 +1,7 @@
 ---
 title: "How to Use a Paint Roller Without Leaving Marks"
 description: "Learn how to load a roller, use the right pressure, keep a wet edge, overlap sections, and stop reworking paint before it starts leaving lines."
-category: home
+category: apply
 difficulty: Easy
 activeTime: "15 minutes to practice"
 totalTime: "About 30 minutes with setup"
@@ -14,7 +14,7 @@ supplies:
   - Stir stick
   - Drop cloth
   - Extension pole if useful
-related: [how-to-choose-roller-nap, fix-roller-marks-and-patchy-paint, paint-brush-vs-roller, how-to-paint-a-room]
+related: [how-to-choose-roller-nap, how-do-i-know-if-i-put-on-enough-paint, should-you-go-back-over-wet-paint, fix-roller-marks-and-patchy-paint, paint-brush-vs-roller]
 featured: true
 recommendationSlots: [nine-inch-roller-frame, roller-extension-pole]
 ---
@@ -73,6 +73,11 @@ Listen and look.
 When the roller begins to sound dry, requires extra pressure, or leaves broken coverage, reload it.
 
 Do not try to "get your money's worth" from every roller load by pressing harder. That can leave thin paint in the center, heavy ridges at the edges, and uneven texture.
+
+<figure>
+  <img src="/images/apply-paint/roller-pressure-comparison.jpg" alt="A roller guided with steady pressure leaving an even film beside a roller pressed too hard and squeezing paint into heavy ridges." width="1536" height="1024" loading="lazy">
+  <figcaption>Guide a loaded roller with steady contact. Excess force squeezes paint unevenly instead of restoring a dry roller.</figcaption>
+</figure>
 
 ## 7. Finish with light, consistent passes
 

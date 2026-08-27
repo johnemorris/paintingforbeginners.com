@@ -7,7 +7,7 @@ const guides = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string().min(80).max(180),
-    category: z.enum(["basics", "home", "furniture", "canvas", "supplies"]),
+    category: z.enum(["basics", "home", "furniture", "canvas", "supplies", "apply"]),
     topic: z.string().optional(),
     difficulty: z.enum(["Easy", "Moderate"]),
     activeTime: z.string(),

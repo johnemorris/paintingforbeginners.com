@@ -9,8 +9,9 @@ export const navigation = [
   { href: "/painting-basics/", label: "Painting Basics" },
   { href: "/home-painting/", label: "Home Painting" },
   { href: "/furniture-projects/", label: "Furniture & Projects" },
-  { href: "/canvas-painting/", label: "Canvas Painting" },
   { href: "/supplies-tools/", label: "Supplies & Tools" },
+  { href: "/apply-paint/", label: "Apply Paint" },
+  { href: "/canvas-painting/", label: "Canvas Painting" },
 ] as const;
 
 export const categories = {
@@ -25,7 +26,6 @@ export const categories = {
     topics: [
       { id: "plan-prepare", title: "Plan & Prepare", description: "Check the existing surface and decide what it needs before opening the finish paint." },
       { id: "paint-coverage", title: "Choose Paint & Coverage", description: "Choose the right finish, estimate paint, and plan for enough coats." },
-      { id: "apply-paint", title: "Apply Paint", description: "Build the simple application habits that produce an even finish." },
       { id: "fix-problems", title: "Fix Paint Problems", description: "Diagnose visible marks and correct the cause before recoating." },
       { id: "drying-durability", title: "Drying & Durability", description: "Know when paint is ready for another coat, handling, and normal use." },
     ],
@@ -68,6 +68,16 @@ export const categories = {
     introHeading: "Understand the job before the product",
     intro: "Every useful recommendation should explain the problem it solves, where it is optional, and what simpler alternative may already be in your kit.",
     startHere: "room-painting-supply-checklist",
+    topics: [],
+  },
+  apply: {
+    title: "Apply Paint",
+    href: "/apply-paint/",
+    eyebrow: "Build an even coat",
+    description: "Beginner-friendly application methods for loading brushes and rollers, keeping paint workable, spraying controlled coats, and knowing when to stop touching the finish.",
+    introHeading: "Good technique manages paint while it is workable",
+    intro: "Choose an applicator that fits the surface, load it enough to flow, spread a controlled film, and connect each section before the edge begins to set. The goal is consistency—not pressure, speed, or one heavy coat.",
+    startHere: "how-to-keep-a-wet-edge",
     topics: [],
   },
 } as const;

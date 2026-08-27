@@ -41,7 +41,7 @@ const problems = commonProblems.map((problem) => ({ ...problem, guide: findGuide
   </section>
 
   <section class="section topics-section" id="topics">
-    <div class="wrap"><div class="section-heading"><p class="eyebrow">Learn by topic</p><h2>Five skills behind a better finish</h2><p class="lead">Choose the question closest to your project. You do not need to learn everything before you begin.</p></div>
+    <div class="wrap"><div class="section-heading"><p class="eyebrow">Learn by topic</p><h2>Four decisions behind a better finish</h2><p class="lead">Choose the question closest to your project. You do not need to learn everything before you begin.</p></div>
       <div class="topic-stack">{category.topics.map((topic) => <PaintingTopicCard {topic} visual={paintingBasicsTopics[topic.id]} {guides} />)}</div>
     </div>
   </section>
@@ -80,7 +80,7 @@ const problems = commonProblems.map((problem) => ({ ...problem, guide: findGuide
   ol p { margin: .15rem 0 0; color: #bfd0d6; }
   .section-heading { max-width: 48rem; margin-bottom: var(--space-5); }
   .section-heading h2 { margin-top: 0; }
-  .topic-stack { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); }
+  .topic-stack { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); }
   .questions-section { background: var(--blue-wash); }
   .question-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); }
   .problem-section { background: var(--canvas); }

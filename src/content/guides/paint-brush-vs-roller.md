@@ -1,18 +1,18 @@
 ---
-title: "Paint Brush vs. Roller: Which Should You Use?"
-description: "Choose between a brush, standard roller, and mini roller by surface size, shape, finish, and paint type—and learn why most projects use both."
+title: "Ways to Apply Paint: Brush vs. Roller, Spray, and Detail Tools"
+description: "Choose a brush, roller, spray can, powered sprayer, foam brush, paint pad, or detail brush by surface size, shape, coating, and finish."
 category: supplies
 difficulty: Easy
 activeTime: "10–20 minutes to choose"
 totalTime: "About 20 minutes"
 updated: 2026-08-26
-summary: "Use a brush for edges, corners, profiles, and control; use a roller for broad, repeatable coverage. Most rooms need an angled brush plus a 9-inch roller, while furniture often combines a brush for details with a small smooth roller for flat panels."
-supplies: [Paint product directions, Surface measurements, Angled brush, Roller frame, Roller cover matched to texture, Tray or bucket and grid]
-related: [how-to-choose-roller-nap, room-painting-supply-checklist, how-to-paint-trim-and-baseboards]
+summary: "Choose by area, control, and shape: brushes handle edges and detail, rollers cover broad surfaces, and spraying reaches awkward forms when masking and overspray control are practical. Many projects use more than one applicator."
+supplies: [Paint product directions, Surface measurements, Brush suited to the coating, Roller and cover matched to texture, Spray applicator when appropriate, Masking and surface protection]
+related: [how-to-choose-roller-nap, how-to-load-a-paint-brush, how-to-use-a-paint-roller, how-to-use-spray-paint-without-drips-runs-or-uneven-coverage, room-painting-supply-checklist]
 recommendationSlots: [angled-cutting-brush, nine-inch-roller-frame]
 ---
 
-Brushes and rollers do different work. Choosing one “winner” usually makes a project harder. The useful question is where each tool gives you the control or consistency the surface needs.
+Painting tools do different work. Choosing one “winner” usually makes a project harder. The useful question is where each applicator gives you the control, reach, or consistency the surface needs.
 
 ## Use a brush when control matters
 
@@ -46,6 +46,24 @@ For a paneled door or dresser, brush molded details first and use a small smooth
 
 Some coatings specify brushing, rolling, spraying, or particular applicators. Follow those instructions rather than forcing a preferred tool onto an incompatible product.
 
+## Use a spray can for small, awkward shapes
+
+Aerosol spray paint can suit curved pieces, narrow parts, open metalwork, and smaller objects that would be tedious to brush. Because the applicator does not touch the surface, it avoids brush and roller texture.
+
+The tradeoff is control. Distance, movement, overlap, and coat thickness all matter, and nearby surfaces must be protected from overspray. Build coverage with light coats instead of trying to make the first pass look finished. See [how to use spray paint without drips, runs, or uneven coverage](/how-to-use-spray-paint-without-drips-runs-or-uneven-coverage/) for the complete technique.
+
+## Use a powered sprayer when the setup earns its keep
+
+A powered sprayer can coat substantial or highly detailed areas quickly when the coating, tip, settings, distance, and movement are correct. It also requires more masking, testing, ventilation planning, and cleanup than a brush or roller.
+
+For a tiny job, that preparation may take longer than brushing. Follow both the coating and sprayer instructions; not every paint can be sprayed as supplied.
+
+## Foam brushes, paint pads, and detail brushes solve narrower jobs
+
+A foam brush can be useful on small smooth areas and with finishes that specifically permit it. A paint pad can help on flat areas or edges when its texture suits the coating. A small detail brush favors precision over speed.
+
+None is automatically smoother or easier than a conventional brush. Use specialty applicators because the shape, coating, or finish benefits—not because the tool promises a shortcut.
+
 ## Tool quality without overspending
 
 Look for a brush whose bristles return to shape, do not shed readily, and match the coating. A roller frame should turn freely and hold its cover securely. Replace a cover that sheds, mats permanently, or has hardened paint at the ends.
@@ -59,6 +77,9 @@ Buying one reliable general-purpose frame and brush is usually more useful than 
 - **Flat door:** Small or standard smooth roller, plus brush for edges and profiles.
 - **Paneled furniture:** Brush for details, mini roller for broad panels.
 - **Rough masonry:** Roller system approved for the texture and coating, with brush work where needed.
+- **Small curved or open object:** Spray can when the product is compatible and overspray can be controlled safely.
+- **Large detailed area:** Powered sprayer when masking, testing, and cleanup are justified.
+- **Small smooth area or craft detail:** Compatible foam brush, paint pad, or detail brush.
 - **Tiny correction:** Match the tool and texture used originally whenever possible.
 
 Clean tools before paint dries in them. A well-shaped, clean brush and freely turning frame are more predictable on the next project than a larger collection of neglected tools.

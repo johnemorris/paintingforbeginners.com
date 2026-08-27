@@ -1,8 +1,7 @@
 ---
 title: "What Does ‘Keep a Wet Edge’ Mean?"
 description: "Understand why adjacent paint sections need to overlap while workable, what causes lap marks, and how coating conditions determine a manageable section."
-category: basics
-topic: apply-paint
+category: apply
 difficulty: Easy
 activeTime: "A few minutes to plan"
 totalTime: "Applies throughout each coat"

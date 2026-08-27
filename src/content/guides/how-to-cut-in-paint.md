@@ -1,7 +1,7 @@
 ---
 title: "How to Cut In Paint Along Ceilings, Trim, and Corners"
 description: "Learn a beginner-friendly cutting-in technique for clean wall edges without overloading the brush or leaving a heavy picture frame."
-category: home
+category: apply
 difficulty: Easy
 activeTime: "20–45 minutes per room coat"
 totalTime: "Part of each paint coat"

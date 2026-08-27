@@ -1,14 +1,14 @@
 ---
 title: "How to Load a Paint Brush Without Drips or Dry Brush Marks"
 description: "Learn how much paint to put on a brush, where to dip the bristles, and how to keep the brush working smoothly instead of dripping or dragging."
-category: supplies
+category: apply
 difficulty: Easy
 activeTime: "5 minutes to learn"
 totalTime: "Ongoing during painting"
 updated: 2026-08-26
 summary: "A brush needs enough paint to flow but not so much that it drips from the ferrule. Load the working portion of the bristles, remove obvious excess, spread the paint, then finish with controlled strokes before it begins to set."
 supplies: [Quality paint brush appropriate to the coating, Small paint pail or container, Paint, Clean rag]
-related: [paint-brush-vs-roller, how-to-cut-in-paint, painters-tape-basics]
+related: [paint-brush-vs-roller, how-to-cut-in-paint, should-you-go-back-over-wet-paint, painters-tape-basics]
 featured: false
 ---
 
@@ -26,13 +26,18 @@ This gives you room to load the brush without submerging the handle and ferrule.
 
 ## Dip the working part of the bristles
 
-Load roughly the lower portion of the bristles rather than burying the brush all the way to the metal ferrule.
+For a typical house-painting brush, loading roughly the lower third of the bristles is a useful beginner starting point. Load the working portion rather than burying the brush all the way to the metal ferrule.
 
 The exact amount varies with brush, paint, and task, but paint packed deeply into the ferrule makes cleanup harder and can encourage mess.
 
+<figure>
+  <img src="/images/apply-paint/brush-loading-comparison.jpg" alt="Three paint brushes showing too little paint at the tips, a practical load on the lower bristles, and too much paint with a drip." width="1536" height="1024" loading="lazy">
+  <figcaption>An underloaded brush drags, a practical load flows without dripping, and an overloaded brush carries paint too high and heavily.</figcaption>
+</figure>
+
 ## Remove obvious excess—do not scrape it bone dry
 
-Lightly tap or wipe enough paint from the brush to prevent a drip from falling on the way to the wall.
+Lightly tap the brush against the inside of the container to remove paint most likely to drip. Wipe only when the task or product calls for it.
 
 Avoid repeatedly scraping both sides until hardly any paint remains. A starved brush drags, leaves weak coverage, and encourages excessive brushing.
 

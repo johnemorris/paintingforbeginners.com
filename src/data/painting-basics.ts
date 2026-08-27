@@ -36,11 +36,6 @@ export const paintingBasicsTopics = {
     href: "/paint-finish-guide/",
     featured: ["paint-finish-guide", "how-much-paint-do-i-need", "how-many-coats-of-paint"],
   },
-  "apply-paint": {
-    image: paintingBasicsImages.application,
-    href: "/how-to-keep-a-wet-edge/",
-    featured: ["how-to-keep-a-wet-edge"],
-  },
   "fix-problems": {
     image: paintingBasicsImages.problems,
     href: "/fix-roller-marks-and-patchy-paint/",
