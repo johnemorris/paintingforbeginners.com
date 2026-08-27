@@ -10,6 +10,9 @@ summary: "Smoother surfaces generally use a shorter nap for a finer texture; rou
 supplies: [Paint technical directions, Photo or sample of the surface, Roller frame size, Compatible roller cover, Spare cover for multi-day work]
 related: [paint-brush-vs-roller, how-to-use-a-paint-roller, fix-roller-marks-and-patchy-paint, room-painting-supply-checklist]
 recommendationSlots: [nine-inch-roller-frame]
+cardImage:
+  src: "/images/article-guides/roller-nap-surface-comparison.jpg"
+  alt: "Short, medium, and long roller covers aligned with smooth, lightly textured, and rough surfaces."
 ---
 
 “Nap” is the length and density of the fibers on a roller cover. It controls how much paint the cover carries, how well it reaches surface texture, and how much texture it leaves behind.
@@ -27,6 +30,11 @@ The product directions and actual surface are more reliable than a universal cha
 - **Longer nap:** Carries more paint into rough or pronounced texture. It can create heavier stipple and is harder to control on a smooth surface.
 
 Common package labels often suggest specific fractions of an inch, but ranges vary by manufacturer, cover material, and regional terminology. Treat the surface description on the package as the decision aid and confirm it against the paint instructions.
+
+<figure>
+  <img src="/images/article-guides/roller-nap-surface-comparison.jpg" alt="Short, medium, and long roller covers aligned with smooth, lightly textured, and rough surfaces." width="1536" height="1024" loading="lazy">
+  <figcaption>Shorter pile suits smoother surfaces; deeper texture needs enough pile to reach low spots without forcing the roller.</figcaption>
+</figure>
 
 ## Cover material matters too
 

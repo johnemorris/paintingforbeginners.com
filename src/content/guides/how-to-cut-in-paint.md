@@ -10,6 +10,9 @@ summary: "Cutting in means brushing the narrow areas a roller cannot safely reac
 supplies: [2–2½ inch angled sash brush, Paint pail or small container, Clean damp rag appropriate to the coating, Painter's tape if desired, Drop cloth]
 related: [painters-tape-basics, how-to-use-a-paint-roller, how-to-paint-a-room]
 featured: false
+cardImage:
+  src: "/images/article-guides/cutting-in-brush-control.jpg"
+  alt: "An angled brush guiding a narrow wet paint line along a ceiling edge."
 ---
 
 Cutting in is simply painting the edges that your full-size roller cannot reach safely.
@@ -41,6 +44,11 @@ Too much paint encourages drips. Too little makes the brush drag and tempts you 
 Place the loaded brush slightly away from the ceiling or trim.
 
 Spread some of the paint, then use the narrower edge of the brush to guide paint toward the boundary. This gives you more control than planting a fully loaded brush directly on the finished line.
+
+<figure>
+  <img src="/images/article-guides/cutting-in-brush-control.jpg" alt="An angled brush guiding a narrow wet paint line along a ceiling edge." width="1536" height="1024" loading="lazy">
+  <figcaption>Release part of the load just below the final line, then guide the angled tips into the edge. The ferrule stays clean and the wet band stays controlled.</figcaption>
+</figure>
 
 ## Work in manageable lengths
 

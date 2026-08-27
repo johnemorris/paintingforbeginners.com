@@ -1,98 +1,38 @@
 ---
 import { getCollection } from "astro:content";
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import SectionLandingLayout from "../../layouts/SectionLandingLayout.astro";
 import EditorialGuideCard from "../../components/EditorialGuideCard.astro";
-import PaintingTopicCard from "../../components/PaintingTopicCard.astro";
 import DiagnosticProblemCard from "../../components/DiagnosticProblemCard.astro";
-import { categories } from "../../data/site";
-import { beginnerQuestions, commonProblems, paintingBasicsImages, paintingBasicsTopics } from "../../data/painting-basics";
+import { beginnerQuestions, commonProblems } from "../../data/painting-basics";
 
-const category = categories.basics;
 const guides = (await getCollection("guides")).filter((guide) => !guide.data.draft && guide.data.category === "basics");
 const findGuide = (id: string) => guides.find((guide) => guide.id === id);
 const questions = beginnerQuestions.map((question) => ({ ...question, guide: findGuide(question.guideId) })).filter((question) => question.guide);
 const problems = commonProblems.map((problem) => ({ ...problem, guide: findGuide(problem.guideId) })).filter((problem) => problem.guide);
 ---
-<BaseLayout title={category.title} description={category.description} image={paintingBasicsImages.hero.src}>
-  <header class="basics-hero">
-    <div class="wrap hero-grid">
-      <div class="hero-copy">
-        <Breadcrumbs items={[{ label: category.title }]} />
-        <p class="eyebrow">{category.eyebrow}</p>
-        <h1>Painting basics, made visual</h1>
-        <p class="lead">A good paint job is a chain of small, learnable decisions: read the surface, choose the right coating, apply it evenly, and give it time to become durable.</p>
-        <div class="hero-actions"><a class="button" href="#start-here">Show me where to start</a></div>
+<SectionLandingLayout category="basics">
+  <div slot="after-topics">
+    <section class="section questions-section" id="common-questions">
+      <div class="wrap">
+        <div class="section-heading"><p class="eyebrow">Quick decisions</p><h2>Common beginner questions</h2><p class="lead">Get a direct answer before you buy supplies or add another step.</p></div>
+        <div class="question-grid">{questions.map(({ guide, image }) => <EditorialGuideCard guide={guide!} {image} compact informativeImage />)}</div>
       </div>
-      <figure><img src={paintingBasicsImages.hero.src} alt={paintingBasicsImages.hero.alt} width="1400" height="933" /><figcaption>A sound old coating can often be repainted—after the right preparation.</figcaption></figure>
-    </div>
-  </header>
-
-  <section class="section start-section" id="start-here">
-    <div class="wrap start-grid">
-      <div><p class="eyebrow">Start here</p><h2>Never painted before? Begin with the surface.</h2><p class="lead">Before color, brushes, or technique, find out what you are painting and whether it is clean, dry, smooth, and firmly attached. That one check prevents most expensive do-overs.</p><a class="button" href="/surface-preparation-before-painting/">Learn the preparation basics <span aria-hidden="true">→</span></a></div>
-      <ol aria-label="The beginner painting sequence">
-        <li><span>01</span><div><strong>Prepare</strong><p>Clean, repair, protect, and test.</p></div></li>
-        <li><span>02</span><div><strong>Choose</strong><p>Match paint and primer to the surface.</p></div></li>
-        <li><span>03</span><div><strong>Apply</strong><p>Cut in, roll, and keep a wet edge.</p></div></li>
-        <li><span>04</span><div><strong>Let it set</strong><p>Respect recoat and cure time.</p></div></li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="section topics-section" id="topics">
-    <div class="wrap"><div class="section-heading"><p class="eyebrow">Learn by topic</p><h2>Four decisions behind a better finish</h2><p class="lead">Choose the question closest to your project. You do not need to learn everything before you begin.</p></div>
-      <div class="topic-stack">{category.topics.map((topic) => <PaintingTopicCard {topic} visual={paintingBasicsTopics[topic.id]} {guides} />)}</div>
-    </div>
-  </section>
-
-  <section class="section questions-section" id="common-questions">
-    <div class="wrap"><div class="section-heading"><p class="eyebrow">Quick decisions</p><h2>Common beginner questions</h2><p class="lead">Get a direct answer before you buy supplies or add another step.</p></div>
-      <div class="question-grid">{questions.map(({ guide, image }) => <EditorialGuideCard guide={guide!} {image} compact informativeImage />)}</div>
-    </div>
-  </section>
-
-  <section class="section problem-section" id="common-problems">
-    <div class="wrap"><div class="section-heading"><p class="eyebrow">Spot the cause</p><h2>Common painting problems</h2><p class="lead">A visible flaw is a clue. Match what your surface is doing before sanding or adding another coat.</p></div>
-      <div class="problem-card-grid">{problems.map(({ label, guide, image }) => <DiagnosticProblemCard {label} guide={guide!} {image} />)}</div>
-    </div>
-  </section>
-
-  <section class="section discovery-section"><div class="wrap discovery"><div><p class="eyebrow">Ready for a project?</p><h2>Take the basics to a real surface</h2><p class="lead">Follow a complete project guide when you are ready to put preparation, application, and drying time together.</p></div><nav aria-label="Explore painting projects"><a href="/how-to-paint-a-room/">Rooms</a><a href="/how-to-paint-a-ceiling/">Ceilings</a><a href="/how-to-paint-trim-and-baseboards/">Trim</a><a href="/how-to-paint-an-interior-door/">Doors</a><a href="/furniture-projects/">Furniture</a><a href="/canvas-painting/">Canvas painting</a></nav></div></section>
-</BaseLayout>
+    </section>
+    <section class="section problem-section" id="common-problems">
+      <div class="wrap">
+        <div class="section-heading"><p class="eyebrow">Spot the cause</p><h2>Common painting problems</h2><p class="lead">A visible flaw is a clue. Match what your surface is doing before sanding or adding another coat.</p></div>
+        <div class="problem-card-grid">{problems.map(({ label, guide, image }) => <DiagnosticProblemCard {label} guide={guide!} {image} />)}</div>
+      </div>
+    </section>
+  </div>
+</SectionLandingLayout>
 <style>
-  .basics-hero { padding: var(--space-4) 0 var(--space-6); overflow: hidden; background: linear-gradient(125deg, var(--blue-wash), var(--canvas)); }
-  .hero-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(28rem, 1.1fr); align-items: center; gap: clamp(var(--space-4), 6vw, var(--space-6)); }
-  .hero-copy .eyebrow { margin-top: var(--space-5); }
-  .hero-copy h1 { max-width: 11ch; }
-  .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); margin-top: var(--space-4); }
-  figure { margin: var(--space-4) 0 0; transform: rotate(1deg); }
-  figure img { width: 100%; aspect-ratio: 4 / 3; border: .65rem solid white; border-radius: var(--radius); object-fit: cover; box-shadow: var(--shadow); }
-  figcaption { margin-top: .5rem; color: var(--muted); font-size: .8rem; text-align: center; }
-  .start-section { background: var(--ink-strong); color: white; }
-  .start-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(20rem, .9fr); align-items: center; gap: var(--space-6); }
-  .start-grid h2, .start-grid .lead { color: white; }
-  .start-grid .eyebrow { color: #76d2cf; }
-  ol { margin: 0; padding: 0; list-style: none; }
-  ol li { display: grid; grid-template-columns: 3rem 1fr; gap: var(--space-2); padding: var(--space-3) 0; border-bottom: 1px solid rgb(255 255 255 / .18); }
-  ol li > span { color: #76d2cf; font-family: var(--font-display); font-size: 1.4rem; }
-  ol strong { color: white; font-size: 1.08rem; }
-  ol p { margin: .15rem 0 0; color: #bfd0d6; }
   .section-heading { max-width: 48rem; margin-bottom: var(--space-5); }
   .section-heading h2 { margin-top: 0; }
-  .topic-stack { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); }
   .questions-section { background: var(--blue-wash); }
   .question-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); }
   .problem-section { background: var(--canvas); }
   .problem-card-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-3); }
-  .discovery-section { background: var(--teal-dark); color: white; }
-  .discovery { display: grid; grid-template-columns: minmax(0, 1fr) minmax(20rem, .8fr); gap: var(--space-5); }
-  .discovery h2, .discovery .lead { color: white; }
-  .discovery .eyebrow { color: #b8ece8; }
-  .discovery nav { display: grid; grid-template-columns: repeat(2, 1fr); align-content: center; gap: var(--space-2); }
-  .discovery nav a { min-height: 3rem; padding: .7rem 1rem; border: 1px solid rgb(255 255 255 / .28); border-radius: var(--radius-sm); color: white; font-weight: 800; text-decoration: none; }
-  .discovery nav a:hover { background: white; color: var(--teal-dark); }
-  @media (max-width: 980px) { .topic-stack, .problem-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  @media (max-width: 860px) { .hero-grid, .start-grid, .discovery { grid-template-columns: 1fr; } .hero-copy h1 { max-width: 13ch; } .hero-grid figure { max-width: 42rem; } }
-  @media (max-width: 620px) { .topic-stack, .question-grid, .problem-card-grid { grid-template-columns: 1fr; } .discovery nav { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 980px) { .problem-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 620px) { .question-grid, .problem-card-grid { grid-template-columns: 1fr; } }
 </style>

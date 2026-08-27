@@ -10,6 +10,9 @@ summary: "A brush needs enough paint to flow but not so much that it drips from 
 supplies: [Quality paint brush appropriate to the coating, Small paint pail or container, Paint, Clean rag]
 related: [paint-brush-vs-roller, how-to-cut-in-paint, should-you-go-back-over-wet-paint, painters-tape-basics]
 featured: false
+cardImage:
+  src: "/images/apply-paint/brush-loading-comparison.jpg"
+  alt: "Underloaded, correctly loaded, and overloaded paint brushes compared side by side."
 ---
 
 Many beginner brush problems come from one of two extremes:

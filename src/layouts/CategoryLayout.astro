@@ -1,23 +1,8 @@
 ---
-import BaseLayout from "./BaseLayout.astro";
-import Breadcrumbs from "../components/Breadcrumbs.astro";
-import CategoryDirectory from "../components/CategoryDirectory.astro";
-import { getCollection } from "astro:content";
-import { categories, type CategoryKey } from "../data/site";
+import SectionLandingLayout from "./SectionLandingLayout.astro";
+import type { CategoryKey } from "../data/site";
 
 interface Props { category: CategoryKey }
 const { category } = Astro.props;
-const categoryInfo = categories[category];
-const { title, description, eyebrow, introHeading, intro, startHere, topics } = categoryInfo;
-const guides = (await getCollection("guides")).filter((guide) => !guide.data.draft && guide.data.category === category);
 ---
-<BaseLayout {title} {description}>
-  <header class="category-head"><div class="wrap"><Breadcrumbs items={[{ label: title }]} /><p class="eyebrow">{eyebrow}</p><h1>{title}</h1><p class="lead">{description}</p></div></header>
-  <section class="section"><div class="wrap"><div class="category-intro"><h2>{introHeading}</h2><p class="lead">{intro}</p></div><CategoryDirectory {guides} {startHere} {topics} /></div></section>
-</BaseLayout>
-<style>
-  .category-head { padding: var(--space-5) 0; background: linear-gradient(110deg, var(--blue-wash), var(--canvas)); }
-  .category-head .eyebrow { margin-top: var(--space-4); }
-  .category-intro { max-width: 52rem; }
-  .category-intro h2 { margin-top: 0; }
-</style>
+<SectionLandingLayout {category} />

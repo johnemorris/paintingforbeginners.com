@@ -14,6 +14,9 @@ supplies:
   - Sample board or inconspicuous test area
 related: [do-you-need-primer, surface-preparation-before-painting, how-many-coats-of-paint]
 featured: true
+cardImage:
+  src: "/images/painting-basics/choose-paint.jpg"
+  alt: "Open paint cans, color swatches, and sample boards showing different sheens."
 ---
 
 Paint finish, or **sheen**, describes how strongly the dried coating reflects light. It affects appearance, how clearly defects show, and often how the coating handles cleaning and wear.
@@ -37,6 +40,11 @@ Durability cannot be judged from sheen alone. Modern low-sheen products can be h
 | Semi-gloss | Clearly reflective | Highlights shapes and edges, but also highlights defects |
 
 High gloss is more reflective still. It can be striking on a very smooth, carefully prepared surface, but it is rarely the easiest finish for a beginner to apply over a large imperfect area.
+
+<figure>
+  <img src="/images/painting-basics/choose-paint.jpg" alt="Open paint cans, color swatches, and sample boards showing different sheens." width="1200" height="800" loading="lazy">
+  <figcaption>Compare sheen on actual dried samples: reflection changes both the apparent color and how strongly surface defects show.</figcaption>
+</figure>
 
 ## Choose by the surface and use
 

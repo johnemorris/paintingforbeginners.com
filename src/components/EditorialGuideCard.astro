@@ -1,12 +1,12 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import { imageForGuide } from "../data/painting-basics";
 
 interface Props { guide: CollectionEntry<"guides">; image?: { src: string; alt: string }; compact?: boolean; informativeImage?: boolean }
-const { guide, image = guide.data.hero ?? imageForGuide(guide.id, guide.data.topic), compact = false, informativeImage = false } = Astro.props;
+const { guide, image: suppliedImage, compact = false, informativeImage = false } = Astro.props;
+const image = suppliedImage ?? guide.data.hero ?? guide.data.cardImage;
 ---
-<article class:list={["editorial-card", { compact }]}>
-  <a class="card-image" href={`/${guide.id}/`} tabindex={informativeImage ? undefined : "-1"} aria-hidden={informativeImage ? undefined : "true"}><img src={image.src} alt={informativeImage ? image.alt : ""} loading="lazy" width="1200" height="800" /></a>
+<article class:list={["editorial-card", { compact, "has-image": image, "text-only": !image }]}>
+  {image && <a class="card-image" href={`/${guide.id}/`} tabindex={informativeImage ? undefined : "-1"} aria-hidden={informativeImage ? undefined : "true"}><img src={image.src} alt={informativeImage ? image.alt : ""} loading="lazy" width="1200" height="800" /></a>}
   <div class="card-copy">
     <p class="card-meta">{guide.data.difficulty} · {guide.data.totalTime}</p>
     <h3><a href={`/${guide.id}/`}>{guide.data.title}</a></h3>
@@ -16,6 +16,7 @@ const { guide, image = guide.data.hero ?? imageForGuide(guide.id, guide.data.top
 </article>
 <style>
   .editorial-card { display: flex; min-height: 100%; flex-direction: column; overflow: hidden; border-radius: var(--radius); background: white; box-shadow: var(--shadow-soft); }
+  .text-only { border-top: .35rem solid var(--teal); }
   .card-image { display: block; overflow: hidden; background: var(--blue-wash); }
   img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; transition: transform .25s ease; }
   .card-image:hover img { transform: scale(1.025); }
@@ -26,10 +27,10 @@ const { guide, image = guide.data.hero ?? imageForGuide(guide.id, guide.data.top
   h3 a:hover { color: var(--teal-dark); text-decoration: underline; }
   .card-copy > p:not(.card-meta) { color: var(--muted); font-size: .9rem; line-height: 1.55; }
   .card-link { margin-top: auto; font-size: .88rem; font-weight: 800; }
-  .compact { display: grid; grid-template-columns: 9rem minmax(0, 1fr); }
-  .compact .card-image, .compact img { height: 100%; }
-  .compact img { aspect-ratio: auto; }
+  .compact.has-image { display: grid; grid-template-columns: 9rem minmax(0, 1fr); }
+  .compact.has-image .card-image, .compact.has-image img { height: 100%; }
+  .compact.has-image img { aspect-ratio: auto; }
   .compact h3 { font-size: 1.08rem; }
-  @media (max-width: 540px) { .compact { grid-template-columns: 7rem minmax(0, 1fr); } }
+  @media (max-width: 540px) { .compact.has-image { grid-template-columns: 7rem minmax(0, 1fr); } }
   @media (prefers-reduced-motion: reduce) { img { transition: none; } }
 </style>

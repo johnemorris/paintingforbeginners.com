@@ -11,6 +11,9 @@ summary: "A fresh drip may be corrected carefully while the surrounding paint is
 supplies: [Brush or roller used for the coating, Fine sanding sponge for dried defects, Clean cloth or vacuum, Matching paint]
 related: [how-to-load-a-paint-brush, how-to-use-a-paint-roller, paint-dry-recoat-cure-time]
 featured: false
+cardImage:
+  src: "/images/painting-basics/problem-drips.jpg"
+  alt: "Several dried paint drips running down a vertical wall."
 ---
 
 A drip happens when more paint collects in one spot than the coating can hold evenly.
@@ -18,6 +21,11 @@ A drip happens when more paint collects in one spot than the coating can hold ev
 The fix depends on one important question:
 
 **Is the paint still workable, or has it started to set?**
+
+<figure>
+  <img src="/images/painting-basics/problem-drips.jpg" alt="Several dried paint drips running down a vertical wall." width="1200" height="800" loading="lazy">
+  <figcaption>A run is excess film that has moved downward. Its wetness—not its size alone—determines whether to spread it now or level it after drying.</figcaption>
+</figure>
 
 ## If you catch the drip immediately
 

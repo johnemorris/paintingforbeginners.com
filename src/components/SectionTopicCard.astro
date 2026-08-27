@@ -1,0 +1,37 @@
+---
+import type { CollectionEntry } from "astro:content";
+import type { SectionImage } from "../data/section-landings";
+
+interface Props {
+  title: string;
+  description: string;
+  image: SectionImage;
+  guides: CollectionEntry<"guides">[];
+  href?: string;
+}
+
+const { title, description, image, guides, href } = Astro.props;
+const representativeGuides = guides.slice(0, 3);
+const ctaHref = href ?? `/${guides[0].id}/`;
+const ctaLabel = href ? `Explore all ${guides.length} ${guides.length === 1 ? "guide" : "guides"}` : guides.length === 1 ? "Read the guide" : "Start with a guide";
+---
+<article class="topic-card">
+  <div class="topic-image"><img src={image.src} alt={image.alt} loading="lazy" width="1200" height="800" /></div>
+  <div class="topic-copy">
+    <h3>{title}</h3>
+    <p>{description}</p>
+    <ul>{representativeGuides.map((guide) => <li><a href={`/${guide.id}/`}>{guide.data.title}</a></li>)}</ul>
+    <a class="topic-cta" href={ctaHref}>{ctaLabel} <span aria-hidden="true">→</span></a>
+  </div>
+</article>
+<style>
+  .topic-card { display: flex; min-width: 0; min-height: 100%; flex-direction: column; overflow: hidden; border-radius: var(--radius); background: white; box-shadow: var(--shadow-soft); }
+  .topic-image img { width: 100%; height: auto; aspect-ratio: 2 / 1; object-fit: cover; }
+  .topic-copy { display: flex; flex: 1; flex-direction: column; padding: var(--space-3); }
+  h3 { margin: 0 0 var(--space-2); font-family: var(--font-display); font-size: 1.35rem; }
+  .topic-copy > p { color: var(--muted); font-size: .94rem; line-height: 1.55; }
+  ul { margin: var(--space-2) 0 var(--space-3); padding: var(--space-2) 0; border-block: 1px solid var(--line); list-style: none; }
+  li + li { margin-top: .4rem; }
+  li a { color: var(--ink); font-size: .82rem; font-weight: 750; line-height: 1.35; text-decoration-thickness: 1px; }
+  .topic-cta { margin-top: auto; font-size: .88rem; font-weight: 850; }
+</style>

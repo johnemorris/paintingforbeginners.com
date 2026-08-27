@@ -10,6 +10,9 @@ summary: "Small wall repairs usually need filling, drying, light sanding, dust r
 supplies: [Lightweight spackle or suitable patching compound, Flexible putty knife, Fine sanding sponge, Clean cloth or vacuum, Primer for repaired areas, Matching wall paint]
 related: [surface-preparation-before-painting, do-you-need-primer, how-to-paint-a-room]
 featured: false
+cardImage:
+  src: "/images/article-guides/small-drywall-repair-stages.jpg"
+  alt: "Four stages of a small drywall repair: open hole, filled patch, sanded surface, and spot-primed repair."
 ---
 
 A fresh coat of paint does not hide most wall damage. In fact, new paint can make ridges, dents, and poorly feathered patches easier to see.
@@ -26,6 +29,11 @@ This guide is for things such as:
 - small areas where the drywall face paper is damaged but the wall is otherwise sound
 
 Large holes, loose drywall, recurring cracks, water damage, soft material, mold, or damage around electrical/plumbing components deserves a more specific repair before painting.
+
+<figure>
+  <img src="/images/article-guides/small-drywall-repair-stages.jpg" alt="Four stages of a small drywall repair: open hole, filled patch, sanded surface, and spot-primed repair." width="1536" height="1024" loading="lazy">
+  <figcaption>A small repair becomes paint-ready through four distinct states: sound opening, thin fill, feathered smooth surface, and spot-primer over exposed patching material.</figcaption>
+</figure>
 
 ## Step 1: Remove anything loose
 

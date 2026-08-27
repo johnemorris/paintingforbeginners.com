@@ -10,6 +10,9 @@ summary: "Correct a flaw only while the paint and surrounding area are still ful
 supplies: [Original brush or roller, Paint product directions, Good light for inspection]
 related: [how-to-keep-a-wet-edge, paint-dry-recoat-cure-time, fix-roller-marks-and-patchy-paint, how-to-fix-paint-drips-and-runs]
 featured: true
+cardImage:
+  src: "/images/apply-paint/wet-paint-workability-comparison.jpg"
+  alt: "Workable wet paint compared with setting paint damaged by another brush pass."
 ---
 
 If you just painted an area and notice a small flaw, there is a strong temptation to keep brushing or rolling it until it looks perfect.

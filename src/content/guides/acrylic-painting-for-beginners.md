@@ -11,6 +11,9 @@ supplies: [Pre-stretched, pre-primed canvas or canvas panel, Student-grade acryl
 related: [canvas-size-for-painting, painting-supplies-for-beginners, how-to-paint-a-simple-landscape]
 featured: true
 recommendationSlots: [canvas-brush-trio, canvas-panel]
+cardImage:
+  src: "/images/section-landings/canvas-start.jpg"
+  alt: "Two blank canvases, a limited acrylic palette, three brushes, and two water jars arranged on a protected table."
 ---
 
 Acrylic is a friendly first painting medium because it cleans up with water while wet, dries quickly, and can cover earlier layers. Its speed can also surprise beginners, so a simple setup and a small painting are more useful than a giant box of supplies.
@@ -26,6 +29,11 @@ Your goal is to practice arranging shapes, making a few colors, and covering a c
 Protect the table and your clothes. Put the reference where you can see it without touching wet work. If you paint with your right hand, keeping water and palette to the right often reduces reaching across the canvas; reverse that if you are left-handed.
 
 Use two water containers: one for the first brush rinse and a cleaner one for the final rinse. Keep a rag nearby. Acrylic can dry in a brush, so do not leave a loaded brush sitting in open air or standing on its bristles.
+
+<figure>
+  <img src="/images/section-landings/canvas-start.jpg" alt="Two blank canvases, a limited acrylic palette, three brushes, and two water jars arranged on a protected table." width="1672" height="941" loading="lazy">
+  <figcaption>A modest but complete first setup: prepared surfaces, a limited palette, three useful brush shapes, two rinse jars, and table protection.</figcaption>
+</figure>
 
 ## 1. Limit your palette
 

@@ -9,9 +9,17 @@ updated: 2026-08-25
 summary: "Laminate is nonporous, so preparation and product compatibility matter more than aggressive sanding. Clean it, scuff it without cutting through the surface, use a primer approved for laminate or slick surfaces, and test adhesion before coating the whole piece."
 supplies: [Degreasing cleaner compatible with laminate, Fine sanding sponge, Vacuum and lint-free cloth, High-adhesion bonding primer, Compatible durable finish paint, Quality synthetic brush or smooth roller, Gloves and ventilation appropriate to labels]
 related: [how-to-paint-wood-furniture, do-you-need-primer, surface-preparation-before-painting]
+cardImage:
+  src: "/images/article-guides/furniture-surface-comparison.jpg"
+  alt: "Furniture corners showing solid wood, wood veneer, and wood-look laminate construction."
 ---
 
 Laminate is a decorative surface bonded over a manufactured core. Unlike solid wood, it does not give you extra material to sand away, and exposed particleboard edges can swell if soaked. The goal is to create adhesion while keeping the laminate intact.
+
+<figure>
+  <img src="/images/article-guides/furniture-surface-comparison.jpg" alt="Furniture corners showing solid wood, wood veneer, and wood-look laminate construction." width="1536" height="1024" loading="lazy">
+  <figcaption>The thin decorative laminate at right cannot be sanded like solid wood; check edges and undersides before choosing preparation.</figcaption>
+</figure>
 
 ## Decide whether the piece is worth painting
 

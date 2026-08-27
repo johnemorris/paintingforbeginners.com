@@ -14,6 +14,9 @@ supplies:
   - Good light for inspecting the surface
 related: [surface-preparation-before-painting, can-you-paint-over-old-paint, how-many-coats-of-paint, paint-and-primer-in-one-do-you-still-need-primer]
 featured: true
+cardImage:
+  src: "/images/painting-basics/question-primer.jpg"
+  alt: "Primer being rolled over repaired spots on an interior wall."
 ---
 
 Primer is a problem-solving layer. It can improve adhesion, control uneven absorption, block certain stains, protect some bare materials, or create the specified base for finish paint.
@@ -28,6 +31,11 @@ It is not automatically required for every repaint, and it cannot make a dirty, 
 - **The old finish is difficult to bond to.** A sound glossy or slick coating may require cleaning, dulling, a bonding primer, or a combination specified by the new system.
 - **The color transition is demanding.** A manufacturer-recommended tinted or neutral primer may create a more efficient base for some strong changes.
 - **The coating system requires it.** Product instructions are more specific than a general rule.
+
+<figure>
+  <img src="/images/painting-basics/question-primer.jpg" alt="Primer being rolled over repaired spots on an interior wall." width="1200" height="800" loading="lazy">
+  <figcaption>Repairs and porous spots often need targeted primer even when the surrounding sound painted wall does not need a full primer coat.</figcaption>
+</figure>
 
 ## A full primer coat may be unnecessary when…
 

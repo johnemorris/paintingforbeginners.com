@@ -10,9 +10,17 @@ summary: "Start with a pre-primed surface, a small student-grade acrylic set, th
 supplies: [Pre-primed canvas or canvas panel, Student-grade acrylic paint, Medium flat brush, Medium round brush, Small detail brush, Palette surface, Two water containers, Rag, Table covering and apron]
 related: [acrylic-painting-for-beginners, canvas-size-for-painting, how-to-paint-a-simple-landscape]
 recommendationSlots: [canvas-brush-trio, canvas-panel]
+cardImage:
+  src: "/images/section-landings/canvas-start.jpg"
+  alt: "Two blank canvases, a limited acrylic palette, three brushes, and two water jars arranged on a protected table."
 ---
 
 Art-store aisles make a simple hobby look as if it needs a workshop. It does not. Buy enough to learn what you enjoy, then upgrade the things whose limitations you can actually notice.
+
+<figure>
+  <img src="/images/section-landings/canvas-start.jpg" alt="Two blank canvases, a limited acrylic palette, three brushes, and two water jars arranged on a protected table." width="1672" height="941" loading="lazy">
+  <figcaption>The essential kit is compact: a prepared surface, a limited set of acrylic colors, three useful brushes, a palette, two rinse jars, and basic protection.</figcaption>
+</figure>
 
 ## Surface
 

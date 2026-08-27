@@ -11,6 +11,9 @@ summary: "If brush marks are raised enough to see or feel after drying, let the 
 supplies: [Fine sanding sponge appropriate to the coating, Quality brush, Matching paint, Vacuum or clean cloth]
 related: [how-to-load-a-paint-brush, how-to-cut-in-paint, paint-brush-vs-roller, paint-dry-recoat-cure-time]
 featured: false
+cardImage:
+  src: "/images/painting-basics/problem-brush-marks.jpg"
+  alt: "Semi-gloss painted trim with visible parallel brush ridges."
 ---
 
 Some brush texture is normal. Deep ridges and obvious tracks are different.
@@ -24,6 +27,11 @@ Look at the surface under normal room lighting from a normal viewing distance.
 Trim painted with a brush will not necessarily look identical to a sprayed factory finish.
 
 If the marks are only visible when you put a flashlight against the surface, you may be fixing something nobody will notice.
+
+<figure>
+  <img src="/images/painting-basics/problem-brush-marks.jpg" alt="Semi-gloss painted trim with visible parallel brush ridges." width="1200" height="800" loading="lazy">
+  <figcaption>Raised parallel ridges are a dried film defect; faint normal brush texture visible only under extreme light may not need correction.</figcaption>
+</figure>
 
 ## If the ridges are obvious
 

@@ -26,6 +26,10 @@ const guides = defineCollection({
       attribution: z.string().optional(),
       attributionUrl: z.string().url().optional(),
     }).optional(),
+    cardImage: z.object({
+      src: z.string(),
+      alt: z.string(),
+    }).optional(),
     draft: z.boolean().default(false),
     noindex: z.boolean().default(false),
     recommendationSlots: z.array(z.string().refine((id) => recommendations.some((item) => item.id === id), "Unknown recommendation ID")).default([]),

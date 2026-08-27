@@ -1,0 +1,25 @@
+---
+import { getAdPlacement, type AdPlacementId } from "../data/monetization";
+
+interface Props {
+  placement: AdPlacementId;
+  eligible?: boolean;
+}
+
+const { placement, eligible = true } = Astro.props;
+const config = getAdPlacement(placement);
+const active = config.active && eligible;
+---
+{active && (
+  <aside class:list={["ad-slot", `ad-slot--${config.format}`]} aria-label="Advertisement" data-ad-slot={placement}>
+    <span>Advertisement</span>
+    <div class="ad-unit" data-ad-unit={placement}></div>
+  </aside>
+)}
+<style>
+  .ad-slot { color: var(--muted); text-align: center; }
+  .ad-slot > span { display: block; margin-bottom: var(--space-1); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; }
+  .ad-slot--horizontal { width: 100%; min-height: 7.5rem; margin-block: var(--space-5); }
+  .ad-slot--rail { min-height: 32rem; }
+  .ad-unit { width: 100%; min-height: inherit; }
+</style>

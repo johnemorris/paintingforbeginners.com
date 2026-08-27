@@ -4,6 +4,11 @@ export interface Recommendation {
   purpose: string;
   lookFor: string[];
   optional?: boolean;
+  productLink?: {
+    href: string;
+    label: string;
+    compensated?: boolean;
+  };
 }
 
 export const recommendations: Recommendation[] = [

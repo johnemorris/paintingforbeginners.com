@@ -10,6 +10,9 @@ summary: "Visible cut-in borders are often caused by different film thickness or
 supplies: [Matching paint, Angled brush, Roller and appropriate cover, Stir stick]
 related: [how-to-cut-in-paint, how-to-keep-a-wet-edge, how-to-use-a-paint-roller, fix-roller-marks-and-patchy-paint]
 featured: false
+cardImage:
+  src: "/images/article-guides/cut-in-halo-comparison.jpg"
+  alt: "A uniform wall edge compared with a darker wide cut-in halo."
 ---
 
 You paint the edges with a brush, roll the middle, and after drying there is a darker or shinier "frame" around the wall.
@@ -28,6 +31,11 @@ The difference becomes more visible when:
 - the cut-in dries before the roller overlaps it
 - the paint is not mixed thoroughly
 - the surface absorbs paint unevenly
+
+<figure>
+  <img src="/images/article-guides/cut-in-halo-comparison.jpg" alt="A uniform wall edge compared with a darker wide cut-in halo." width="1536" height="1024" loading="lazy">
+  <figcaption>A narrow wet cut-in blended with the roller dries uniformly; a wide brushed band allowed to dry can keep a different thickness, texture, and sheen.</figcaption>
+</figure>
 
 ## Keep the cut-in narrow
 

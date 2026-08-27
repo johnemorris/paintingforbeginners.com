@@ -10,6 +10,9 @@ summary: "A wet edge is the still-workable boundary of paint already applied. Bl
 supplies: [Coating label or technical data, Applicator suited to the coating and surface]
 related: [fix-roller-marks-and-patchy-paint, paint-dry-recoat-cure-time, cut-in-before-or-after-rolling]
 featured: false
+cardImage:
+  src: "/images/article-guides/wet-edge-comparison.jpg"
+  alt: "An even wet overlap compared with a visible lap line formed over a dried edge."
 ---
 
 “Keep a wet edge” does not mean keeping the entire project wet. It means keeping the boundary where the next application meets the previous one workable enough to blend.
@@ -21,6 +24,11 @@ This principle matters on broad surfaces coated with a roller, brush, pad, or si
 Overlapping fresh paint onto a section that has begun setting can create a band with different film thickness or texture. After drying, that may appear as a lap line, darker area, sheen change, or visible transition.
 
 The risk increases with higher sheen, large uninterrupted areas, fast-drying conditions, uneven application, and coatings with short working time.
+
+<figure>
+  <img src="/images/article-guides/wet-edge-comparison.jpg" alt="An even wet overlap compared with a visible lap line formed over a dried edge." width="1536" height="1024" loading="lazy">
+  <figcaption>Overlapping into workable paint produces one continuous film; overlapping an edge that has set can leave a visible thickness and sheen band.</figcaption>
+</figure>
 
 ## Section size is the real decision
 

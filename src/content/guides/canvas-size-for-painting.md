@@ -9,6 +9,9 @@ updated: 2026-08-25
 summary: "For a first acrylic painting, a canvas or panel around 8×10 to 12×16 inches is large enough to use normal brushstrokes but small enough to finish in a sitting or two. Match the shape to your subject and choose a size that fits your workspace comfortably."
 supplies: [Tape measure, Reference image or simple sketch, Painter's tape for testing proportions, Canvas panel or pre-primed stretched canvas]
 related: [acrylic-painting-for-beginners, painting-supplies-for-beginners, how-to-paint-a-simple-landscape]
+cardImage:
+  src: "/images/section-landings/canvas-start.jpg"
+  alt: "Two modest blank canvases beside a limited acrylic painting setup."
 ---
 
 The best beginner canvas is not the largest one you can afford. It is the one that lets you make comfortable marks, fits your workspace, and feels finishable.
@@ -18,6 +21,11 @@ The best beginner canvas is not the largest one you can afford. It is the one th
 An 8×10, 9×12, 11×14, or similarly modest canvas works well for many first projects. Very tiny canvases force you to use tiny tools and solve cramped detail problems. Very large canvases use more paint, require larger brushes, and make proportion errors harder to see while you are close to the surface.
 
 There is no universal correct size. Use those dimensions as a practical starting range, not an art rule.
+
+<figure>
+  <img src="/images/section-landings/canvas-start.jpg" alt="Two modest blank canvases beside a limited acrylic painting setup." width="1672" height="941" loading="lazy">
+  <figcaption>Modest canvases leave room for natural brush marks while keeping the paint, workspace, and time commitment manageable.</figcaption>
+</figure>
 
 ## Match the shape to the subject
 

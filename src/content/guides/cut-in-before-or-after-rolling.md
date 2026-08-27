@@ -10,6 +10,9 @@ summary: "For a typical wall, cut in a manageable section and roll it while the 
 supplies: [Angled brush, Roller and cover, Paint pail, Paint tray or bucket and grid]
 related: [how-to-cut-in-paint, how-to-keep-a-wet-edge, how-to-use-a-paint-roller, painters-tape-basics]
 featured: false
+cardImage:
+  src: "/images/article-guides/cut-in-rolling-sequence.jpg"
+  alt: "A roller connecting into a fresh cut-in band compared with rolling beside an edge that has already dried."
 ---
 
 For most beginner wall painting, the useful answer is:
@@ -37,6 +40,11 @@ For each wall:
 5. continue to the next section
 
 For a small wall, that may mean cutting the whole wall before rolling. For a large wall, break it into smaller working areas.
+
+<figure>
+  <img src="/images/article-guides/cut-in-rolling-sequence.jpg" alt="A roller connecting into a fresh cut-in band compared with rolling beside an edge that has already dried." width="1536" height="1024" loading="lazy">
+  <figcaption>Brush a manageable length, then roll into it while the edge is still workable. A perimeter cut in too far ahead can dry as a separate band.</figcaption>
+</figure>
 
 ## Should the roller touch the cut-in?
 

@@ -10,9 +10,17 @@ summary: "Clean the piece, repair damage, scuff-sand the existing sound finish, 
 supplies: [Cleaner compatible with the old finish, Screwdriver and labeled bags, Sandpaper or sanding sponge, Vacuum and lint-free cloths, Bonding or stain-blocking primer when needed, Furniture or cabinet-suitable paint, Quality brush and small roller, Drop cloth and supports]
 related: [surface-preparation-before-painting, do-you-need-primer, how-to-paint-laminate-furniture]
 featured: true
+cardImage:
+  src: "/images/article-guides/furniture-surface-comparison.jpg"
+  alt: "Furniture corners showing solid wood, wood veneer, and wood-look laminate construction."
 ---
 
 A lasting furniture finish begins with identifying what you actually have. Solid wood, wood veneer, and wood-look laminate can resemble one another but need different preparation. This guide covers sound solid wood or veneered wood with an existing finish.
+
+<figure>
+  <img src="/images/article-guides/furniture-surface-comparison.jpg" alt="Furniture corners showing solid wood, wood veneer, and wood-look laminate construction." width="1536" height="1024" loading="lazy">
+  <figcaption>Look at a discreet edge: continuous end grain suggests solid wood, a thin real-wood layer suggests veneer, and a printed surface over particleboard indicates laminate.</figcaption>
+</figure>
 
 ## Check the piece before painting
 

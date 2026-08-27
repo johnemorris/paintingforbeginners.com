@@ -11,6 +11,9 @@ summary: "You do not automatically need to sand every surface before painting. S
 supplies: [Fine or medium sanding sponge appropriate to the surface, Vacuum or clean cloth, Eye protection, Dust protection appropriate to the job]
 related: [surface-preparation-before-painting, can-you-paint-over-old-paint, do-you-need-primer]
 featured: false
+cardImage:
+  src: "/images/painting-basics/question-sanding.jpg"
+  alt: "A hand lightly scuff-sanding a small area of glossy painted wall."
 ---
 
 "Sanding before painting" sounds like a universal rule. It is not.
@@ -34,6 +37,11 @@ Paint follows the shape underneath it. A new coat will not flatten a ridge.
 A glossy or hard, slick coating may need cleaning and scuff-sanding as part of the preparation for the next coating.
 
 The exact preparation depends on the existing finish and the new product. Follow the new coating manufacturer's adhesion and preparation directions.
+
+<figure>
+  <img src="/images/painting-basics/question-sanding.jpg" alt="A hand lightly scuff-sanding a small area of glossy painted wall." width="1200" height="800" loading="lazy">
+  <figcaption>Scuff-sanding is a controlled dulling step for a slick sound finish—not a reason to remove every intact coating.</figcaption>
+</figure>
 
 ## A sound painted surface may not need sanding
 

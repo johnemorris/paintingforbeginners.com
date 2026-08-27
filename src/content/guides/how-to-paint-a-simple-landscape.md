@@ -10,9 +10,17 @@ summary: "Divide the canvas into a few large zones, paint the sky first, soften 
 supplies: [Small pre-primed canvas or panel, Acrylic red yellow blue white and dark neutral, Medium flat brush, Medium round brush, Small detail brush, Palette, Two water containers, Rag or paper towel]
 related: [acrylic-painting-for-beginners, canvas-size-for-painting, painting-supplies-for-beginners]
 featured: true
+cardImage:
+  src: "/images/section-landings/canvas-project.jpg"
+  alt: "A beginner adding broad sky shapes to a simple acrylic landscape in progress."
 ---
 
 A landscape is a good first subject because it can remain recognizable without precise drawing. This project uses four layers: sky, distant land, nearer ground, and selected foreground marks.
+
+<figure>
+  <img src="/images/section-landings/canvas-project.jpg" alt="A beginner adding broad sky shapes to a simple acrylic landscape in progress." width="1672" height="941" loading="lazy">
+  <figcaption>Work from broad zones toward small marks: establish the sky and land masses before committing to trees, branches, and focal details.</figcaption>
+</figure>
 
 ## Choose and crop a reference
 

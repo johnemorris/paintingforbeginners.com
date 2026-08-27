@@ -24,7 +24,7 @@ export const categories = {
     intro: "You do not need to memorize a painter's handbook. Learn how to read the surface, match the coating to it, and give each layer the conditions it needs.",
     startHere: "surface-preparation-before-painting",
     topics: [
-      { id: "plan-prepare", title: "Plan & Prepare", description: "Check the existing surface and decide what it needs before opening the finish paint." },
+      { id: "plan-prepare", title: "Plan & Prepare", description: "Check the existing surface and decide what it needs before opening the finish paint.", href: "/painting-basics/plan-prepare/" },
       { id: "paint-coverage", title: "Choose Paint & Coverage", description: "Choose the right finish, estimate paint, and plan for enough coats." },
       { id: "fix-problems", title: "Fix Paint Problems", description: "Diagnose visible marks and correct the cause before recoating." },
       { id: "drying-durability", title: "Drying & Durability", description: "Know when paint is ready for another coat, handling, and normal use." },

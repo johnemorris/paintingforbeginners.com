@@ -10,6 +10,9 @@ summary: "You have enough paint on the surface when the coat is wet and reasonab
 supplies: [Paint product directions, Brush or roller suited to the coating, Good work light]
 related: [how-to-use-a-paint-roller, how-to-load-a-paint-brush, why-isnt-my-paint-covering-old-color, how-many-coats-of-paint, should-you-go-back-over-wet-paint]
 featured: true
+cardImage:
+  src: "/images/apply-paint/paint-amount-comparison.jpg"
+  alt: "Thin, even, and overly heavy paint films compared side by side."
 ---
 
 You have enough paint on the surface when the coat is spreading evenly and your brush or roller can do its job without being forced.

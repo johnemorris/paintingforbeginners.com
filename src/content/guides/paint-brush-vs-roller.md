@@ -10,9 +10,17 @@ summary: "Choose by area, control, and shape: brushes handle edges and detail, r
 supplies: [Paint product directions, Surface measurements, Brush suited to the coating, Roller and cover matched to texture, Spray applicator when appropriate, Masking and surface protection]
 related: [how-to-choose-roller-nap, how-to-load-a-paint-brush, how-to-use-a-paint-roller, how-to-use-spray-paint-without-drips-runs-or-uneven-coverage, room-painting-supply-checklist]
 recommendationSlots: [angled-cutting-brush, nine-inch-roller-frame]
+cardImage:
+  src: "/images/article-guides/application-tool-comparison.jpg"
+  alt: "Brush, roller, and spray finishes compared on matching painted sample panels."
 ---
 
 Painting tools do different work. Choosing one “winner” usually makes a project harder. The useful question is where each applicator gives you the control, reach, or consistency the surface needs.
+
+<figure>
+  <img src="/images/article-guides/application-tool-comparison.jpg" alt="Brush, roller, and spray finishes compared on matching painted sample panels." width="1536" height="1024" loading="lazy">
+  <figcaption>Brushes prioritize control, rollers cover broad surfaces with light stipple, and spray can produce a finer film when its setup and overspray are appropriate.</figcaption>
+</figure>
 
 ## Use a brush when control matters
 

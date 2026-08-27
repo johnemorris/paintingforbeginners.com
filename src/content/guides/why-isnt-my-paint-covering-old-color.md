@@ -11,6 +11,9 @@ summary: "Poor hiding does not always mean the paint is bad. Check whether the c
 supplies: [Remaining finish paint, Roller cover appropriate to the surface, Stir stick, Suitable primer if the coating system requires it]
 related: [how-many-coats-of-paint, do-you-need-primer, how-to-use-a-paint-roller, paint-dry-recoat-cure-time]
 featured: false
+cardImage:
+  src: "/images/painting-basics/question-poor-coverage.jpg"
+  alt: "A pale first coat with a darker old wall color showing through."
 ---
 
 The new coat has dried, but the old color still shows through.
@@ -35,6 +38,11 @@ Signs include:
 - repeated temptation to press harder on the roller
 
 Reload the applicator before it becomes starved and apply the paint at the manufacturer's recommended coverage rate.
+
+<figure>
+  <img src="/images/painting-basics/question-poor-coverage.jpg" alt="A pale first coat with a darker old wall color showing through." width="1200" height="800" loading="lazy">
+  <figcaption>Uniform show-through after a controlled first coat can mean another coat is needed; irregular streaks and dry patches point to film-thickness problems.</figcaption>
+</figure>
 
 ## Common reason #2: the color change is demanding
 

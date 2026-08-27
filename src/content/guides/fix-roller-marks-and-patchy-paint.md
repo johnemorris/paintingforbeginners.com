@@ -16,6 +16,9 @@ supplies:
 related: [how-to-use-a-paint-roller, how-to-choose-roller-nap, how-many-coats-of-paint, paint-dry-recoat-cure-time]
 featured: true
 recommendationSlots: [nine-inch-roller-frame, roller-extension-pole, sanding-sponge]
+cardImage:
+  src: "/images/painting-basics/problem-roller-marks.jpg"
+  alt: "Dried wall paint with darker roller bands and uneven sheen."
 ---
 
 Roller marks are not one problem. A raised ridge, a broad lap line, thin coverage, and a dull porous patch may look similar from across the room, but they have different causes.
@@ -30,6 +33,11 @@ The first decision is simple: **let the coating dry before diagnosing it.** Wet 
 - **Different sheen without a ridge:** Film thickness, porosity, mixing, or application method may differ across the area.
 
 Feel the surface as well as looking at it. A physical ridge needs a different correction from a smooth area that simply lacks hide.
+
+<figure>
+  <img src="/images/painting-basics/problem-roller-marks.jpg" alt="Dried wall paint with darker roller bands and uneven sheen." width="1200" height="800" loading="lazy">
+  <figcaption>Broad bands and patchy sheen point to overlap, film-thickness, or timing differences; raised ridges require a separate physical correction.</figcaption>
+</figure>
 
 ## Common causes
 

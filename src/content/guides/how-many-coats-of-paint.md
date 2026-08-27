@@ -14,6 +14,9 @@ supplies:
   - Primer when the system requires it
 related: [do-you-need-primer, paint-dry-recoat-cure-time, why-isnt-my-paint-covering-old-color]
 featured: true
+cardImage:
+  src: "/images/painting-basics/question-coats.jpg"
+  alt: "First-coat and second-coat paint samples compared side by side."
 ---
 
 There is no universal coat count. One finish coat may be enough in favorable conditions; two are common; a third can be justified for a difficult color or corrected application. The answer comes from the specified coating system and the dried result—not from a rule that every project gets the same number.
@@ -31,6 +34,11 @@ One coat may be enough when all of these are true:
 - the fully dried finish looks uniform under normal light.
 
 A marketing phrase is not a reason to buy too little paint. Check the conditions attached to any one-coat claim.
+
+<figure>
+  <img src="/images/painting-basics/question-coats.jpg" alt="First-coat and second-coat paint samples compared side by side." width="1200" height="800" loading="lazy">
+  <figcaption>A first coat can be consistently applied yet still show the old color; the dried second coat is the meaningful coverage comparison.</figcaption>
+</figure>
 
 ## Primer is not a finish coat
 

@@ -10,6 +10,9 @@ summary: "New drywall is not the same as an already-painted wall. Finish and ins
 supplies: [Suitable drywall primer, Interior finish paint, Roller and cover, Angled brush, Paint tray or bucket and grid, Fine sanding sponge for minor finishing, Vacuum or clean dust-removal supplies, Drop cloths]
 related: [do-you-need-primer, surface-preparation-before-painting, how-many-coats-of-paint, how-to-use-a-paint-roller]
 featured: false
+cardImage:
+  src: "/images/article-guides/drywall-priming-comparison.jpg"
+  alt: "Properly primed drywall compared with unprimed drywall showing uneven sheen over a joint-compound seam."
 ---
 
 New drywall can look deceptively ready for paint. The paper face and joint compound are porous, and unfinished seams or sanding scratches can become much more obvious after coating.
@@ -46,6 +49,11 @@ Use a primer intended for new drywall or another primer specifically recommended
 Primer helps create a more uniform surface across the drywall paper and joint compound and prepares the wall for finish paint.
 
 "Paint and primer in one" does not automatically mean bare drywall should skip the primer specified for new drywall.
+
+<figure>
+  <img src="/images/article-guides/drywall-priming-comparison.jpg" alt="Properly primed drywall compared with unprimed drywall showing uneven sheen over a joint-compound seam." width="1536" height="1024" loading="lazy">
+  <figcaption>Primer evens the absorption difference between drywall paper and joint compound; skipping it can leave the seam flashing through the finish.</figcaption>
+</figure>
 
 ## 4. Inspect again after priming
 

@@ -17,6 +17,9 @@ supplies:
 related: [how-to-choose-roller-nap, how-do-i-know-if-i-put-on-enough-paint, should-you-go-back-over-wet-paint, fix-roller-marks-and-patchy-paint, paint-brush-vs-roller]
 featured: true
 recommendationSlots: [nine-inch-roller-frame, roller-extension-pole]
+cardImage:
+  src: "/images/apply-paint/roller-pressure-comparison.jpg"
+  alt: "Correct roller pressure compared with excessive pressure and uneven paint ridges."
 ---
 
 A roller is simple enough to use badly on the first try.

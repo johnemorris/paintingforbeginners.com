@@ -11,6 +11,9 @@ summary: "Peeling and bubbling are adhesion symptoms, not problems to hide with 
 supplies: [Scraper appropriate to the surface, Cleaning supplies appropriate to the contamination, Sanding supplies if safe and appropriate, Suitable primer, Finish paint, Protective equipment appropriate to the job]
 related: [surface-preparation-before-painting, can-you-paint-over-old-paint, do-you-need-primer]
 featured: false
+cardImage:
+  src: "/images/painting-basics/paint-failure.jpg"
+  alt: "Peeling and bubbled paint exposing a failed older coating beneath it."
 ---
 
 If paint is peeling, blistering, or bubbling, another coat is rarely the first answer.
@@ -30,6 +33,11 @@ Before cosmetic repair, investigate possible water or moisture sources such as:
 Do not seal an active moisture problem behind fresh paint.
 
 If the material is soft, wet, moldy, heavily corroded, or the source is unclear, the project may need repair beyond painting.
+
+<figure>
+  <img src="/images/painting-basics/paint-failure.jpg" alt="Peeling and bubbled paint exposing a failed older coating beneath it." width="1200" height="800" loading="lazy">
+  <figcaption>Lifted edges and blisters show that one or more layers have lost their bond. New paint cannot reconnect the failed layer underneath.</figcaption>
+</figure>
 
 ## Other common causes
 

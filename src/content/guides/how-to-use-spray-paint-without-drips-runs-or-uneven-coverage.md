@@ -10,6 +10,9 @@ summary: "Follow the can's directions, test the spray pattern, keep the can movi
 supplies: [Compatible aerosol spray paint, Prepared test piece or scrap, Drop cloth and masking materials, Protective equipment required by the product label]
 related: [should-you-go-back-over-wet-paint, how-do-i-know-if-i-put-on-enough-paint, how-to-fix-paint-drips-and-runs, surface-preparation-before-painting]
 featured: true
+cardImage:
+  src: "/images/apply-paint/spray-distance-comparison.jpg"
+  alt: "Spray patterns produced from correct, too-close, and too-distant positions."
 ---
 
 The easiest way to make spray paint run is to try to make the first coat look finished.

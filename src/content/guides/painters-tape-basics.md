@@ -10,6 +10,9 @@ summary: "Apply tape to a clean, dry, cured surface; choose a product approved f
 supplies: [Painter's tape matched to the surface, 2–2½ inch angled brush, Clean dry cloth, Putty knife or application tool when approved, Sharp utility blade for carefully scoring bridged paint, Drop cloth]
 related: [how-to-paint-a-room, how-to-paint-trim-and-baseboards, how-to-use-a-paint-roller, room-painting-supply-checklist]
 recommendationSlots: [angled-cutting-brush]
+cardImage:
+  src: "/images/article-guides/painters-tape-edge-comparison.jpg"
+  alt: "A crisp painted edge compared with feathered paint bleed on the same textured surface."
 ---
 
 Painter's tape is most useful for protecting finished surfaces and creating repeatable boundaries. It is not automatically required for every edge, and the wrong tape can lift paint, leave residue, or still allow bleed.
@@ -55,6 +58,11 @@ Apply manageable lengths without stretching the tape. Stretching encourages it t
 On textured walls, small gaps remain beneath a straight tape edge. Heavy paint pushes into those gaps. Use controlled, thin strokes away from the edge rather than loading paint against it.
 
 For a very crisp decorative line, some systems seal the edge with the underlying wall color before applying the new color. Test compatibility and let layers dry as directed; this is a technique, not a reason to build up several heavy films.
+
+<figure>
+  <img src="/images/article-guides/painters-tape-edge-comparison.jpg" alt="A crisp painted edge compared with feathered paint bleed on the same textured surface." width="1536" height="1024" loading="lazy">
+  <figcaption>A clean edge depends on a sound, sealed contact line. Texture or poorly pressed tape leaves channels where wet paint can bleed.</figcaption>
+</figure>
 
 ## Paint away from the edge
 
