@@ -6,7 +6,7 @@ topic: paint-coverage
 difficulty: Easy
 activeTime: "A few minutes to evaluate"
 totalTime: "Usually 1–2 finish coats plus drying"
-updated: 2026-08-26
+updated: 2026-08-27
 summary: "Two finish coats are a dependable planning assumption for many beginner projects, but the correct number depends on the product, surface, color change, preparation, and dried appearance. Do not add coats to solve contamination, moisture, poor adhesion, or another surface failure."
 supplies:
   - Finish-paint label or technical data
@@ -34,6 +34,10 @@ One coat may be enough when all of these are true:
 - the fully dried finish looks uniform under normal light.
 
 A marketing phrase is not a reason to buy too little paint. Check the conditions attached to any one-coat claim.
+
+## A rough first coat is not always a failed coat
+
+The first coat often exposes the difficulty of a color change and can look lighter, patchier, or less opaque than the finished wall. Let it dry for the specified interval before judging. Normal incomplete hiding is different from raised ridges, poor adhesion, contamination craters, or severe texture; those defects need diagnosis rather than an automatic second coat.
 
 <figure>
   <img src="/images/painting-basics/question-coats.jpg" alt="First-coat and second-coat paint samples compared side by side." width="1200" height="800" loading="lazy">

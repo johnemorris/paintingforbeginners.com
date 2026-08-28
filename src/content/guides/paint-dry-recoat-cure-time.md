@@ -6,7 +6,7 @@ topic: drying-durability
 difficulty: Easy
 activeTime: "5 minutes to check the product"
 totalTime: "Hours to weeks depending on the coating"
-updated: 2026-08-26
+updated: 2026-08-27
 summary: "Touch-dry, recoat-ready, and cured are different stages. Use the product label or technical data for actual timing because coating chemistry, temperature, humidity, airflow, film thickness, and surface all affect drying."
 supplies:
   - Paint label or technical data sheet
@@ -53,11 +53,20 @@ Two paints can list very different touch, recoat, and cure times. Even a familia
 
 Check both products when another material is involved. Painter's tape, adhesive hooks, cleaners, and topcoats each have their own requirements, and their timing must be compatible with the paint beneath them.
 
-## What if paint stays soft or tacky?
+## Why is my paint still sticky or soft?
 
-Allow more time when conditions have been cool or humid, but investigate persistent tackiness. Possible causes include a coat applied too heavily, incompatible material underneath, contamination, or application outside the product's stated conditions.
+Normal incomplete cure can leave a new coating softer than its final film even though it is ready for a careful recoat. That should improve along the product's expected cure path.
 
-Do not hide persistent softness under another coat. Check the technical information and contact the manufacturer when the coating does not develop as expected.
+Abnormal prolonged softness or tackiness deserves investigation. Possible factors include:
+
+- coating chemistry that cures more slowly than expected;
+- low temperature, high humidity, or poor airflow;
+- a coat applied much thicker than intended;
+- incompatible paint, primer, or old finish beneath it;
+- recoating outside the manufacturer's stated window; or
+- contamination that interfered with film formation.
+
+Do not hide persistent softness under another coat or promise yourself that every coating hardens on the same schedule. Compare the real conditions with the product directions and contact the manufacturer when the film does not develop as specified.
 
 ## Use the right question
 

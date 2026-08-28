@@ -1,11 +1,18 @@
 ---
-title: "Essential Painting Supplies for Beginners"
+title: "Acrylic Painting Supplies for Beginners: A Simple First-Canvas Kit"
 description: "A no-filler starter list for beginner acrylic painting, including what each item does, where modest supplies are enough, and what you can skip at first."
-category: supplies
+category: canvas
 difficulty: Easy
 activeTime: "20–40 minutes to choose"
 totalTime: "One shopping trip"
-updated: 2026-08-25
+updated: 2026-08-27
+role: pillar
+ranking: 3
+status: published
+isArchived: false
+movement: stable
+lastReviewed: 2026-08-27
+resourceType: guide
 summary: "Start with a pre-primed surface, a small student-grade acrylic set, three useful brushes, a palette, two water containers, and protection for your table and clothing. An easel, dozens of colors, specialty mediums, and expensive detail tools can wait."
 supplies: [Pre-primed canvas or canvas panel, Student-grade acrylic paint, Medium flat brush, Medium round brush, Small detail brush, Palette surface, Two water containers, Rag, Table covering and apron]
 related: [acrylic-painting-for-beginners, canvas-size-for-painting, how-to-paint-a-simple-landscape]

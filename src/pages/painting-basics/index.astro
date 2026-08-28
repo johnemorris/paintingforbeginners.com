@@ -1,23 +1,16 @@
 ---
 import { getCollection } from "astro:content";
 import SectionLandingLayout from "../../layouts/SectionLandingLayout.astro";
-import EditorialGuideCard from "../../components/EditorialGuideCard.astro";
 import DiagnosticProblemCard from "../../components/DiagnosticProblemCard.astro";
-import { beginnerQuestions, commonProblems } from "../../data/painting-basics";
+import { commonProblems } from "../../data/painting-basics";
+import { isDiscoverableGuide } from "../../data/catalog";
 
-const guides = (await getCollection("guides")).filter((guide) => !guide.data.draft && guide.data.category === "basics");
+const guides = (await getCollection("guides")).filter((guide) => isDiscoverableGuide(guide) && guide.data.category === "basics");
 const findGuide = (id: string) => guides.find((guide) => guide.id === id);
-const questions = beginnerQuestions.map((question) => ({ ...question, guide: findGuide(question.guideId) })).filter((question) => question.guide);
 const problems = commonProblems.map((problem) => ({ ...problem, guide: findGuide(problem.guideId) })).filter((problem) => problem.guide);
 ---
 <SectionLandingLayout category="basics">
   <div slot="after-topics">
-    <section class="section questions-section" id="common-questions">
-      <div class="wrap">
-        <div class="section-heading"><p class="eyebrow">Quick decisions</p><h2>Common beginner questions</h2><p class="lead">Get a direct answer before you buy supplies or add another step.</p></div>
-        <div class="question-grid">{questions.map(({ guide, image }) => <EditorialGuideCard guide={guide!} {image} compact informativeImage />)}</div>
-      </div>
-    </section>
     <section class="section problem-section" id="common-problems">
       <div class="wrap">
         <div class="section-heading"><p class="eyebrow">Spot the cause</p><h2>Common painting problems</h2><p class="lead">A visible flaw is a clue. Match what your surface is doing before sanding or adding another coat.</p></div>
@@ -29,10 +22,8 @@ const problems = commonProblems.map((problem) => ({ ...problem, guide: findGuide
 <style>
   .section-heading { max-width: 48rem; margin-bottom: var(--space-5); }
   .section-heading h2 { margin-top: 0; }
-  .questions-section { background: var(--blue-wash); }
-  .question-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); }
   .problem-section { background: var(--canvas); }
   .problem-card-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-3); }
   @media (max-width: 980px) { .problem-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  @media (max-width: 620px) { .question-grid, .problem-card-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 620px) { .problem-card-grid { grid-template-columns: 1fr; } }
 </style>

@@ -1,0 +1,36 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  heading: string;
+  lead: string;
+  guides: CollectionEntry<"guides">[];
+}
+
+const { heading, lead, guides } = Astro.props;
+---
+<section class="section questions-section" id="common-questions">
+  <div class="wrap questions-layout">
+    <div class="section-heading">
+      <p class="eyebrow">Common beginner questions</p>
+      <h2>{heading}</h2>
+      <p class="lead">{lead}</p>
+    </div>
+    <nav class="question-links" aria-label={heading}>
+      {guides.map((guide) => <a href={`/${guide.id}/`}><span>{guide.data.title}</span><span aria-hidden="true">→</span></a>)}
+    </nav>
+  </div>
+</section>
+
+<style>
+  .questions-section { background: var(--blue-wash); }
+  .questions-layout { display: grid; grid-template-columns: minmax(16rem, .7fr) minmax(0, 1.3fr); gap: var(--space-5); align-items: start; }
+  .section-heading { max-width: 34rem; }
+  .section-heading h2 { margin-top: 0; }
+  .question-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-2); }
+  .question-links a { display: flex; min-height: 3.65rem; align-items: center; justify-content: space-between; gap: var(--space-2); padding: .8rem 1rem; border: 1px solid var(--line); border-radius: var(--radius-sm); background: white; color: var(--ink); font-size: .88rem; font-weight: 800; line-height: 1.35; text-decoration: none; box-shadow: var(--shadow-soft); }
+  .question-links a:hover { border-color: var(--teal-dark); color: var(--teal-dark); transform: translateY(-1px); }
+  .question-links a span:last-child { flex: 0 0 auto; color: var(--teal-dark); }
+  @media (max-width: 820px) { .questions-layout { grid-template-columns: 1fr; gap: var(--space-3); } }
+  @media (max-width: 620px) { .question-links { grid-template-columns: 1fr; } }
+</style>

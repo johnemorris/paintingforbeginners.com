@@ -1,0 +1,171 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import LibraryIndexEntry from "../../components/LibraryIndexEntry.astro";
+import { isDiscoverableGuide, sortGuides } from "../../data/catalog";
+import { categories, navigation, type CategoryKey } from "../../data/site";
+
+const guides = sortGuides((await getCollection("guides")).filter(isDiscoverableGuide));
+const categoryNavigation = navigation.filter((item) => item.key !== "articles");
+const groups = categoryNavigation.map((item) => {
+  const key = item.key as CategoryKey;
+  return { key, category: categories[key], guides: guides.filter((guide) => guide.data.category === key) };
+});
+---
+<BaseLayout title="Article Library" description="Browse every published Painting for Beginners guide by title, topic, or section, with permanent links to practical painting help." activeSection="articles">
+  <header class="library-hero">
+    <div class="wrap">
+      <Breadcrumbs items={[{ label: "Article Library" }]} />
+      <p class="eyebrow">The complete reference collection</p>
+      <h1>Article Library</h1>
+      <p class="lead">Search every normally discoverable guide. Section pages remain curated starting points; this library is the full collection.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrap">
+      <section class="library-controls" data-library-controls aria-label="Search and filter the article library">
+        <label for="library-query">Search by title or topic<input id="library-query" type="search" placeholder="Try “primer,” “roller,” or “acrylic”" autocomplete="off" /></label>
+        <div class="library-filter" role="radiogroup" aria-labelledby="library-filter-label" data-library-filter>
+          <span id="library-filter-label" class="filter-label">Filter by section</span>
+          <div class="filter-options">
+            <button type="button" role="radio" aria-checked="true" tabindex="0" data-library-filter-option data-section="">All sections</button>
+            {groups.map((group) => <button type="button" role="radio" aria-checked="false" tabindex="-1" data-library-filter-option data-section={group.key}>{group.category.title}</button>)}
+          </div>
+        </div>
+      </section>
+      <p class="result-count" aria-live="polite"><strong data-result-count>{guides.length}</strong> articles</p>
+      <div class="library-index" data-library-index>
+        {groups.map((group) => (
+          <section class="library-group" data-library-group data-section={group.key}>
+            <header>
+              <h2>{group.category.title}</h2>
+              <p><strong data-group-count>{group.guides.length}</strong> guides</p>
+            </header>
+            <ul>{group.guides.map((guide) => <LibraryIndexEntry {guide} />)}</ul>
+          </section>
+        ))}
+      </div>
+      <p class="empty-state" data-empty-state hidden>No articles match those filters. Try a broader word or choose all sections.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const controls = document.querySelector("[data-library-controls]");
+  const queryInput = document.querySelector("#library-query");
+  const filterOptions = Array.from(document.querySelectorAll("[data-library-filter-option]"));
+  const groups = Array.from(document.querySelectorAll("[data-library-group]"));
+  const count = document.querySelector("[data-result-count]");
+  const empty = document.querySelector("[data-empty-state]");
+  let selectedSection = "";
+
+  const params = new URLSearchParams(window.location.search);
+  if (queryInput instanceof HTMLInputElement) queryInput.value = params.get("query") ?? "";
+
+  const requestedSection = params.get("section") ?? "";
+  if (filterOptions.some((option) => option instanceof HTMLElement && option.dataset.section === requestedSection)) {
+    selectedSection = requestedSection;
+  }
+
+  function selectSection(section: string, shouldFocus = false) {
+    selectedSection = section;
+    for (const option of filterOptions) {
+      if (!(option instanceof HTMLButtonElement)) continue;
+      const isSelected = option.dataset.section === section;
+      option.setAttribute("aria-checked", String(isSelected));
+      option.tabIndex = isSelected ? 0 : -1;
+      if (isSelected && shouldFocus) option.focus();
+    }
+    filterLibrary();
+  }
+
+  function filterLibrary() {
+    if (!(controls instanceof HTMLElement)) return;
+    const query = queryInput instanceof HTMLInputElement ? queryInput.value.trim().toLowerCase() : "";
+    const section = selectedSection;
+    let visible = 0;
+
+    for (const group of groups) {
+      if (!(group instanceof HTMLElement)) continue;
+      let groupVisible = 0;
+      const matchesSection = !section || group.dataset.section === section;
+
+      for (const item of group.querySelectorAll("[data-library-item]")) {
+        if (!(item instanceof HTMLElement)) continue;
+        const matchesQuery = !query || (item.dataset.search ?? "").includes(query);
+        item.hidden = !(matchesSection && matchesQuery);
+        if (!item.hidden) groupVisible += 1;
+      }
+
+      group.hidden = groupVisible === 0;
+      const groupCount = group.querySelector("[data-group-count]");
+      if (groupCount) groupCount.textContent = String(groupVisible);
+      visible += groupVisible;
+    }
+
+    if (count) count.textContent = String(visible);
+    if (empty instanceof HTMLElement) empty.hidden = visible !== 0;
+
+    const params = new URLSearchParams();
+    if (query) params.set("query", query);
+    if (section) params.set("section", section);
+    const nextUrl = `${window.location.pathname}${params.size ? `?${params}` : ""}`;
+    window.history.replaceState(null, "", nextUrl);
+  }
+
+  queryInput?.addEventListener("input", filterLibrary);
+  for (const option of filterOptions) {
+    if (!(option instanceof HTMLButtonElement)) continue;
+    option.addEventListener("click", () => selectSection(option.dataset.section ?? ""));
+    option.addEventListener("keydown", (event) => {
+      const currentIndex = filterOptions.indexOf(option);
+      let nextIndex = currentIndex;
+
+      if (event.key === "ArrowLeft") nextIndex = (currentIndex - 1 + filterOptions.length) % filterOptions.length;
+      else if (event.key === "ArrowRight") nextIndex = (currentIndex + 1) % filterOptions.length;
+      else if (event.key === "Home") nextIndex = 0;
+      else if (event.key === "End") nextIndex = filterOptions.length - 1;
+      else if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        selectSection(option.dataset.section ?? "");
+        return;
+      } else return;
+
+      event.preventDefault();
+      const nextOption = filterOptions[nextIndex];
+      if (nextOption instanceof HTMLButtonElement) selectSection(nextOption.dataset.section ?? "", true);
+    });
+  }
+
+  selectSection(selectedSection);
+</script>
+
+<style>
+  .library-hero { padding: var(--space-4) 0 var(--space-6); background: linear-gradient(120deg, var(--blue-wash), var(--canvas)); }
+  .library-hero .eyebrow { margin-top: var(--space-5); }
+  .library-hero h1 { max-width: 12ch; }
+  .library-controls { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 1fr); gap: var(--space-3); padding: var(--space-4); border-radius: var(--radius); background: var(--ink-strong); color: white; }
+  label { display: grid; gap: var(--space-1); font-size: .82rem; font-weight: 850; }
+  input { width: 100%; min-height: 3rem; padding: .65rem .8rem; border: 2px solid transparent; border-radius: var(--radius-sm); background: white; color: var(--ink); }
+  input:focus-visible { border-color: var(--ochre); outline: 3px solid var(--ochre); outline-offset: 2px; }
+  .library-filter { min-width: 0; }
+  .filter-label { display: block; margin-bottom: var(--space-1); font-size: .82rem; font-weight: 850; }
+  .filter-options { display: flex; flex-wrap: wrap; gap: .45rem; }
+  .filter-options button { min-height: 2.5rem; padding: .45rem .65rem; border: 1px solid rgb(255 255 255 / .55); border-radius: 999px; background: transparent; color: white; cursor: pointer; font: inherit; font-size: .78rem; font-weight: 800; line-height: 1.15; }
+  .filter-options button:hover { border-color: white; background: rgb(255 255 255 / .12); }
+  .filter-options button[aria-checked="true"] { border-color: var(--teal); background: var(--teal); color: var(--ink-strong); }
+  .filter-options button:focus-visible { outline: 3px solid var(--ochre); outline-offset: 3px; }
+  .result-count { margin: var(--space-4) 0 var(--space-3); color: var(--muted); }
+  .library-controls, .result-count, .library-index, .empty-state { max-width: 60rem; }
+  .library-group { padding: var(--space-5) 0; }
+  .library-group + .library-group { border-top: .25rem solid var(--teal); }
+  .library-group > header { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-3); margin-bottom: var(--space-3); }
+  .library-group h2 { margin: 0; font-size: clamp(1.65rem, 3vw, 2.2rem); }
+  .library-group header p { flex: 0 0 auto; margin: 0; color: var(--coral-dark); font-size: .76rem; font-weight: 850; letter-spacing: .07em; text-transform: uppercase; }
+  .library-group ul { margin: 0; padding: 0; list-style: none; }
+  :global([data-library-item][hidden]), .library-group[hidden] { display: none; }
+  .empty-state { padding: var(--space-5); border: 1px solid var(--line); background: var(--canvas); text-align: center; }
+  @media (max-width: 720px) { .library-controls { grid-template-columns: 1fr; padding: var(--space-3); } .library-group { padding: var(--space-4) 0; } .library-group > header { align-items: flex-start; flex-direction: column; gap: var(--space-1); } }
+</style>

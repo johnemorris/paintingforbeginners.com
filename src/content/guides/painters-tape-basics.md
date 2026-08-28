@@ -5,7 +5,7 @@ category: supplies
 difficulty: Easy
 activeTime: "20–60 minutes"
 totalTime: "Depends on project and removal window"
-updated: 2026-08-26
+updated: 2026-08-27
 summary: "Apply tape to a clean, dry, cured surface; choose a product approved for that surface and duration; press down the paint-side edge; use thin coats near it; and remove it within the manufacturer's window. Tape helps with protection, but it cannot compensate for dirt, texture, or heavy paint buildup."
 supplies: [Painter's tape matched to the surface, 2–2½ inch angled brush, Clean dry cloth, Putty knife or application tool when approved, Sharp utility blade for carefully scoring bridged paint, Drop cloth]
 related: [how-to-paint-a-room, how-to-paint-trim-and-baseboards, how-to-use-a-paint-roller, room-painting-supply-checklist]
@@ -69,6 +69,22 @@ For a very crisp decorative line, some systems seal the edge with the underlying
 With a brush, place paint slightly away from the tape and work toward it with a lightly loaded edge. With a roller, avoid forcing the roller end into the tape. Excess paint creates a ridge and a thicker bridge that is more likely to tear during removal.
 
 Tape should support careful application, not invite faster, wetter painting.
+
+## Why paint bleeds under tape
+
+Bleeding usually means wet paint found a channel beneath the working edge. Dust, grease, wall texture, a stretched strip, or an edge that was not pressed down can all create that channel. A heavily loaded brush or roller then pushes more paint into it.
+
+Let the area dry before correcting it. For the next edge, clean and dry the surface, apply an approved tape without stretching it, press the paint-side edge firmly, and use controlled strokes that move away from the boundary.
+
+## Why tape pulls fresh paint off
+
+Paint can feel dry to a fingertip before it is ready for adhesive. Check the coating's cure guidance and the tape's rules for recently painted or delicate surfaces before masking. The product's removal window matters too: leaving tape in place too long can strengthen the bond or allow finish paint to form a continuous bridge across the edge.
+
+If paint bridges over the tape, score only that film at the boundary before pulling slowly back over the strip. Do not cut deeply into the surface.
+
+Tape lifting a sound but insufficiently cured finish is a timing or product-selection problem. Tape lifting paint that was already loose, chalky, or poorly bonded reveals a weak underlying film. In that case, stop masking and address the adhesion failure before adding more paint.
+
+For the difference between paint that is dry to touch and paint that is ready for adhesive, see [paint dry time, recoat time, and cure time](/paint-dry-recoat-cure-time/).
 
 ## Remove it at the right time
 

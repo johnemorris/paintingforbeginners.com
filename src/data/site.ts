@@ -5,15 +5,6 @@ export const site = {
   description: "Practical, beginner-friendly guides for painting rooms, furniture, everyday projects, and your first canvas.",
 } as const;
 
-export const navigation = [
-  { href: "/painting-basics/", label: "Painting Basics" },
-  { href: "/home-painting/", label: "Home Painting" },
-  { href: "/furniture-projects/", label: "Furniture & Projects" },
-  { href: "/supplies-tools/", label: "Supplies & Tools" },
-  { href: "/apply-paint/", label: "Apply Paint" },
-  { href: "/canvas-painting/", label: "Canvas Painting" },
-] as const;
-
 export const categories = {
   basics: {
     title: "Painting Basics",
@@ -83,3 +74,14 @@ export const categories = {
 } as const;
 
 export type CategoryKey = keyof typeof categories;
+export type NavigationKey = CategoryKey | "articles";
+
+export const navigation = [
+  { key: "basics", href: "/painting-basics/", label: "Painting Basics" },
+  { key: "home", href: "/home-painting/", label: "Home Painting" },
+  { key: "furniture", href: "/furniture-projects/", label: "Furniture & Projects" },
+  { key: "supplies", href: "/supplies-tools/", label: "Supplies & Tools" },
+  { key: "apply", href: "/apply-paint/", label: "Apply Paint" },
+  { key: "canvas", href: "/canvas-painting/", label: "Canvas Painting" },
+  { key: "articles", href: "/articles/", label: "Article Library" },
+] as const satisfies readonly { key: NavigationKey; href: string; label: string }[];

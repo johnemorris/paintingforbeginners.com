@@ -15,11 +15,17 @@ await walk(root);
 
 const htmlFiles = files.filter((file) => file.pathname.endsWith(".html"));
 const failures = [];
+const canonicalOwners = new Map();
 const sitemap = await readFile(new URL("sitemap.xml", root), "utf8");
 for (const file of htmlFiles) {
   const html = await readFile(file, "utf8");
+  const canonical = html.match(/rel="canonical" href="([^"]+)"/)?.[1];
+  if (canonical) {
+    const existingOwner = canonicalOwners.get(canonical);
+    if (existingOwner) failures.push(`${file.pathname.replace(root.pathname, "")}: duplicate canonical also used by ${existingOwner}`);
+    else canonicalOwners.set(canonical, file.pathname.replace(root.pathname, ""));
+  }
   if (html.includes('name="robots" content="noindex')) {
-    const canonical = html.match(/rel="canonical" href="([^"]+)"/)?.[1];
     if (canonical && sitemap.includes(`<loc>${canonical}</loc>`)) failures.push(`${file.pathname.replace(root.pathname, "")}: noindex URL appears in sitemap`);
   }
   for (const match of html.matchAll(/href="(\/[^"]*)"/g)) {
@@ -30,6 +36,12 @@ for (const file of htmlFiles) {
     let exists = false;
     for (const candidate of candidates) { try { if ((await stat(candidate)).isFile()) exists = true; } catch {} }
     if (!exists) failures.push(`${file.pathname.replace(root.pathname, "")}: broken internal link ${href}`);
+  }
+  for (const match of html.matchAll(/(?:src|poster)="(\/[^"?#]+)[^\"]*"/g)) {
+    const asset = match[1];
+    const relative = asset.replace(/^\//, "");
+    try { await stat(new URL(relative, root)); }
+    catch { failures.push(`${file.pathname.replace(root.pathname, "")}: missing local asset ${asset}`); }
   }
 }
 

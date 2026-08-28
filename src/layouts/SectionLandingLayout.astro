@@ -3,14 +3,17 @@ import { getCollection, type CollectionEntry } from "astro:content";
 import BaseLayout from "./BaseLayout.astro";
 import Breadcrumbs from "../components/Breadcrumbs.astro";
 import SectionTopicCard from "../components/SectionTopicCard.astro";
+import SectionQuestionLinks from "../components/SectionQuestionLinks.astro";
+import SectionActionBand from "../components/SectionActionBand.astro";
 import { categories, type CategoryKey } from "../data/site";
 import { sectionLandings } from "../data/section-landings";
+import { isDiscoverableGuide } from "../data/catalog";
 
 interface Props { category: CategoryKey }
 const { category } = Astro.props;
 const categoryInfo = categories[category];
 const config = sectionLandings[category];
-const allGuides = (await getCollection("guides")).filter((guide) => !guide.data.draft);
+const allGuides = (await getCollection("guides")).filter(isDiscoverableGuide);
 const guideById = new Map(allGuides.map((guide) => [guide.id, guide]));
 const startGuide = guideById.get(config.start.guideId);
 
@@ -24,8 +27,13 @@ const topics = config.topics.groups.filter((topic) => topic.guideIds.length > 0)
   }
   return { ...topic, guides };
 });
+const questionGuides = config.questions.guideIds.map((id) => guideById.get(id)).filter(Boolean) as CollectionEntry<"guides">[];
+if (questionGuides.length !== config.questions.guideIds.length) {
+  const missing = config.questions.guideIds.filter((id) => !guideById.has(id));
+  throw new Error(`Missing question guides in ${category}: ${missing.join(", ")}`);
+}
 ---
-<BaseLayout title={categoryInfo.title} description={categoryInfo.description} image={config.hero.src}>
+<BaseLayout title={categoryInfo.title} description={categoryInfo.description} image={config.hero.src} activeSection={category}>
   <header class="section-hero">
     <div class="wrap hero-grid">
       <div class="hero-copy">
@@ -33,7 +41,7 @@ const topics = config.topics.groups.filter((topic) => topic.guideIds.length > 0)
         <p class="eyebrow">{categoryInfo.eyebrow}</p>
         <h1>{config.hero.heading}</h1>
         <p class="lead">{config.hero.lead}</p>
-        <div class="hero-actions"><a class="button" href="#start-here">Show me where to start</a></div>
+        <div class="hero-actions"><a class="button" href={`/${startGuide.id}/`}>{config.start.cta} <span aria-hidden="true">→</span></a></div>
       </div>
       <figure><img src={config.hero.src} alt={config.hero.alt} width="1536" height="1024" /><figcaption>{config.hero.caption}</figcaption></figure>
     </div>
@@ -57,21 +65,25 @@ const topics = config.topics.groups.filter((topic) => topic.guideIds.length > 0)
 
   <slot name="after-topics" />
 
-  <section class="section discovery-section">
-    <div class="wrap discovery">
-      <div><p class="eyebrow">{config.transition.eyebrow}</p><h2>{config.transition.heading}</h2><p class="lead">{config.transition.lead}</p></div>
-      <nav aria-label={`Explore beyond ${categoryInfo.title}`}>{config.transition.links.map((link) => <a href={link.href}>{link.label}</a>)}</nav>
+  <SectionQuestionLinks heading={config.questions.heading} lead={config.questions.lead} guides={questionGuides} />
+
+  {config.actionBands.map((band) => <SectionActionBand {band} categoryTitle={categoryInfo.title} />)}
+
+  <section class="section library-section">
+    <div class="wrap library-callout">
+      <div><p class="eyebrow">The complete collection</p><h2>Explore all {categoryInfo.title} guides</h2><p class="lead">Browse every published guide in this section without turning this curated starting page into an exhaustive list.</p></div>
+      <a class="button" href={`/articles/?section=${category}`}>View all {categoryInfo.title} guides <span aria-hidden="true">→</span></a>
     </div>
   </section>
 </BaseLayout>
 <style>
-  .section-hero { padding: var(--space-4) 0 var(--space-6); overflow: hidden; background: linear-gradient(125deg, var(--blue-wash), var(--canvas)); }
-  .hero-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(28rem, 1.1fr); align-items: center; gap: clamp(var(--space-4), 6vw, var(--space-6)); }
+  .section-hero { padding: var(--space-3) 0 var(--space-5); overflow: hidden; background: linear-gradient(125deg, var(--blue-wash), var(--canvas)); }
+  .hero-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(23rem, .85fr); align-items: center; gap: clamp(var(--space-4), 5vw, var(--space-6)); }
   .hero-copy .eyebrow { margin-top: var(--space-5); }
   .hero-copy h1 { max-width: 12ch; }
   .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); margin-top: var(--space-4); }
-  figure { margin: var(--space-4) 0 0; transform: rotate(1deg); }
-  figure img { width: 100%; aspect-ratio: 4 / 3; border: .65rem solid white; border-radius: var(--radius); object-fit: cover; box-shadow: var(--shadow); }
+  figure { width: 100%; max-width: 31rem; margin: var(--space-3) 0 0; justify-self: end; transform: rotate(1deg); }
+  figure img { width: 100%; height: auto; aspect-ratio: 4 / 3; border: .65rem solid white; border-radius: var(--radius); object-fit: cover; box-shadow: var(--shadow); }
   figcaption { margin-top: .5rem; color: var(--muted); font-size: .8rem; text-align: center; }
   .start-section { background: var(--ink-strong); color: white; }
   .start-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(20rem, .9fr); align-items: center; gap: var(--space-6); }
@@ -85,14 +97,12 @@ const topics = config.topics.groups.filter((topic) => topic.guideIds.length > 0)
   .section-heading { max-width: 48rem; margin-bottom: var(--space-5); }
   .section-heading h2 { margin-top: 0; }
   .topic-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; gap: var(--space-3); }
-  .discovery-section { background: var(--teal-dark); color: white; }
-  .discovery { display: grid; grid-template-columns: minmax(0, 1fr) minmax(20rem, .8fr); gap: var(--space-5); }
-  .discovery h2, .discovery .lead { color: white; }
-  .discovery .eyebrow { color: #b8ece8; }
-  .discovery nav { display: grid; grid-template-columns: repeat(2, 1fr); align-content: center; gap: var(--space-2); }
-  .discovery nav a { min-height: 3rem; padding: .7rem 1rem; border: 1px solid rgb(255 255 255 / .28); border-radius: var(--radius-sm); color: white; font-weight: 800; text-decoration: none; }
-  .discovery nav a:hover { background: white; color: var(--teal-dark); }
+  .library-section { background: var(--canvas); }
+  .library-callout { display: flex; align-items: center; justify-content: space-between; gap: var(--space-5); }
+  .library-callout > div { max-width: 48rem; }
+  .library-callout h2 { margin-top: 0; }
+  .library-callout .button { flex: 0 0 auto; text-align: center; }
   @media (max-width: 940px) { .topic-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  @media (max-width: 860px) { .hero-grid, .start-grid, .discovery { grid-template-columns: 1fr; } .hero-copy h1 { max-width: 13ch; } .hero-grid figure { max-width: 42rem; } }
-  @media (max-width: 620px) { .topic-grid { grid-template-columns: 1fr; } .discovery nav { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 860px) { .hero-grid, .start-grid { grid-template-columns: 1fr; } .hero-copy h1 { max-width: 13ch; } .hero-grid figure { max-width: 32rem; justify-self: start; } .library-callout { align-items: flex-start; flex-direction: column; gap: var(--space-3); } }
+  @media (max-width: 620px) { .section-hero { padding-bottom: var(--space-4); } .topic-grid { grid-template-columns: 1fr; } .hero-grid figure { max-width: 100%; } }
 </style>

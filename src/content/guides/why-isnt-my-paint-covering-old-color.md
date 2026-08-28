@@ -6,7 +6,7 @@ topic: paint-coverage
 difficulty: Easy
 activeTime: "15–30 minutes to diagnose"
 totalTime: "Usually another coat plus drying time"
-updated: 2026-08-26
+updated: 2026-08-27
 summary: "Poor hiding does not always mean the paint is bad. Check whether the coat is fully dry, whether enough paint was applied uniformly, whether the surface is porous, and whether the color change or coating system needs additional coats or a recommended primer."
 supplies: [Remaining finish paint, Roller cover appropriate to the surface, Stir stick, Suitable primer if the coating system requires it]
 related: [how-many-coats-of-paint, do-you-need-primer, how-to-use-a-paint-roller, paint-dry-recoat-cure-time]
@@ -25,6 +25,12 @@ Before changing products, determine **why** the coating is not hiding evenly.
 Wet paint can look uneven, translucent, darker, or lighter in places.
 
 Do not judge final hiding while portions are still drying. Wait for the required interval and evaluate under normal lighting.
+
+## Is it normal for the first coat to look bad?
+
+A first coat can look uneven or allow a strong old color to show through even when the project is still on track. Judge it only after the specified drying interval. If the dried film is firmly attached and the main problem is incomplete, reasonably uniform hiding, the next complete coat may be the intended correction.
+
+Do not dismiss every defect as “just the first coat.” Raised ridges, peeling, craters around contamination, or paint that slides away from the surface point to preparation or application failure. Correct those causes before covering them again.
 
 ## Common reason #1: the film is too thin
 
