@@ -3,8 +3,9 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import GuideList from "../components/GuideList.astro";
 import { categories, site } from "../data/site";
-const guides = (await getCollection("guides")).filter((guide) => !guide.data.draft);
-const featured = guides.filter((guide) => guide.data.featured).slice(0, 6);
+import { isDiscoverableGuide, sortGuides } from "../data/catalog";
+const guides = (await getCollection("guides")).filter(isDiscoverableGuide);
+const featured = sortGuides(guides.filter((guide) => guide.data.featured)).slice(0, 6);
 const paths = [
   { key: "home", copy: "Walls, ceilings, trim, doors, and the order that keeps a room manageable." },
   { key: "furniture", copy: "Wood, laminate, and everyday pieces that deserve a useful second life." },

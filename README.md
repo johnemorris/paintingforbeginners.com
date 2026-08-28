@@ -17,7 +17,7 @@ For background development, use `astro dev --background`, `astro dev status`, `a
 ## Architecture
 
 - `src/content/guides/` contains editorial Markdown. Guides contain useful prose, not duplicated page structure.
-- `src/content.config.ts` validates guide metadata used by summaries, supply lists, related content, dates, and SEO.
+- `src/content.config.ts` validates guide metadata used by summaries, supply lists, editorial role/ranking, publication and archive state, related content, dates, and SEO.
 - `src/layouts/` owns the global shell and page-family layouts.
 - `src/components/` owns reusable navigation, breadcrumb, card, and guide-list UI.
 - `src/data/site.ts` owns site identity, navigation, and category definitions.
@@ -30,11 +30,13 @@ For background development, use `astro dev --background`, `astro dev status`, `a
 
 1. Add Markdown to `src/content/guides/`; its filename becomes the root-level public URL.
 2. Supply every required schema field and write a self-contained, beginner-useful guide.
-3. Add only strong `related` connections. Optional cross-cutting fields support `hero` image/alt/attribution, `draft`, `noindex`, and validated recommendation IDs.
+3. Add only strong `related` connections. Publication is controlled by `status`; `featured` controls promotion, while `isArchived` removes an established guide from normal browsing without deleting its route. Optional cross-cutting fields support `hero` image/alt/attribution, `noindex`, and validated recommendation IDs.
 4. If the category defines topic sections in `src/data/site.ts`, select one with the guide's `topic` field. The build fails when a guide in a grouped category has no valid topic.
 5. Run `npm run build` and review the result at phone and desktop sizes.
 
 Root-level guide URLs intentionally avoid deep taxonomy. Category hubs group guides without coupling durable article URLs to a category that may evolve.
+
+The Article Library at `/articles/` is generated from the same content collection. Do not maintain a separate article list.
 
 ## Historical URLs
 

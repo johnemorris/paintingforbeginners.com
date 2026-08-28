@@ -31,7 +31,7 @@ const schema = [
   ]},
 ];
 ---
-<BaseLayout {title} {description} image={hero?.src} type="article" {schema} {noindex}>
+<BaseLayout {title} {description} image={hero?.src} type="article" {schema} {noindex} activeSection={category}>
   <header class="article-head">
     <div class="wrap">
       <Breadcrumbs items={breadcrumbs} />

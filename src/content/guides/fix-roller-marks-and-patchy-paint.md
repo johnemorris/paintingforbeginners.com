@@ -6,8 +6,8 @@ topic: fix-problems
 difficulty: Easy
 activeTime: "15–30 minutes to diagnose"
 totalTime: "Allow drying before correction"
-updated: 2026-08-26
-summary: "Let the coating dry before judging it. Roller marks usually come from uneven film thickness, a mismatched cover, excess pressure, a lost wet edge, or reworking paint after it begins to set. The right correction depends on whether the dried defect is physical texture, uneven coverage, or a surface problem."
+updated: 2026-08-27
+summary: "Let the coating dry before judging it. Separate raised ridges, lap lines, patchy hiding, normal stipple, excessive texture, and flashing before choosing a correction."
 supplies:
   - Product label or technical data
   - Good light for inspection
@@ -31,8 +31,13 @@ The first decision is simple: **let the coating dry before diagnosing it.** Wet 
 - **Broad stripes or lap lines:** Adjacent sections did not blend while both edges were workable.
 - **Thin or translucent patches:** Too little paint was applied, the roller ran dry, or the surface absorbed unevenly.
 - **Different sheen without a ridge:** Film thickness, porosity, mixing, or application method may differ across the area.
+- **Normal roller stipple:** A fine, consistent texture created by the cover and coating is expected and may be visible in side light.
+- **Objectionable orange-peel-like texture:** Pronounced, irregular peaks can come from the wrong cover, paint that was too thick for the method, excessive pressure, or reworking a setting film.
+- **Flashing over repairs:** A smooth patch that turns shiny or dull under angled light may be a porosity or sheen problem rather than roller texture.
 
 Feel the surface as well as looking at it. A physical ridge needs a different correction from a smooth area that simply lacks hide.
+
+If the surface feels smooth but changes mainly with viewing angle, compare it with [paint that looks shiny or dull in spots](/why-does-paint-look-shiny-or-dull-in-spots/) before blaming the roller.
 
 <figure>
   <img src="/images/painting-basics/problem-roller-marks.jpg" alt="Dried wall paint with darker roller bands and uneven sheen." width="1200" height="800" loading="lazy">
@@ -63,9 +68,9 @@ Bare repairs, porous patches, contamination, or inconsistent primer can change a
 
 ## Decide what correction is needed
 
-If the dried surface feels smooth but the color or sheen is uneven, a complete uniform coat across the affected surface or natural break may be enough. First correct loading, cover choice, wet-edge timing, or porosity.
+If the dried surface feels smooth but coverage is uneven, a complete uniform coat across the affected surface or natural break may be enough. If the problem is sheen over porous repairs, prepare and prime those repairs first. If the issue is only normal, consistent stipple, correction may be unnecessary.
 
-If raised ridges are visible and easy to feel, let the coating harden sufficiently, level only the defect using a method allowed for that coating, remove the dust, and then recoat uniformly. Do not sand soft paint or chase isolated wet patches.
+If raised ridges or excessive texture are visible and easy to feel, let the coating harden sufficiently, level only the defect using a method allowed for that coating, remove the dust, and then recoat uniformly. Do not sand soft paint or chase isolated wet patches.
 
 Stop adding coats when failure repeats in the same places. Moisture, contamination, poor adhesion, unsealed repairs, or an incompatible system will not be corrected by roller technique.
 

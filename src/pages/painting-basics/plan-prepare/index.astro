@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import TopicLandingLayout from "../../../layouts/TopicLandingLayout.astro";
-const guides = (await getCollection("guides")).filter((guide) => !guide.data.draft && guide.data.category === "basics" && guide.data.topic === "plan-prepare");
+import { isDiscoverableGuide } from "../../../data/catalog";
+const guides = (await getCollection("guides")).filter((guide) => isDiscoverableGuide(guide) && guide.data.category === "basics" && guide.data.topic === "plan-prepare");
 ---
 <TopicLandingLayout {guides} />
