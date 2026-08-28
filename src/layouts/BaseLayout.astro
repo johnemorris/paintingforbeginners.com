@@ -1,0 +1,33 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { site, type NavigationKey } from "../data/site";
+import "../styles/global.css";
+
+interface Props { title: string; description: string; image?: string; noindex?: boolean; type?: "website" | "article"; schema?: Record<string, unknown> | Record<string, unknown>[]; activeSection?: NavigationKey }
+const { title, description, image = "/images/wall.jpg", noindex = false, type = "website", schema, activeSection } = Astro.props;
+const pageTitle = title === site.name ? title : `${title} | ${site.name}`;
+const canonical = new URL(Astro.url.pathname, site.url);
+const socialImage = new URL(image, site.url);
+const foundationSchema = [
+  { "@context": "https://schema.org", "@type": "Organization", "@id": `${site.url}/#organization`, name: site.name, url: site.url },
+  { "@context": "https://schema.org", "@type": "WebSite", "@id": `${site.url}/#website`, name: site.name, url: site.url, description: site.description, publisher: { "@id": `${site.url}/#organization` }, inLanguage: "en-US" },
+];
+const structuredData = schema ? [...foundationSchema, ...(Array.isArray(schema) ? schema : [schema])] : foundationSchema;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content={type} /><meta property="og:site_name" content={site.name} /><meta property="og:title" content={pageTitle} /><meta property="og:description" content={description} /><meta property="og:url" content={canonical} /><meta property="og:image" content={socialImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    {noindex && <meta name="robots" content="noindex,follow" />}
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  </head>
+  <body><a class="skip-link" href="#main">Skip to content</a><Header {activeSection} /><main id="main"><slot /></main><Footer /></body>
+</html>

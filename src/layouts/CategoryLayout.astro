@@ -1,0 +1,8 @@
+---
+import SectionLandingLayout from "./SectionLandingLayout.astro";
+import type { CategoryKey } from "../data/site";
+
+interface Props { category: CategoryKey }
+const { category } = Astro.props;
+---
+<SectionLandingLayout {category} />

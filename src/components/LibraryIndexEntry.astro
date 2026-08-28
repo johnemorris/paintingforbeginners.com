@@ -1,0 +1,25 @@
+---
+import type { GuideEntry } from "../data/catalog";
+import { categories } from "../data/site";
+
+const { guide } = Astro.props as { guide: GuideEntry };
+const category = categories[guide.data.category];
+const searchable = `${guide.data.title} ${guide.data.description} ${category.title} ${guide.data.role} ${guide.data.resourceType}`.toLowerCase();
+---
+<li class="library-entry" data-library-item data-section={guide.data.category} data-search={searchable}>
+  <h3><a href={`/${guide.id}/`}>{guide.data.title}<span aria-hidden="true">→</span></a></h3>
+  <p>{guide.data.description}</p>
+</li>
+
+<style>
+  .library-entry { padding: var(--space-3) 0; border-bottom: 1px solid var(--line); }
+  .library-entry:first-child { border-top: 1px solid var(--line); }
+  h3 { margin: 0; font-family: var(--font-display); font-size: clamp(1.2rem, 2.5vw, 1.45rem); line-height: 1.2; }
+  h3 a { display: flex; min-height: 2.75rem; align-items: center; justify-content: space-between; gap: var(--space-3); color: var(--ink-strong); text-decoration: none; }
+  h3 a:hover { color: var(--teal-dark); text-decoration: underline; text-underline-offset: .18em; }
+  h3 a:focus-visible { color: var(--teal-dark); outline: 3px solid var(--ochre); outline-offset: 4px; text-decoration: underline; text-underline-offset: .18em; }
+  h3 span { flex: 0 0 auto; color: var(--teal-dark); opacity: 0; transform: translateX(-.25rem); transition: opacity .15s ease, transform .15s ease; }
+  h3 a:hover span, h3 a:focus-visible span { opacity: 1; transform: translateX(0); }
+  p { max-width: 54rem; margin: .25rem 2.5rem 0 0; color: var(--muted); font-size: .9rem; line-height: 1.5; }
+  @media (prefers-reduced-motion: reduce) { h3 span { transition: none; } }
+</style>

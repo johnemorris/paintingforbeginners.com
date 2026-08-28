@@ -1,0 +1,35 @@
+---
+interface Hero {
+  src: string;
+  alt: string;
+  caption?: string;
+  attribution?: string;
+  attributionUrl?: string;
+}
+
+interface Props {
+  hero: Hero;
+  variant?: "standard" | "editorial";
+}
+
+const { hero, variant = "standard" } = Astro.props;
+const caption = hero.caption ?? hero.attribution;
+---
+
+<figure class:list={["article-hero", variant]}>
+  <img src={hero.src} alt={hero.alt} width="1400" height="933" fetchpriority="high" />
+  {caption && (
+    <figcaption>
+      {hero.attribution && hero.attributionUrl ? <a href={hero.attributionUrl} rel="license">{hero.attribution}</a> : caption}
+    </figcaption>
+  )}
+</figure>
+
+<style>
+  .article-hero { margin: 0 0 var(--space-4); }
+  .article-hero img { width: 100%; height: clamp(16rem, 50vw, 30rem); border-radius: var(--radius-sm); object-fit: cover; }
+  .article-hero figcaption { margin-top: .5rem; color: var(--muted); font-size: .78rem; line-height: 1.45; }
+  .article-hero.editorial { margin: 0; }
+  .article-hero.editorial img { height: clamp(18rem, 36vw, 30rem); border: .6rem solid white; border-radius: var(--radius); box-shadow: var(--shadow); }
+  .article-hero.editorial figcaption { text-align: center; }
+</style>

@@ -1,0 +1,5 @@
+---
+import GuideCard from "./GuideCard.astro";
+const { guides } = Astro.props;
+---
+<div class="card-grid">{guides.map((guide) => <GuideCard href={`/${guide.id}/`} title={guide.data.title} description={guide.data.description} meta={`${guide.data.difficulty} · ${guide.data.totalTime}`} />)}</div>

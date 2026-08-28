@@ -1,0 +1,156 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import ArticleHero from "../components/ArticleHero.astro";
+import AdSlot from "../components/AdSlot.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import EditorialGuideCard from "../components/EditorialGuideCard.astro";
+import InThisGuide from "../components/InThisGuide.astro";
+import Recommendations from "../components/Recommendations.astro";
+import { categories, site } from "../data/site";
+import { getRecommendations } from "../data/recommendations";
+
+const { entry, relatedGuides = [], headings = [] } = Astro.props;
+const { title, description, category, difficulty, activeTime, totalTime, updated, summary, supplies, hero, noindex, recommendationSlots, takeaways } = entry.data;
+const categoryInfo = categories[category];
+const topicInfo = "topics" in categoryInfo && entry.data.topic ? categoryInfo.topics.find((topic) => topic.id === entry.data.topic) : undefined;
+const breadcrumbs = [
+  { label: categoryInfo.title, href: categoryInfo.href },
+  ...(topicInfo && "href" in topicInfo ? [{ label: topicInfo.title, href: topicInfo.href }] : []),
+  { label: title },
+];
+const recommendationItems = getRecommendations(recommendationSlots);
+const isoDate = updated.toISOString();
+const visibleRelated = relatedGuides.slice(0, 3);
+const inlineAdEligible = headings.length >= 6;
+const schema = [
+  { "@context": "https://schema.org", "@type": "Article", headline: title, description, dateModified: isoDate, image: hero ? `${site.url}${hero.src}` : undefined, mainEntityOfPage: `${site.url}/${entry.id}/`, publisher: { "@id": `${site.url}/#organization` } },
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: site.url },
+    { "@type": "ListItem", position: 2, name: categoryInfo.title, item: `${site.url}${categoryInfo.href}` },
+    { "@type": "ListItem", position: 3, name: title, item: `${site.url}/${entry.id}/` },
+  ]},
+];
+---
+<BaseLayout {title} {description} image={hero?.src} type="article" {schema} {noindex} activeSection={category}>
+  <header class="article-head">
+    <div class="wrap">
+      <Breadcrumbs items={breadcrumbs} />
+      <div class:list={["article-hero-grid", { "has-hero": hero, "no-hero": !hero }]}>
+        <div class="article-title">
+          <p class="eyebrow">{categoryInfo.eyebrow}</p>
+          <h1>{title}</h1>
+          <p class="lead">{description}</p>
+          <dl class="guide-meta">
+            <div><dt>Difficulty</dt><dd>{difficulty}</dd></div>
+            <div><dt>Hands-on time</dt><dd>{activeTime}</dd></div>
+            <div><dt>Total time</dt><dd>{totalTime}</dd></div>
+          </dl>
+        </div>
+        {hero && <ArticleHero {hero} variant="editorial" />}
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap article-shell">
+    <aside class="toc-column"><InThisGuide {headings} /></aside>
+    <div class="article-column">
+      <aside class="quick-answer" aria-labelledby="quick-answer">
+        <p class="eyebrow">Quick answer</p>
+        <h2 id="quick-answer">What to know before you begin</h2>
+        <p>{summary}</p>
+      </aside>
+      <section class="supplies" aria-labelledby="supplies-heading">
+        <h2 id="supplies-heading">What you'll need</h2>
+        <ul>{supplies.map((item) => <li>{item}</li>)}</ul>
+        <p class="supply-note"><strong>Choose for the job:</strong> Use only the preparation, protection, and application supplies your surface and project require.</p>
+      </section>
+      <article class="prose"><slot /></article>
+      <AdSlot placement="article-inline" eligible={inlineAdEligible} />
+      {takeaways && <aside class="takeaways" aria-labelledby="takeaways-heading"><p class="eyebrow">The bottom line</p><h2 id="takeaways-heading">Key takeaways</h2><ul>{takeaways.map((item) => <li>{item}</li>)}</ul></aside>}
+      {recommendationItems.length > 0 && <Recommendations items={recommendationItems} />}
+      <p class="updated">Last reviewed and updated <time datetime={isoDate}>{updated.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</time>.</p>
+    </div>
+    <div class="ad-rail"><AdSlot placement="article-rail" /></div>
+  </div>
+
+  <div class="wrap article-end-ad"><AdSlot placement="article-end" /></div>
+
+  {visibleRelated.length > 0 && (
+    <section class="section related-guides">
+      <div class="wrap">
+        <p class="eyebrow">Keep learning</p>
+        <h2>Related beginner guides</h2>
+        <p class="lead">Continue with the next decision or practical step for your project.</p>
+        <div class="related-grid">{visibleRelated.map((guide) => <EditorialGuideCard {guide} />)}</div>
+      </div>
+    </section>
+  )}
+</BaseLayout>
+<style>
+  .article-head { padding: var(--space-3) 0 var(--space-6); background: linear-gradient(120deg, var(--blue-wash), var(--canvas)); }
+  .article-hero-grid { display: grid; align-items: center; gap: clamp(var(--space-4), 6vw, var(--space-6)); margin-top: var(--space-4); }
+  .article-hero-grid.has-hero { grid-template-columns: minmax(0, .95fr) minmax(28rem, 1.05fr); }
+  .article-hero-grid.no-hero { grid-template-columns: minmax(0, 58rem); }
+  .article-title .eyebrow { margin-top: var(--space-3); }
+  .article-title h1 { max-width: 16ch; font-size: clamp(2.7rem, 6vw, 4.9rem); }
+  .no-hero .article-title h1 { max-width: 18ch; }
+  .no-hero .article-title .lead { max-width: 48rem; }
+  .guide-meta { display: grid; grid-template-columns: repeat(3, 1fr); margin: var(--space-4) 0 0; border-block: 1px solid rgb(13 40 61 / .18); }
+  .no-hero .guide-meta { max-width: 52rem; }
+  .guide-meta div { padding: var(--space-2) var(--space-3); border-right: 1px solid rgb(13 40 61 / .18); }
+  .guide-meta div:last-child { border: 0; }
+  dt { color: var(--muted); font-size: .72rem; font-weight: 850; letter-spacing: .06em; text-transform: uppercase; }
+  dd { margin: .1rem 0 0; color: var(--ink-strong); font-weight: 800; }
+  .article-shell { position: relative; display: grid; grid-template-columns: minmax(0, var(--content)) 13.5rem; justify-content: start; gap: clamp(var(--space-4), 5vw, var(--space-6)); padding-block: var(--space-5) var(--space-6); }
+  .toc-column, .article-column { min-width: 0; }
+  .article-column { grid-column: 1; grid-row: 1; }
+  .toc-column { grid-column: 2; grid-row: 1; }
+  .ad-rail { display: none; }
+  .article-end-ad:empty { display: none; }
+  .quick-answer { margin: 0 0 var(--space-4); padding: var(--space-4); border-top: .4rem solid var(--teal); border-radius: var(--radius-sm); background: var(--blue-wash); }
+  .quick-answer h2 { margin: 0 0 var(--space-2); font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.15rem); }
+  .quick-answer p:last-child { margin-bottom: 0; }
+  .supplies { margin: var(--space-5) 0; padding: var(--space-4); border: 1px solid var(--line); background: white; box-shadow: var(--shadow-soft); }
+  .supplies h2 { margin-top: 0; }
+  .supplies ul { columns: 2; padding-left: 1.25rem; }
+  .supplies li { margin-bottom: .5rem; break-inside: avoid; }
+  .supply-note { margin: var(--space-3) 0 0; padding-top: var(--space-3); border-top: 1px solid var(--line); color: var(--muted); font-size: .82rem; }
+  .prose :global(p), .prose :global(li) { font-size: 1.03rem; }
+  .prose :global(h2) { margin-top: var(--space-6); padding-top: 0; scroll-margin-top: 1rem; }
+  .prose :global(h3) { margin-top: var(--space-5); scroll-margin-top: 1rem; }
+  .prose :global(li) { margin-bottom: .55rem; }
+  .prose :global(blockquote) { margin: var(--space-4) 0; padding: var(--space-3); border-left: 5px solid var(--ochre); background: #fff6d9; color: var(--ink-strong); }
+  .prose :global(blockquote p:last-child) { margin-bottom: 0; }
+  .prose :global(figure) { margin: var(--space-5) calc(var(--space-4) * -1); }
+  .prose :global(figure img) { width: 100%; height: min(28rem, 60vw); border-radius: var(--radius); object-fit: cover; object-position: var(--article-image-position, center); box-shadow: var(--shadow-soft); }
+  .prose :global(figure.article-image--detail img) { height: min(34rem, 70vw); aspect-ratio: 4 / 3; }
+  .prose :global(figcaption) { max-width: 42rem; margin: .65rem auto 0; color: var(--muted); font-size: .82rem; line-height: 1.45; text-align: center; }
+  .prose :global(.decision-box) { margin: var(--space-4) 0; padding: var(--space-3) var(--space-4); border: 1px solid var(--line); border-left: .35rem solid var(--coral); background: white; box-shadow: var(--shadow-soft); }
+  .takeaways { margin-top: var(--space-6); padding: var(--space-4); border-radius: var(--radius); background: var(--ink-strong); color: white; }
+  .takeaways .eyebrow { color: #8bd8d4; }
+  .takeaways h2 { margin: 0 0 var(--space-3); color: white; }
+  .takeaways ul { margin-bottom: 0; padding-left: 1.3rem; }
+  .takeaways li { margin-bottom: .65rem; }
+  .updated { margin-top: var(--space-5); color: var(--muted); font-size: .85rem; }
+  .related-guides { background: var(--blue-wash); }
+  .related-guides h2 { margin-top: 0; }
+  .related-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); margin-top: var(--space-4); }
+  @media (min-width: 112rem) {
+    .ad-rail { position: absolute; top: var(--space-5); left: calc(100% + var(--space-4)); display: block; width: 16rem; }
+  }
+  @media (max-width: 980px) {
+    .article-hero-grid.has-hero { grid-template-columns: 1fr; }
+    .article-hero-grid > :global(.article-hero) { max-width: 46rem; }
+    .article-shell { grid-template-columns: minmax(0, var(--content)); }
+    .toc-column { grid-column: 1; grid-row: 1; }
+    .article-column { grid-column: 1; grid-row: 2; }
+    .related-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 620px) {
+    .guide-meta { grid-template-columns: 1fr; }
+    .guide-meta div { border-right: 0; border-bottom: 1px solid rgb(13 40 61 / .18); }
+    .supplies ul { columns: 1; }
+    .prose :global(figure) { margin-inline: 0; }
+    .related-grid { grid-template-columns: 1fr; }
+  }
+</style>

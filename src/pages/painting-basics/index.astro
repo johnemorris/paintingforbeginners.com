@@ -1,0 +1,29 @@
+---
+import { getCollection } from "astro:content";
+import SectionLandingLayout from "../../layouts/SectionLandingLayout.astro";
+import DiagnosticProblemCard from "../../components/DiagnosticProblemCard.astro";
+import { commonProblems } from "../../data/painting-basics";
+import { isDiscoverableGuide } from "../../data/catalog";
+
+const guides = (await getCollection("guides")).filter((guide) => isDiscoverableGuide(guide) && guide.data.category === "basics");
+const findGuide = (id: string) => guides.find((guide) => guide.id === id);
+const problems = commonProblems.map((problem) => ({ ...problem, guide: findGuide(problem.guideId) })).filter((problem) => problem.guide);
+---
+<SectionLandingLayout category="basics">
+  <div slot="after-topics">
+    <section class="section problem-section" id="common-problems">
+      <div class="wrap">
+        <div class="section-heading"><p class="eyebrow">Spot the cause</p><h2>Common painting problems</h2><p class="lead">A visible flaw is a clue. Match what your surface is doing before sanding or adding another coat.</p></div>
+        <div class="problem-card-grid">{problems.map(({ label, guide, image }) => <DiagnosticProblemCard {label} guide={guide!} {image} />)}</div>
+      </div>
+    </section>
+  </div>
+</SectionLandingLayout>
+<style>
+  .section-heading { max-width: 48rem; margin-bottom: var(--space-5); }
+  .section-heading h2 { margin-top: 0; }
+  .problem-section { background: var(--canvas); }
+  .problem-card-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-3); }
+  @media (max-width: 980px) { .problem-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 620px) { .problem-card-grid { grid-template-columns: 1fr; } }
+</style>

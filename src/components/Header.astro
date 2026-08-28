@@ -1,0 +1,60 @@
+---
+import { navigation, type NavigationKey } from "../data/site";
+
+interface Props { activeSection?: NavigationKey }
+const { activeSection } = Astro.props;
+---
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="Painting for Beginners, home">
+      <span class="roller" aria-hidden="true"></span>
+      <span><strong>Painting</strong><small>for Beginners</small></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      {navigation.map((item) => <a href={item.href} class:list={{ "is-active": item.key === activeSection }} aria-current={item.key === activeSection ? "page" : undefined}>{item.label}</a>)}
+    </nav>
+    <details class="nav-shell">
+      <summary>Menu</summary>
+      <nav aria-label="Mobile navigation">
+        {navigation.map((item) => <a href={item.href} class:list={{ "is-active": item.key === activeSection }} aria-current={item.key === activeSection ? "page" : undefined}>{item.label}</a>)}
+      </nav>
+    </details>
+  </div>
+</header>
+<script>
+  const mobileMenu = document.querySelector(".nav-shell");
+
+  mobileMenu?.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape" || !(mobileMenu instanceof HTMLDetailsElement) || !mobileMenu.open) return;
+    event.preventDefault();
+    mobileMenu.open = false;
+    mobileMenu.querySelector("summary")?.focus();
+  });
+</script>
+<style>
+  .site-header { position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--line); background: rgb(255 253 248); box-shadow: 0 3px 14px rgb(24 47 57 / .08); }
+  .header-inner { display: flex; min-height: 5rem; align-items: center; justify-content: space-between; gap: 2rem; }
+  .brand { display: inline-flex; align-items: center; gap: .7rem; color: var(--ink); line-height: .9; text-decoration: none; }
+  .brand strong { display: block; font-size: 1.35rem; letter-spacing: -.035em; text-transform: uppercase; }
+  .brand small { color: var(--teal-dark); font-family: var(--font-display); font-size: .95rem; font-style: italic; }
+  .roller { position: relative; width: 2rem; height: 2.6rem; transform: rotate(7deg); }
+  .roller::before { position: absolute; top: 0; left: .2rem; width: 1.55rem; height: 1.15rem; border: 3px solid var(--ink); border-radius: .2rem; background: var(--teal); content: ""; }
+  .roller::after { position: absolute; top: 1.25rem; left: .92rem; width: .38rem; height: 1.35rem; border-radius: 0 0 .2rem .2rem; background: var(--ink); content: ""; }
+  .nav-shell { display: none; }
+  nav { display: flex; align-items: center; gap: clamp(.8rem, 2vw, 1.7rem); }
+  nav a { position: relative; color: var(--ink); font-size: .86rem; font-weight: 750; text-decoration: none; }
+  nav a:hover { color: var(--teal-dark); }
+  .brand:focus-visible, nav a:focus-visible, .nav-shell summary:focus-visible { outline: 3px solid var(--ochre); outline-offset: 4px; }
+  .desktop-nav a.is-active { color: var(--teal-dark); }
+  .desktop-nav a.is-active::after { position: absolute; right: 0; bottom: -.65rem; left: 0; height: 2px; background: var(--teal); content: ""; }
+  @media (max-width: 880px) {
+    .header-inner { min-height: 4.5rem; }
+    .desktop-nav { display: none; }
+    .nav-shell { display: block; }
+    .nav-shell summary { display: block; min-width: 3.25rem; padding: .55rem .7rem; border: 2px solid var(--ink); border-radius: var(--radius-sm); cursor: pointer; font-weight: 800; list-style: none; text-align: center; }
+    .nav-shell[open] nav { display: flex; }
+    nav { position: absolute; top: 100%; right: 0; left: 0; display: none; align-items: stretch; flex-direction: column; gap: 0; padding: .5rem 1rem 1rem; border-bottom: 1px solid var(--line); background: var(--paper); box-shadow: var(--shadow); }
+    nav a { min-height: 2.8rem; padding: .8rem; border-bottom: 1px solid var(--line); }
+    .nav-shell nav a.is-active { background: var(--blue-wash); color: var(--teal-dark); box-shadow: inset 3px 0 var(--teal); }
+  }
+</style>

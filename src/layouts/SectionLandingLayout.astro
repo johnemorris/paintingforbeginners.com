@@ -1,0 +1,108 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import BaseLayout from "./BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import SectionTopicCard from "../components/SectionTopicCard.astro";
+import SectionQuestionLinks from "../components/SectionQuestionLinks.astro";
+import SectionActionBand from "../components/SectionActionBand.astro";
+import { categories, type CategoryKey } from "../data/site";
+import { sectionLandings } from "../data/section-landings";
+import { isDiscoverableGuide } from "../data/catalog";
+
+interface Props { category: CategoryKey }
+const { category } = Astro.props;
+const categoryInfo = categories[category];
+const config = sectionLandings[category];
+const allGuides = (await getCollection("guides")).filter(isDiscoverableGuide);
+const guideById = new Map(allGuides.map((guide) => [guide.id, guide]));
+const startGuide = guideById.get(config.start.guideId);
+
+if (!startGuide) throw new Error(`Missing start guide "${config.start.guideId}" for ${category}`);
+
+const topics = config.topics.groups.filter((topic) => topic.guideIds.length > 0).map((topic) => {
+  const guides = topic.guideIds.map((id) => guideById.get(id)).filter(Boolean) as CollectionEntry<"guides">[];
+  if (guides.length !== topic.guideIds.length) {
+    const missing = topic.guideIds.filter((id) => !guideById.has(id));
+    throw new Error(`Missing guides in ${category}/${topic.id}: ${missing.join(", ")}`);
+  }
+  return { ...topic, guides };
+});
+const questionGuides = config.questions.guideIds.map((id) => guideById.get(id)).filter(Boolean) as CollectionEntry<"guides">[];
+if (questionGuides.length !== config.questions.guideIds.length) {
+  const missing = config.questions.guideIds.filter((id) => !guideById.has(id));
+  throw new Error(`Missing question guides in ${category}: ${missing.join(", ")}`);
+}
+---
+<BaseLayout title={categoryInfo.title} description={categoryInfo.description} image={config.hero.src} activeSection={category}>
+  <header class="section-hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <Breadcrumbs items={[{ label: categoryInfo.title }]} />
+        <p class="eyebrow">{categoryInfo.eyebrow}</p>
+        <h1>{config.hero.heading}</h1>
+        <p class="lead">{config.hero.lead}</p>
+        <div class="hero-actions"><a class="button" href={`/${startGuide.id}/`}>{config.start.cta} <span aria-hidden="true">→</span></a></div>
+      </div>
+      <figure><img src={config.hero.src} alt={config.hero.alt} width="1536" height="1024" /><figcaption>{config.hero.caption}</figcaption></figure>
+    </div>
+  </header>
+
+  <section class="section start-section" id="start-here">
+    <div class="wrap start-grid">
+      <div><p class="eyebrow">Start here</p><h2>{config.start.heading}</h2><p class="lead">{config.start.lead}</p><a class="button" href={`/${startGuide.id}/`}>{config.start.cta} <span aria-hidden="true">→</span></a></div>
+      <ol aria-label={`The ${categoryInfo.title.toLowerCase()} beginner sequence`}>
+        {config.start.steps.map((step, index) => <li><span>{String(index + 1).padStart(2, "0")}</span><div><strong>{step.title}</strong><p>{step.description}</p></div></li>)}
+      </ol>
+    </div>
+  </section>
+
+  <section class="section topics-section" id="topics">
+    <div class="wrap">
+      <div class="section-heading"><p class="eyebrow">Learn by topic</p><h2>{config.topics.heading}</h2><p class="lead">{config.topics.lead}</p></div>
+      <div class="topic-grid">{topics.map((topic) => <SectionTopicCard title={topic.title} description={topic.description} image={topic.image} guides={topic.guides} href={topic.href} />)}</div>
+    </div>
+  </section>
+
+  <slot name="after-topics" />
+
+  <SectionQuestionLinks heading={config.questions.heading} lead={config.questions.lead} guides={questionGuides} />
+
+  {config.actionBands.map((band) => <SectionActionBand {band} categoryTitle={categoryInfo.title} />)}
+
+  <section class="section library-section">
+    <div class="wrap library-callout">
+      <div><p class="eyebrow">The complete collection</p><h2>Explore all {categoryInfo.title} guides</h2><p class="lead">Browse every published guide in this section without turning this curated starting page into an exhaustive list.</p></div>
+      <a class="button" href={`/articles/?section=${category}`}>View all {categoryInfo.title} guides <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</BaseLayout>
+<style>
+  .section-hero { padding: var(--space-3) 0 var(--space-5); overflow: hidden; background: linear-gradient(125deg, var(--blue-wash), var(--canvas)); }
+  .hero-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(23rem, .85fr); align-items: center; gap: clamp(var(--space-4), 5vw, var(--space-6)); }
+  .hero-copy .eyebrow { margin-top: var(--space-5); }
+  .hero-copy h1 { max-width: 12ch; }
+  .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); margin-top: var(--space-4); }
+  figure { width: 100%; max-width: 31rem; margin: var(--space-3) 0 0; justify-self: end; transform: rotate(1deg); }
+  figure img { width: 100%; height: auto; aspect-ratio: 4 / 3; border: .65rem solid white; border-radius: var(--radius); object-fit: cover; box-shadow: var(--shadow); }
+  figcaption { margin-top: .5rem; color: var(--muted); font-size: .8rem; text-align: center; }
+  .start-section { background: var(--ink-strong); color: white; }
+  .start-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(20rem, .9fr); align-items: center; gap: var(--space-6); }
+  .start-grid h2, .start-grid .lead { color: white; }
+  .start-grid .eyebrow { color: #76d2cf; }
+  ol { margin: 0; padding: 0; list-style: none; }
+  ol li { display: grid; grid-template-columns: 3rem 1fr; gap: var(--space-2); padding: var(--space-3) 0; border-bottom: 1px solid rgb(255 255 255 / .18); }
+  ol li > span { color: #76d2cf; font-family: var(--font-display); font-size: 1.4rem; }
+  ol strong { color: white; font-size: 1.08rem; }
+  ol p { margin: .15rem 0 0; color: #bfd0d6; }
+  .section-heading { max-width: 48rem; margin-bottom: var(--space-5); }
+  .section-heading h2 { margin-top: 0; }
+  .topic-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; gap: var(--space-3); }
+  .library-section { background: var(--canvas); }
+  .library-callout { display: flex; align-items: center; justify-content: space-between; gap: var(--space-5); }
+  .library-callout > div { max-width: 48rem; }
+  .library-callout h2 { margin-top: 0; }
+  .library-callout .button { flex: 0 0 auto; text-align: center; }
+  @media (max-width: 940px) { .topic-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 860px) { .hero-grid, .start-grid { grid-template-columns: 1fr; } .hero-copy h1 { max-width: 13ch; } .hero-grid figure { max-width: 32rem; justify-self: start; } .library-callout { align-items: flex-start; flex-direction: column; gap: var(--space-3); } }
+  @media (max-width: 620px) { .section-hero { padding-bottom: var(--space-4); } .topic-grid { grid-template-columns: 1fr; } .hero-grid figure { max-width: 100%; } }
+</style>

@@ -1,0 +1,27 @@
+---
+import type { Recommendation } from "../data/recommendations";
+const { items } = Astro.props as { items: Recommendation[] };
+const containsCompensatedLinks = items.some((item) => item.productLink?.compensated);
+---
+<aside class="recommendations" aria-labelledby="recommendations-heading">
+  <p class="eyebrow">Tool characteristics that help</p>
+  <h2 id="recommendations-heading">What to look for</h2>
+  <p class="disclosure"><strong>{containsCompensatedLinks ? "Affiliate disclosure:" : "Merchant-neutral guidance:"}</strong> {containsCompensatedLinks ? "Some product links in this section may earn the site a commission at no additional cost to you. Recommendations remain based on the task they solve." : "These are tool types, not paid placements. There are no merchant links, prices, or commissions on this page. If compensated links are added later, they will be disclosed here beside the recommendation."}</p>
+  <div class="recommendation-grid">
+    {items.map((item) => <article><h3>{item.name}</h3>{item.optional && <span>Optional</span>}<p>{item.purpose}</p><ul>{item.lookFor.map((detail) => <li>{detail}</li>)}</ul>{item.productLink && <a class="product-link" href={item.productLink.href} rel={item.productLink.compensated ? "sponsored nofollow" : undefined}>{item.productLink.label} <span aria-hidden="true">→</span></a>}</article>)}
+  </div>
+</aside>
+<style>
+  .recommendations { margin: var(--space-5) 0; padding: var(--space-4); background: var(--canvas); }
+  .recommendations h2 { margin-top: 0; }
+  .disclosure { padding: var(--space-3); border-left: 4px solid var(--teal); background: white; color: var(--muted); font-size: .88rem; }
+  .recommendation-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3); }
+  article { padding: var(--space-3); border-top: 4px solid var(--ochre); background: white; }
+  h3 { display: inline; margin: 0; }
+  span { margin-left: .5rem; padding: .15rem .4rem; background: var(--blue-wash); color: var(--teal-dark); font-size: .7rem; font-weight: 800; text-transform: uppercase; }
+  article p { margin-top: .6rem; }
+  ul { margin-bottom: 0; padding-left: 1.2rem; }
+  .product-link { display: inline-block; margin-top: var(--space-3); font-weight: 800; }
+  .product-link span { margin-left: .25rem; padding: 0; background: transparent; color: inherit; font-size: inherit; text-transform: none; }
+  @media (max-width: 600px) { .recommendation-grid { grid-template-columns: 1fr; } }
+</style>
