@@ -1,19 +1,19 @@
 ---
-title: "What Does a Surface Need Before Painting?"
-description: "Use five condition checks—sound, clean, dry, smooth enough, and compatible—to decide what preparation a painted or bare surface actually needs."
+title: "How to Prepare a Surface Before Painting"
+description: "Prepare walls, wood, and other surfaces for paint by checking condition, cleaning, repairing, smoothing, testing compatibility, and priming only as needed."
 category: basics
 topic: plan-prepare
 difficulty: Easy
 activeTime: "10–20 minutes to assess"
 totalTime: "Preparation time depends on condition"
-updated: 2026-08-26
-summary: "A paint-ready surface is sound, clean, dry, smooth enough for the intended finish, and compatible with the coating system. Preparation should correct the conditions you find rather than apply the same cleaning, sanding, repair, and priming routine to every project."
+updated: 2026-10-15
+summary: "A paint-ready surface is sound, clean, dry, smooth enough for the intended finish, and compatible with the coating system. Inspect first, clean before sanding, repair and smooth defects, remove dust, then prime only where the surface or coating system requires it."
 supplies:
   - Bright light
   - Clean white cloth
   - New coating label or technical data
   - Cleaning, repair, sanding, or priming materials only as needed
-related: [do-you-need-primer, can-you-paint-over-old-paint, do-you-need-to-sand-before-painting]
+related: [should-you-clean-walls-before-painting, do-you-need-primer, do-you-need-to-sand-before-painting, how-to-paint-a-room]
 featured: true
 recommendationSlots: [sanding-sponge]
 ---
@@ -21,6 +21,21 @@ recommendationSlots: [sanding-sponge]
 Preparation is not a fixed list of chores. It is an assessment: identify what the surface is, find the conditions that could interfere with adhesion or appearance, and correct only those conditions.
 
 The same five checks apply broadly, although the products and methods differ by material.
+
+## The usual preparation order
+
+The exact work depends on the surface, but this sequence prevents one step from undoing another:
+
+1. **Identify the material and old finish.** Confirm whether you have drywall, plaster, wood, metal, masonry, laminate, canvas, or another substrate. Check whether disturbing an older coating requires hazardous-material precautions.
+2. **Protect the work area.** Move or cover objects, mask only where it helps, and plan dust control, ventilation, and cleanup.
+3. **Correct active problems.** Repair leaks, rot, loose material, corrosion, or structural damage before cosmetic preparation.
+4. **Clean contamination.** Remove dust, grease, wax, soap film, chalk, or other residue with a method compatible with the surface.
+5. **Repair and smooth.** Patch defects, feather sound coating edges, and sand only where smoothing, deglossing, or the product instructions require it.
+6. **Remove preparation dust.** Vacuum and wipe by the coating manufacturer's recommended method.
+7. **Prime for a specific reason.** Prime bare porous areas, repairs, stains, difficult substrates, or other conditions identified by the chosen system.
+8. **Make a final inspection.** Confirm that the surface is stable, clean, dry, sufficiently even, and ready within the coating's stated conditions.
+
+Cleaning normally comes before sanding so an abrasive does not spread grease or wax. Small repairs often come after cleaning so filler bonds to a clean surface. Product-specific directions can change the order, so read the complete system before starting.
 
 ## 1. Is the surface sound?
 
@@ -57,6 +72,14 @@ Read the new coating's approved surfaces and preparation directions. When the ol
 Sand when you need to smooth a defect, feather an edge, dull gloss, or meet product instructions. Prime when you need adhesion, porosity control, stain blocking, corrosion protection, or another specified function.
 
 Neither step should be automatic, and neither can correct active moisture, dirt, or a failing substrate.
+
+## How to prepare walls for painting
+
+For a sound previously painted interior wall, begin by removing dust and [cleaning grease, fingerprints, and residue where needed](/should-you-clean-walls-before-painting/). Patch nail holes and minor supported damage, allow repairs to dry, then sand those repairs flush and remove the dust. Feather only sound coating edges; do not hide peeling paint beneath filler.
+
+Check glossy areas and the new paint's instructions to decide whether deglossing is required. Spot-prime porous repairs or bare drywall, and use a suitable broader primer when stains, uneven porosity, adhesion, or a major color change calls for it. A clean wall in good condition may need far less work than a greasy kitchen wall or a wall with many repairs.
+
+Once the preparation passes the five checks, continue with the complete [room-painting sequence](/how-to-paint-a-room/).
 
 ## A final condition check
 

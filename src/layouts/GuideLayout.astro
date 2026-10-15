@@ -68,7 +68,7 @@ const schema = [
       <AdSlot placement="article-inline" eligible={inlineAdEligible} />
       {takeaways && <aside class="takeaways" aria-labelledby="takeaways-heading"><p class="eyebrow">The bottom line</p><h2 id="takeaways-heading">Key takeaways</h2><ul>{takeaways.map((item) => <li>{item}</li>)}</ul></aside>}
       {recommendationItems.length > 0 && <Recommendations items={recommendationItems} />}
-      <p class="updated">Last reviewed and updated <time datetime={isoDate}>{updated.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</time>.</p>
+      <p class="updated">Last reviewed and updated <time datetime={isoDate}>{updated.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" })}</time>.</p>
     </div>
     <div class="ad-rail"><AdSlot placement="article-rail" /></div>
   </div>

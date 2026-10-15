@@ -15,7 +15,7 @@ lastReviewed: 2026-08-27
 resourceType: guide
 summary: "Start with a pre-primed surface, a small student-grade acrylic set, three useful brushes, a palette, two water containers, and protection for your table and clothing. An easel, dozens of colors, specialty mediums, and expensive detail tools can wait."
 supplies: [Pre-primed canvas or canvas panel, Student-grade acrylic paint, Medium flat brush, Medium round brush, Small detail brush, Palette surface, Two water containers, Rag, Table covering and apron]
-related: [acrylic-painting-for-beginners, canvas-size-for-painting, how-to-paint-a-simple-landscape]
+related: [acrylic-painting-for-beginners, what-is-gesso-and-do-you-need-it-before-painting, color-wheel-for-beginners, canvas-size-for-painting]
 recommendationSlots: [canvas-brush-trio, canvas-panel]
 cardImage:
   src: "/images/section-landings/canvas-start.jpg"

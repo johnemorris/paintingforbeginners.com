@@ -8,7 +8,7 @@ totalTime: "2–3 hours"
 updated: 2026-08-25
 summary: "Divide the canvas into a few large zones, paint the sky first, soften distant shapes with lighter and less intense color, then add darker foreground forms and only a handful of details. Let layers dry whenever unwanted mixing begins."
 supplies: [Small pre-primed canvas or panel, Acrylic red yellow blue white and dark neutral, Medium flat brush, Medium round brush, Small detail brush, Palette, Two water containers, Rag or paper towel]
-related: [acrylic-painting-for-beginners, canvas-size-for-painting, painting-supplies-for-beginners]
+related: [acrylic-painting-for-beginners, fall-painting-ideas-for-beginners, color-wheel-for-beginners, canvas-size-for-painting]
 featured: true
 cardImage:
   src: "/images/section-landings/canvas-project.jpg"

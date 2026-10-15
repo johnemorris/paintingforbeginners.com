@@ -8,7 +8,7 @@ totalTime: "One afternoon"
 updated: 2026-08-25
 summary: "Use a pre-primed canvas, a small set of colors, two or three brushes, water, and a palette. Sketch only the large shapes, paint broad areas before details, let layers dry when you need clean edges, and treat the first canvas as practice rather than a test."
 supplies: [Pre-stretched, pre-primed canvas or canvas panel, Student-grade acrylic colors, One medium flat brush, One medium round brush, One small detail brush, Palette or disposable palette paper, Two water containers, Rag or paper towel, Apron or old shirt]
-related: [canvas-size-for-painting, painting-supplies-for-beginners, how-to-paint-a-simple-landscape]
+related: [how-to-start-painting, color-wheel-for-beginners, what-is-gesso-and-do-you-need-it-before-painting, how-to-paint-a-simple-landscape]
 featured: true
 recommendationSlots: [canvas-brush-trio, canvas-panel]
 cardImage:

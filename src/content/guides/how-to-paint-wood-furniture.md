@@ -8,7 +8,7 @@ totalTime: "2–4 days with drying"
 updated: 2026-08-25
 summary: "Clean the piece, repair damage, scuff-sand the existing sound finish, remove dust, prime when the surface or stains require it, then apply thin finish coats. Let the paint cure before hard use—dry to the touch is not the same as durable."
 supplies: [Cleaner compatible with the old finish, Screwdriver and labeled bags, Sandpaper or sanding sponge, Vacuum and lint-free cloths, Bonding or stain-blocking primer when needed, Furniture or cabinet-suitable paint, Quality brush and small roller, Drop cloth and supports]
-related: [surface-preparation-before-painting, do-you-need-primer, how-to-paint-laminate-furniture]
+related: [painting-solid-oak-kitchen-cabinets, surface-preparation-before-painting, do-you-need-primer, how-to-paint-laminate-furniture]
 featured: true
 cardImage:
   src: "/images/article-guides/furniture-surface-comparison.jpg"
