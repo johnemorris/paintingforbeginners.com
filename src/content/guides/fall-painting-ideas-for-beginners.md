@@ -72,4 +72,3 @@ Mix a small family of colors before starting: one light, one middle, and one dar
 Do not use every fall color at equal strength; the result can feel noisy. Avoid mixing repeatedly in the same wet area, which can neutralize the colors into mud. Let a layer dry before placing a clean contrasting shape over it.
 
 For a pumpkin as the object itself, use [Pumpkin Painting for Beginners](/pumpkin-painting-for-beginners/). Keeping that project separate prevents a general fall canvas from becoming a duplicate pumpkin tutorial.
-

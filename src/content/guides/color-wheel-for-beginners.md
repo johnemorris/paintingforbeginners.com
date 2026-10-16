@@ -86,4 +86,3 @@ If the palette cannot produce a bright purple or green you need, add a second wa
 3. **Limited painting:** make a small image from two complements plus white. Use the complement to darken or neutralize instead of reaching automatically for black.
 
 Use the wheel to form a hypothesis, then trust the dried swatch. Painting skill grows from seeing the actual mixture, not memorizing a diagram.
-

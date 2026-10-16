@@ -102,4 +102,3 @@ None is the one correct starting medium. Acrylic is convenient for many beginner
 Choose the kind of painting before buying supplies. For a room, follow [How to Paint a Room](/how-to-paint-a-room/). For a table, chair, or cabinet, begin with [How to Paint Wood Furniture](/how-to-paint-wood-furniture/) and identify the surface first. For art, use [Acrylic Painting for Beginners](/acrylic-painting-for-beginners/) or browse [painting ideas organized by skill](/painting-ideas-for-beginners/).
 
 If you are still deciding, [How to Start Painting](/how-to-start-painting/) provides three short paths and a first action for each.
-

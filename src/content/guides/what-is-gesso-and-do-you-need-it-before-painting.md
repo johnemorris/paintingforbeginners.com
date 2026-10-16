@@ -78,4 +78,3 @@ Brush marks in gesso are not inherently wrong. Preserve them when they support t
 - Clear gesso is not optically invisible in every application; its solids can create a cloudy or gritty appearance.
 
 For a first project, buy a small pre-primed canvas and use the [first acrylic canvas guide](/acrylic-painting-for-beginners/). Learn what that surface feels like before customizing it.
-

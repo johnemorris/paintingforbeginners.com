@@ -76,4 +76,3 @@ Dry flat and store flat or in a protective sleeve. Dried paint buildup can chang
 - **Smears during repositioning:** wipe the stencil back and let adjacent repeats dry.
 
 Perfectly crisp edges are not always possible on rough surfaces. A small test reveals whether the design should be simplified before the full project.
-

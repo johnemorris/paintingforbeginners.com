@@ -17,6 +17,23 @@ const htmlFiles = files.filter((file) => file.pathname.endsWith(".html"));
 const failures = [];
 const canonicalOwners = new Map();
 const sitemap = await readFile(new URL("sitemap.xml", root), "utf8");
+const packageJson = JSON.parse(await readFile(new URL("../package.json", import.meta.url), "utf8"));
+const statusBody = await readFile(new URL("status", root), "utf8");
+const statusHeaders = await readFile(new URL("_headers", root), "utf8");
+let status;
+try { status = JSON.parse(statusBody); }
+catch { failures.push("status: response is not valid JSON"); }
+
+if (status) {
+  if (status.service !== "paintingforbeginners" || status.status !== "ok" || status.statusCode !== 200 || status.environment !== "production" || status.location !== "cloudflare-pages") {
+    failures.push("status: response fields do not match the deployment-status contract");
+  }
+  if (!/^[0-9a-f]{8}$/.test(status.version)) failures.push("status: version must be an eight-character short Git SHA");
+}
+if (!statusHeaders.includes("/status") || !statusHeaders.includes("Content-Type: application/json; charset=utf-8")) {
+  failures.push("status: Cloudflare static headers do not declare the JSON content type");
+}
+if (sitemap.includes("/status")) failures.push("status: endpoint must not appear in the sitemap");
 for (const file of htmlFiles) {
   const html = await readFile(file, "utf8");
   const canonical = html.match(/rel="canonical" href="([^"]+)"/)?.[1];
@@ -27,6 +44,10 @@ for (const file of htmlFiles) {
   }
   if (html.includes('name="robots" content="noindex')) {
     if (canonical && sitemap.includes(`<loc>${canonical}</loc>`)) failures.push(`${file.pathname.replace(root.pathname, "")}: noindex URL appears in sitemap`);
+  }
+  if (html.includes('href="/status') || html.includes("href='/status")) failures.push(`${file.pathname.replace(root.pathname, "")}: status endpoint must not be linked`);
+  if (status && !html.includes(`data-build-version="${packageJson.version}.${status.version}"`)) {
+    failures.push(`${file.pathname.replace(root.pathname, "")}: footer build version does not match status metadata`);
   }
   for (const match of html.matchAll(/href="(\/[^"]*)"/g)) {
     const href = match[1].split(/[?#]/)[0];

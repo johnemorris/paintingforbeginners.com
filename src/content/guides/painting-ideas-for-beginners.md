@@ -105,4 +105,3 @@ Short exercises work when they answer a question. Label samples with color, tool
 Choose canvas painting if you want a low-stakes creative session and can accept an imperfect result. Choose a home project if you want a practical change and can protect the room. Choose furniture if you enjoy preparation and can allow several days for drying and curing.
 
 Then shrink the scope: one small canvas, one room, or one uncomplicated object. Buy for that project only. A finished modest project teaches more than a complicated idea waiting indefinitely for the perfect supplies.
-

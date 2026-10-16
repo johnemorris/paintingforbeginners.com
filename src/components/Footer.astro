@@ -1,5 +1,6 @@
 ---
 import { navigation, site } from "../data/site";
+import { buildMetadata } from "../data/build-metadata";
 ---
 <footer class="site-footer">
   <div class="wrap footer-grid">
@@ -9,7 +10,10 @@ import { navigation, site } from "../data/site";
       <a href="/about/">About</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/affiliate-disclosure/">Affiliate disclosure</a><a href="/accessibility/">Accessibility</a>
     </nav>
   </div>
-  <div class="wrap fine-print">© {new Date().getFullYear()} {site.name}. Informational guidance only; follow product labels and use suitable safety equipment.</div>
+  <div class="wrap fine-print">
+    <span>© {new Date().getFullYear()} {site.name}. Informational guidance only; follow product labels and use suitable safety equipment.</span>
+    <span class="build-version" data-build-version={buildMetadata.displayVersion} aria-label={`Version ${buildMetadata.displayVersion}`}>{buildMetadata.displayVersion}</span>
+  </div>
 </footer>
 <style>
   .site-footer { padding: var(--space-5) 0 var(--space-3); background: var(--ink-strong); color: #dfe9eb; }
@@ -18,6 +22,8 @@ import { navigation, site } from "../data/site";
   p { max-width: 20rem; color: #bfcdd2; }
   nav { display: flex; flex-direction: column; gap: .5rem; }
   a { color: #edf5f4; }
-  .fine-print { margin-top: var(--space-4); padding-top: var(--space-3); border-top: 1px solid rgb(255 255 255 / .16); color: #bfcdd2; font-size: .82rem; }
+  .fine-print { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-2) var(--space-4); margin-top: var(--space-4); padding-top: var(--space-3); border-top: 1px solid rgb(255 255 255 / .16); color: #bfcdd2; font-size: .82rem; }
+  .build-version { flex: 0 0 auto; color: #91a4aa; font-size: .72rem; letter-spacing: .02em; }
   @media (max-width: 700px) { .footer-grid { grid-template-columns: 1fr; gap: var(--space-3); } }
+  @media (max-width: 520px) { .fine-print { align-items: flex-start; flex-direction: column; } }
 </style>

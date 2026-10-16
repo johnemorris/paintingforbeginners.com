@@ -12,5 +12,6 @@
   { "from": "/category/oil-painting/", "to": "/canvas-painting/", "status": 301, "reason": "Oil taxonomy is outside the focused MVP" },
   { "from": "/category/watercolor-painting/", "to": "/canvas-painting/", "status": 301, "reason": "Watercolor taxonomy is outside the focused MVP" },
   { "from": "/checklist-for-painting/", "to": "/painting-supplies-for-beginners/", "status": 301, "reason": "Closest current beginner art supply checklist" },
-  { "from": "/acrylic-painting-techniques/", "to": "/acrylic-painting-for-beginners/", "status": 301, "reason": "Techniques are covered in the complete current acrylic guide" }
+  { "from": "/acrylic-painting-techniques/", "to": "/acrylic-painting-for-beginners/", "status": 301, "reason": "Techniques are covered in the complete current acrylic guide" },
+  { "from": "/status/", "to": "/status", "status": 301, "reason": "Canonical raw JSON deployment-status route" }
 ]

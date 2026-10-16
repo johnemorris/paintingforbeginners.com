@@ -68,4 +68,3 @@ Do not hang on newly painted walls until the coating manufacturer allows pressur
 Keep art out of persistent direct sunlight, damp locations, and strong heat unless materials and framing are intended for that exposure. Recheck hardware periodically, especially after a move or when wire shows kinks, corrosion, or fraying.
 
 For frame selection and mounting differences among canvas, panels, and paper, see [How to Frame a Painting or Canvas](/how-to-frame-a-painting-or-canvas/).
-

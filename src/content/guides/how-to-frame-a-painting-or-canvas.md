@@ -73,4 +73,3 @@ Let the painting lead. A quiet frame can separate a busy picture from the wall; 
 ## When professional framing makes sense
 
 Use a professional framer for valuable, sentimental, unusually large, heavy, warped, fragile, or historically important work; for unfamiliar media; or when conservation mounting and glazing matter. Ask for reversible methods and materials appropriate to the medium. After framing, use [How to Hang a Painting or Canvas](/how-to-hang-a-painting-or-canvas/) to match hardware to the final weight and wall.
-

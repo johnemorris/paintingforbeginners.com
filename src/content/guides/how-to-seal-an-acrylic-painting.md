@@ -72,4 +72,3 @@ Spray varnish can help with delicate or highly textured surfaces but introduces 
 - **Color change:** gloss often deepens dark colors; matte finishes can reduce saturation.
 
 If the painting is valuable, sentimental, unstable, or made with unfamiliar mixed media, consult a professional conservator before coating it. Varnish is easier to add later than to remove after a compatibility problem.
-

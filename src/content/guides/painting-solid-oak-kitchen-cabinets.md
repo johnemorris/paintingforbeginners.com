@@ -97,4 +97,3 @@ During cure, avoid scrubbing, steam, harsh cleaners, and heavy impacts. Follow t
 ## When painting oak may not be the right choice
 
 Keep or refinish the wood when you value its grain, the cabinetry is historically important, or a paint finish would reduce its character. Replacement or professional repair may make more sense when boxes are water-damaged, joints are failing, veneer is extensively loose, or the layout no longer works. Professional finishing is also worth considering when an occupied kitchen cannot support the dust control, spray safety, or downtime the chosen system requires.
-

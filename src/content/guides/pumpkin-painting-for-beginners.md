@@ -79,4 +79,3 @@ For a reusable artificial pumpkin, use a clear finish only if the paint maker re
 ## Kid-friendly project considerations
 
 Choose age-appropriate, water-based materials labeled for the intended use, cover clothes and surfaces, and provide adult supervision appropriate to the child and tools. Adults should handle aerosol products, cutting, strong cleaners, and any preparation that creates dust. A large real or artificial pumpkin with broad washable-paint shapes is easier to manage than tiny detailed designs.
-
